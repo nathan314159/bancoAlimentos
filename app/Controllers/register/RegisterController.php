@@ -29,24 +29,10 @@ class RegisterController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
+            log_message('debug', 'Validation failed. Errors: ' . $this->validator->listErrors());
+
             return redirect()->back()->withInput()->with("errors", $this->validator->listErrors());
         }
-
-        // $userModel = new UserModel();
-        // $post = $this->request->getPost(['nombreUsuario', 'nombre', 'apellido', 'email', 'cedula', 'telefono', 'fechaNacimiento', 'genero', 'password']);
-        // $token = bin2hex(random_bytes(20));
-
-        // $userModel->insert([
-        //     'nombreUsuario' => $post['nombreUsuario'],
-        //     'nombre' => $post['nombre'],
-        //     'apellido' => $post['apellido'],
-        //     'email' => $post['email'],
-        //     'telefono' => $post['telefono'],
-        //     'fechaNacimiento' => $post['fechaNacimiento'],
-        //     'genero' => $post['genero'],
-        //     'password' => password_hash($post['password'], PASSWORD_DEFAULT),
-        //     'users_estado' => 0,
-        //     'users_activation_token' => $token,
-        // ]);
+        
     }
 }
