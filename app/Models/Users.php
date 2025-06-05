@@ -1,0 +1,63 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class Users extends Model
+{
+    protected $table            = 'users';
+    protected $primaryKey       = 'id_users';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+    protected $allowedFields    = ["users_nombre", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
+
+    protected bool $allowEmptyInserts = false;
+    // protected bool $updateOnlyChanged = true;
+
+    // protected array $casts = [];
+    // protected array $castHandlers = [];
+
+    // Dates
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'users_created_at';
+    protected $updatedField  = 'users_updated_at';
+    // protected $deletedField  = 'deleted_at';
+
+    public function insertUsuario($data)
+    {
+        // Cargar el helper de base de datos
+        $db = \Config\Database::connect();
+
+        // Construir la consulta de inserción
+        $builder = $db->table('tbl_users');
+
+        // Ejecutar la inserción
+        $builder->insert($data);
+
+        // Retornar el ID del último registro insertado
+        return $db->insertID();
+    }
+
+    public function findUser($userName, $password)
+    {
+        $db = \config\database::connect();
+        $builder = $db->table("users");
+
+        $builder->select([
+            'users_nombre',
+            'users_nombreUsuario',
+            'users_apellido',
+            'users_cedula',
+            'users_email',
+            'users_telefono'
+        ]);
+        $builder->where('users_nombreUsuario', $userName);
+        $builder->where('users_contrasenia', $password);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+}

@@ -1,0 +1,11 @@
+__ci_last_regenerate|i:1749055448;_ci_previous_url|s:48:"http://localhost/bancoAlimentos/index.php/create";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:10:{s:13:"nombreUsuario";s:6:"nathan";s:6:"nombre";s:6:"nathan";s:8:"apellido";s:8:"arboleda";s:5:"email";s:24:"njarboleda@pucesi.edu.ec";s:6:"cedula";s:10:"1722417331";s:8:"telefono";s:10:"0998098630";s:15:"fechaNacimiento";s:10:"2025-06-21";s:6:"genero";s:1:"1";s:8:"password";s:6:"123456";s:10:"repassword";s:6:"123456";}}__ci_vars|a:3:{s:13:"_ci_old_input";s:3:"new";s:21:"_ci_validation_errors";s:3:"new";s:6:"errors";s:3:"new";}_ci_validation_errors|a:3:{s:13:"nombreUsuario";s:52:"The nombreUsuario field must contain a unique value.";s:5:"email";s:44:"The email field must contain a unique value.";s:6:"cedula";s:45:"The cedula field must contain a unique value.";}errors|s:380:"<!-- DEBUG-VIEW START 2 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>The nombreUsuario field must contain a unique value.</li>
+					<li>The email field must contain a unique value.</li>
+					<li>The cedula field must contain a unique value.</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 2 SYSTEMPATH\Validation\Views\list.php -->
+";
