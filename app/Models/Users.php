@@ -12,7 +12,7 @@ class Users extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["users_nombre", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
+    protected $allowedFields    = ["users_nombre", "users_nombreUsuario", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
 
     protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
@@ -42,10 +42,11 @@ class Users extends Model
         return $db->insertID();
     }
 
-    public function findUser($userName, $password)
+    public function findUser($userName)
     {
-        $db = \config\database::connect();
-        $builder = $db->table("users");
+        $db = \Config\Database::connect();
+
+        $builder = $db->table("tbl_users");
 
         $builder->select([
             'users_nombre',
@@ -53,11 +54,13 @@ class Users extends Model
             'users_apellido',
             'users_cedula',
             'users_email',
-            'users_telefono'
+            'users_telefono',
+            'users_contrasenia'
         ]);
         $builder->where('users_nombreUsuario', $userName);
-        $builder->where('users_contrasenia', $password);
+        print_r($builder);
         $query = $builder->get();
-        return $query->getResult();
+
+        return $query->getRowArray(); // Return a single user as an associative array
     }
 }

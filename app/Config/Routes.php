@@ -9,4 +9,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/register', 'register\RegisterController::index');
 $routes->post('/create', 'register\RegisterController::create');
 $routes->get('/loginView', 'login\LoginController::loginView');
-
+$routes->post('/verifyUser', 'login\LoginController::verifyUser');

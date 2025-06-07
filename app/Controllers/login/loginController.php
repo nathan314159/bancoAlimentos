@@ -21,7 +21,26 @@ class LoginController extends BaseController
         echo view('login/body.php');
     }
 
-    public function verifyUser(){
-        
+    public function verifyUser()
+    {
+        helper(['form']);
+
+        $username = $this->request->getPost('users_nombreUsuario');
+        $password = $this->request->getPost('users_contrasenia');
+        var_dump($username);
+        var_dump($password);
+        $user = $this->users->findUser($username);
+
+        if (!$user) {
+            echo "El usuario no existe";
+            return;
+        }
+
+        if (password_verify($password, $user['users_contrasenia'])) {
+            echo "Existe y contraseña válida";
+            // session()->set('usuario', $user); // optional session
+        } else {
+            echo "Contraseña incorrecta";
+        }
     }
 }
