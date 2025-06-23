@@ -51,6 +51,9 @@ abstract class BaseController extends Controller
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
+        //Helper to control functions in controllers
+        helper('administration');
+
         // Preload any models, libraries, etc, here.
 
         $this->session = service('session');

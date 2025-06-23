@@ -1,95 +1,131 @@
-<body class="bg-gradient-primary">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="container">
+<head>
+    <title>Iniciar sesión</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/login/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/css/main.css">
+    <!--===============================================================================================-->
+    <!--ALERTIFY-->
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/alertify.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/themes/default.css" rel="stylesheet">
+</head>
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+<body>
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                    <form class="user" method="post" action="<?php echo base_url('/verifyUser'); ?>">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..." name="users_nombreUsuario">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" name="users_contrasenia">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary btn-user btn-block" type="submit">
-                                            Login
-                                        </button>
-                                        <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
-                                    </form>
-                                    <pre>
-                                        <?php echo base_url('register'); ?>
-                                    </pre>
-
-                                    <pre>
-                                        <?php print_r(session()->getFlashdata()); ?>
-                                    </pre>
-
-
-                                    <?php if (session()->getFlashdata('errors') !== null): ?>
-
-                                        <div class="alert alert-danger my-3" role="alert">
-                                            <?= session()->getFlashdata("errors"); ?>
-
-                                        </div>
-                                    <?php endif; ?>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="<?php echo base_url(); ?>assets/login/images/img-04.png" alt="IMG">
                 </div>
 
+                <form class="login100-form validate-form" method="post" action="<?= base_url('/enterUser') ?>">
+                    <span class="login100-form-title">
+                        Iniciar sesión
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Email válido requerido: ex@abc.xyz">
+                        <input class="input100" type="text" name="users_email" id="users_email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Contraseña válida requerida: contra_#@s3ña">
+                        <input class="input100" type="password" name="users_contrasenia" id="users_contrasenia" placeholder="Contraseña">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" id="btnLogin" onclick="enterUser();" type="button">
+                            Iniciar sesión
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-12">
+                        <a class="txt2" href="#" data-toggle="modal" data-target="#forgotPasswordModal">
+                            Olvidé mi contraseña
+                        </a>
+                    </div>
+
+                    <div class="text-center p-t-136">
+                        <a class="txt2" href="<?= base_url('/createAccountView') ?>">
+                            Crear cuenta
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
             </div>
-
         </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel"><b>¿Olvidaste tu contraseña?</b></h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-justify">
+                    <p class="mb-3"><b>Por razones de seguridad, Banco de Alimentos te informa que el cambio de clave debe ser solicitado al administrador del sistema. Gracias por tu comprensión.</b></p>
+                    <p class="text-muted"><b>Nombre de administrador:</b> Juan Alvarez</p>
+                    <p class="text-muted"><b>Contacto:</b> 0900200300</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary px-4" data-dismiss="modal"><b>Entendido</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url(); ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
+
+    <!--===============================================================================================-->
+    <script src="<?php echo base_url(); ?>assets/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo base_url(); ?>assets/login/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?php echo base_url(); ?>assets/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo base_url(); ?>assets/login/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?php echo base_url(); ?>assets/login/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="<?php echo base_url(); ?>assets/login/js/main.js"></script>
+
+    <!-- Alertify -->
+    <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>
+    <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.min.js"></script>
+
+    <!-- Session control -->
+    <script src="<?php echo base_url(); ?>/assets/js/operations/login.js"></script>
 </body>
 
 </html>

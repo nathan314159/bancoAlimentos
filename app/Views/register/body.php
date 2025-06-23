@@ -1,113 +1,151 @@
-<body class="bg-gradient-primary">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="container">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+    <!-- Title Page-->
+    <title>Crear cuenta</title>
+
+    <!-- Icons font CSS-->
+    <link href="<?php echo base_url(); ?>assets/register/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url(); ?>assets/register/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="<?php echo base_url(); ?>assets/register/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url(); ?>assets/register/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="<?php echo base_url(); ?>assets/register/css/main.css" rel="stylesheet" media="all">
+
+    <!--ALERTIFY-->
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/alertify.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/themes/default.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title"><b>Crear cuenta</b></h2>
+                    <form method="POST" action="<?= base_url('/registerUser') ?>">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Nombres</label>
+                                    <input class="input--style-4" type="text" name="users_nombre" id="users_nombre">
+                                </div>
                             </div>
-                            <form class="user" method="post" action="<?php echo base_url('index.php/create'); ?>">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="nombreUsuario" name="nombreUsuario"
-                                        placeholder="Nombre de usuario">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Apellidos</label>
+                                    <input class="input--style-4" type="text" name="users_apellido" id="users_apellido">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre"
-                                            placeholder="Nombres">
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Nombre de usuario</label>
+                                    <input class="input--style-4" type="text" name="users_nombreUsuario" id="users_nombreUsuario">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Cédula</label>
+                                    <input class="input--style-4" type="text" name="users_cedula" id="users_cedula">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Fecha de nacimiento</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker" type="text" name="users_fecha_de_nacimiento" id="users_fecha_de_nacimiento">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="apellido" name="apellido"
-                                            placeholder="Apellidos">
-                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="email" name="email"
-                                        placeholder="Email@mail.com">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user" id="cedula" name="cedula"
-                                            placeholder="Cédula">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="number" class="form-control form-control-user" id="telefono" name="telefono"
-                                            placeholder="Teléfono">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="date" class="form-control form-control-user" id="fechaNacimiento" name="fechaNacimiento">
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" id="genero" name="genero">
-                                        <option value="" disabled selected>Seleccione su género...</option>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" for="users_genero">Género</label>
+                                    <select class="input--style-4" name="users_genero" id="users_genero">
+                                        <option disabled selected>Seleccione...</option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
                                         <option value="3">Otro</option>
                                     </select>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="password" name="password" placeholder="Contraseña">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="repassword" name="repassword" placeholder="Repita la contraseña">
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary btn-user btn-block" type="submit">
-                                    Crear cuenta
-                                </button>
-                                <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
-                            </form>
-   
-
-
-                            <?php if (session()->getFlashdata('errors') !== null): ?>
-
-                                <div class="alert alert-danger my-3" role="alert">
-                                    <?= session()->getFlashdata("errors"); ?>
-
-                                </div>
-                            <?php endif; ?>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="users_email" id="users_email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Teléfono</label>
+                                    <input class="input--style-4" type="text" name="users_telefono" id="users_telefono">
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Contraseña</label>
+                                    <input class="input--style-4" type="password" name="users_contrasenia" id="users_contrasenia">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Repetir contraseña</label>
+                                    <input class="input--style-4" type="password" name="users_contrasenia_repeat" id="users_contrasenia_repeat">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Crear cuenta</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery JS-->
+    <script src="<?php echo base_url(); ?>assets/register/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="<?php echo base_url(); ?>assets/register/vendor/select2/select2.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/register/vendor/datepicker/moment.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/register/vendor/datepicker/daterangepicker.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url(); ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Main JS-->
+    <script src="<?php echo base_url(); ?>assets/register/js/global.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
+    <!-- Alertify -->
+    <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>
+    <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.min.js"></script>
 
 </body>
 
 </html>
+<!-- end document-->

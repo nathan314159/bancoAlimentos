@@ -1,0 +1,10 @@
+Administrador
+
+/* Cerrar sesión */
+/logout
+
+
+Empleado
+
+/* Cerrar sesión */
+/logout

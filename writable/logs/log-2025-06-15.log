@@ -1,0 +1,1027 @@
+DEBUG - 2025-06-15 21:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 22:58:27 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 22:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 22:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 22:59:17 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:01:27 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:01:34 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:01:36 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:02:02 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:03:16 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:03:16 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:03:17 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:03:17 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:03:17 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:06:45 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 33.
+ 1 APPPATH\Controllers\Principal.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:07:40 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 34.
+ 1 APPPATH\Controllers\Principal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:07:41 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 34.
+ 1 APPPATH\Controllers\Principal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:07:41 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 34.
+ 1 APPPATH\Controllers\Principal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:07:41 --> ErrorException: Undefined array key "users_mail"
+[Method: POST, Route: verifyUser]
+in APPPATH\Controllers\Principal.php on line 34.
+ 1 APPPATH\Controllers\Principal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "users_mail"', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->verifyUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:16 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:17 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:17 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:17 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:17 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:17 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:18 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:18 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:26 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:26 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:26 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:26 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:39 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:48 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:55 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:55 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:55 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:55 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:08:55 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:10:49 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:10:52 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:10:57 --> Error en verifyUser: Undefined array key "users_mail"
+DEBUG - 2025-06-15 23:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:22:13 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UsersMod::buscarVariablesSesion
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Principal.php(52): CodeIgniter\Model->__call('buscarVariablesSesion', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:27:25 --> mysqli_sql_exception: Table 'badi.tbl_users_rol' doesn't exist in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `u`.`id_...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id_...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id_...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(52): App\Models\UsersMod->searchSessionVariables('2')
+#6 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#7 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-06-15 23:27:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_users_rol' doesn't exist
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = :ur.id_users:
+ LIMIT 1', [...], false)
+ 2 APPPATH\Models\UsersMod.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Principal.php(52): App\Models\UsersMod->searchSessionVariables('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:27:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_users_rol' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = :ur.id_users:
+ LIMIT 1', [...], false)
+ 4 APPPATH\Models\UsersMod.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Principal.php(52): App\Models\UsersMod->searchSessionVariables('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:27:25 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_users_rol' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_users`, `u`.`users_nombre`, `u`.`users_apellido`, `u`.`users_cedula`, `r`.`id_rol`, `r`.`rol_nombre`
+FROM `tbl_users_rol` `ur`
+JOIN `tbl_users` `u` ON `u`.`id_users` = `ur`.`id_users`
+JOIN `tbl_rol` `r` ON `r`.`id_rol` = `ur`.`id_rol`
+WHERE `ur`.`id_users` = :ur.id_users:
+ LIMIT 1', [...], false)
+ 5 APPPATH\Models\UsersMod.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Principal.php(52): App\Models\UsersMod->searchSessionVariables('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:28:24 --> ErrorException: Undefined array key 0
+[Method: POST, Route: enterUser]
+in APPPATH\Helpers\administration_helper.php on line 7.
+ 1 APPPATH\Helpers\administration_helper.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Helpers\\administration_helper.php', 7)
+ 2 APPPATH\Controllers\Principal.php(52): sessionVariables([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:32:43 --> ErrorException: Undefined property: stdClass::$users_nombreuserario
+[Method: POST, Route: enterUser]
+in APPPATH\Helpers\administration_helper.php on line 10.
+ 1 APPPATH\Helpers\administration_helper.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$users_nombreuserario', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Helpers\\administration_helper.php', 10)
+ 2 APPPATH\Controllers\Principal.php(52): sessionVariables([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:33:06 --> mysqli_sql_exception: Unknown column 'tbl_users_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:33:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_users_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = :tbl_users_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:33:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_users_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = :tbl_users_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:33:06 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_users_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_users_rol`.`id_users` = :tbl_users_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:33:57 --> mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:33:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:33:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:33:57 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_users_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:34:41 --> mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:34:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:34:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:34:41 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(49): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:39:09 --> mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:39:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:39:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:39:09 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:41:07 --> mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:41:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:41:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:41:07 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-15 23:41:55 --> mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause' in C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp3\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol...', 0)
+#1 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol...')
+#2 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol...')
+#3 C:\xampp3\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol...', Array, false)
+#4 C:\xampp3\htdocs\bancoAlimentos\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\bancoAlimentos\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp3\htdocs\bancoAlimentos\app\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+#7 C:\xampp3\htdocs\bancoAlimentos\app\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+#8 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+#9 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp3\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp3\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 23:41:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+[Method: POST, Route: enterUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:41:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:41:55 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_user_rol.id_users' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = \'2\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rol`.`id_rol`, `tbl_rol`.`rol_nombre`
+FROM `tbl_users`
+JOIN `tbl_rol` ON `tbl_rol`.`id_rol` = `tbl_user_rol`.`id_rol`
+WHERE `tbl_user_rol`.`id_users` = :tbl_user_rol.id_users:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsersMod.php(50): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Principal.php(53): App\Models\UsersMod->searchRolUser('2')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:43:56 --> ErrorException: Undefined array key 0
+[Method: POST, Route: enterUser]
+in APPPATH\Helpers\administration_helper.php on line 24.
+ 1 APPPATH\Helpers\administration_helper.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Helpers\\administration_helper.php', 24)
+ 2 APPPATH\Controllers\Principal.php(53): redirectUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:55:09 --> ErrorException: Undefined array key 0
+[Method: POST, Route: enterUser]
+in APPPATH\Helpers\administration_helper.php on line 7.
+ 1 APPPATH\Helpers\administration_helper.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Helpers\\administration_helper.php', 7)
+ 2 APPPATH\Controllers\Principal.php(52): sessionVariables([])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:56:14 --> ErrorException: Undefined array key 0
+[Method: POST, Route: enterUser]
+in APPPATH\Helpers\administration_helper.php on line 7.
+ 1 APPPATH\Helpers\administration_helper.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Helpers\\administration_helper.php', 7)
+ 2 APPPATH\Controllers\Principal.php(52): sessionVariables([])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-15 23:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-15 23:59:09 --> ErrorException: Array to string conversion
+[Method: POST, Route: enterUser]
+in APPPATH\Controllers\Principal.php on line 51.
+ 1 APPPATH\Controllers\Principal.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp3\\htdocs\\bancoAlimentos\\app\\Controllers\\Principal.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Principal->enterUser()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-15 23:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

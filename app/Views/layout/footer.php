@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2021</span>
+            <span><b>Copyright &copy; Banco de Alimentos - 2025</b></span>
         </div>
     </div>
 </footer>
@@ -10,6 +10,7 @@
 
 </div>
 <!-- End of Content Wrapper -->
+
 
 </div>
 <!-- End of Page Wrapper -->
@@ -40,7 +41,7 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?php echo base_url(); ?>assets/assets/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
@@ -49,12 +50,12 @@
 <!-- Custom scripts for all pages-->
 <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
-<!-- Page level plugins -->
-<script src="<?php echo base_url(); ?>assets/vendor/chart.js/Chart.min.js"></script>
+<!-- Session control -->
+<script src="<?php echo base_url(); ?>/assets/js/operations/login.js"></script>
 
-<!-- Page level custom scripts -->
-<script src="<?php echo base_url(); ?>assets/js/demo/chart-area-demo.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/demo/chart-pie-demo.js"></script>
+<!-- Alertify -->
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.min.js"></script>
 
 </body>
 

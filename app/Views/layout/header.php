@@ -20,4 +20,8 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!--ALERTIFY--> 
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/alertify.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/alertify/themes/default.css" rel="stylesheet">
+
 </head>
