@@ -1,25 +1,45 @@
 <?php
 
-namespace App\Controllers\datos_generales;
+namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\GeneralInformationMod;
+use App\Models\UsersMod;
+use App\Models\RolAccessMod;
+use App\Models\UserRolMod;
 
-class DatosGeneralesLoginController extends BaseController
+class GeneralInformation extends BaseController
 {
+    protected $form;
     protected $users;
+    protected $rol_access;
+    protected $user_rol;
+
 
     public function __construct()
     {
-        $this->users = new GeneralInformationMod();
+        $this->session = \Config\Services::session();
+        $this->users = new UsersMod();
+        $this->rol_access = new RolAccessMod();
+        $this->user_rol = new UserRolMod();
+        $this->form = new GeneralInformationMod();
     }
 
-    public function index()
+    public function formGeneralInformation()
     {
-        //return view('register/signup');
-        // echo view('layout/header.php');
-        // echo view('register/body.php');
-        return view('datosGenerales/index');
+        echo "<script>if (window.history.replaceState) { // verificamos disponibilidad
+			window.history.replaceState(null, null, window.location.href);
+		}</script>";
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/formGeneralInformation", $routes)) {
+                echo view('generalInformation/body');
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
     }
 
     public function create()
@@ -60,9 +80,6 @@ class DatosGeneralesLoginController extends BaseController
             'datos_cantidad_celulare' => $this->request->getPost('datos_cantidad_celulare'),
             'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
         ];
-        $this->users->insertUsuario($userData);
+        $this->form->insertUsuario($userData);
     }
-
-
-
 }

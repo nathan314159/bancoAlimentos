@@ -29,6 +29,7 @@ class Principal extends BaseController
 			window.history.replaceState(null, null, window.location.href);
 		}</script>";
         if ($this->session->has('id_users')) {
+            principalPage();
         } else {
             echo view('login/body.php');
         }

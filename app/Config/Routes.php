@@ -16,7 +16,7 @@ $routes->get('/logout', 'Principal::logout');
 $routes->get('/createAccountView', 'Principal::createAccountView');
 $routes->post('/create', 'register\RegisterController::create');
 
-$routes->get('/formDatosGenerales', 'datos_generales\DatosGeneralesLoginController::index');
-$routes->post('/insertDatosGenerales', 'datos_generales\DatosGeneralesLoginController::create');
+$routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
+$routes->post('/insertDatosGenerales', 'GeneralInformation::create');
 
 $routes->post('/registerUser', 'Principal::insertUser');

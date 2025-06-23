@@ -31,7 +31,7 @@ function redirectUser($routes)
 //Principal page for rol
 function principalPage()
 {
-    header("Location: " . base_url(). "demoMain");
+    header("Location: " . base_url(). "formGeneralInformation");
     exit;
 }
 
