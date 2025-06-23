@@ -106,12 +106,17 @@ class UsersMod extends Model
             'users_nombreUsuario' => $userInfo['users_nombreUsuario'],
             'users_apellido'      => $userInfo['users_apellido'],
             'users_cedula'        => $userInfo['users_cedula'],
+            'users_fecha_de_nacimiento'        => $userInfo['users_fecha_de_nacimiento'],
             'users_email'         => $userInfo['users_email'],
             'users_telefono'      => $userInfo['users_telefono'],
             'users_contrasenia'   => $userInfo['users_contrasenia'],
-            'users_estado'         => 1,
+            'users_estado'        => 1,
         ];
 
-        return $builder->insert($data); // Devuelve true o false
+        if ($builder->insert($data)) {
+            return $db->insertID(); // Devuelve el ID insertado
+        } else {
+            return false; // O puedes devolver $db->error() si deseas saber qué falló
+        }
     }
 }

@@ -4,11 +4,13 @@ namespace App\Controllers;
 
 use App\Models\UsersMod;
 use App\Models\RolAccessMod;
+use App\Models\UserRolMod;
 
 class Principal extends BaseController
 {
     protected $users;
     protected $rol_access;
+    protected $user_rol;
 
     public $session = null;
 
@@ -17,6 +19,7 @@ class Principal extends BaseController
         $this->session = \Config\Services::session();
         $this->users = new UsersMod();
         $this->rol_access = new RolAccessMod();
+        $this->user_rol = new UserRolMod();
     }
 
 
@@ -110,12 +113,13 @@ class Principal extends BaseController
             'users_nombreUsuario' => $this->request->getPost("users_nombreUsuario"),
             'users_apellido'      => $this->request->getPost("users_apellido"),
             'users_cedula'        => $this->request->getPost("users_cedula"),
+            'users_fecha_de_nacimiento'        => $this->request->getPost("users_fecha_de_nacimiento"),
             'users_email'         => $this->request->getPost("users_email"),
             'users_telefono'      => $this->request->getPost("users_telefono"),
             'users_contrasenia'   => $this->request->getPost("users_contrasenia"),
         ];
 
-        $this->users->registerUser($user);
+        $this->user_rol->insertUserRolDefault($this->users->registerUser($user));
     }
 
 

@@ -12,7 +12,7 @@ class Users extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["users_nombre", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
+    protected $allowedFields    = ["users_nombre", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_fecha_de_nacimiento", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
 
     protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;

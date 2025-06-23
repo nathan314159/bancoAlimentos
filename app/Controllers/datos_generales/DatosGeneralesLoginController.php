@@ -3,7 +3,7 @@
 namespace App\Controllers\datos_generales;
 
 use App\Controllers\BaseController;
-use App\Models\DatosGenerales;
+use App\Models\GeneralInformationMod;
 
 class DatosGeneralesLoginController extends BaseController
 {
@@ -11,7 +11,7 @@ class DatosGeneralesLoginController extends BaseController
 
     public function __construct()
     {
-        $this->users = new DatosGenerales();
+        $this->users = new GeneralInformationMod();
     }
 
     public function index()

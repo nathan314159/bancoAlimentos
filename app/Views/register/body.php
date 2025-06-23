@@ -37,9 +37,9 @@
                 <div class="card-body">
                     <h2 class="title"><b>Crear cuenta</b></h2>
                     <form method="POST" action="<?= base_url('/registerUser') ?>">
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="mb-3">
                                     <label class="label">Nombres</label>
                                     <input class="input--style-4" type="text" name="users_nombre" id="users_nombre">
                                 </div>
@@ -72,8 +72,7 @@
                                 <div class="input-group">
                                     <label class="label">Fecha de nacimiento</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="users_fecha_de_nacimiento" id="users_fecha_de_nacimiento">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        <input class="input--style-4" type="date" name="users_fecha_de_nacimiento" id="users_fecha_de_nacimiento">
                                     </div>
                                 </div>
                             </div>
