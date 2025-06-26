@@ -38,10 +38,8 @@ CREATE TABLE `tbl_rol_access` (
 --
 
 INSERT INTO `tbl_rol_access` (`id_principal_rol_access`, `id_rol`, `id_funcionalidad`) VALUES
-(3, 1, 1),
-(4, 2, 1),
-(5, 1, 3),
-(6, 2, 3);
+(3, 1, 1);
+
 
 --
 -- Índices para tablas volcadas
