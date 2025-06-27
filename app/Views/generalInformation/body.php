@@ -1,12 +1,17 @@
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
+
     <meta charset="UTF-8">
     <title>Formulario de Datos</title>
+
+    <!-- AlertifyJS CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- AlertifyJS JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
     <style>
         form {
             max-width: 800px;
@@ -46,7 +51,7 @@
 
 <body>
 
-    <form action="<?php echo base_url('/insertDatosGenerales'); ?>" method="POST">
+    <form id="datosForm" action="<?php echo base_url('/insertDatosGenerales'); ?>" method="POST">
         <h2>Formulario de Datos</h2>
 
         <label for="datos_provincia">Provincia</label>
@@ -176,5 +181,242 @@
     </form>
 
 </body>
+<script>
+    const datos_provincia = document.getElementById("datos_provincia");
+    const datos_canton = document.getElementById("datos_canton");
+    const datos_parroquias = document.getElementById("datos_parroquias");
+    const datos_comunidades = document.getElementById("datos_comunidades");
+    const datos_barrios = document.getElementById("datos_barrios");
+    const datos_tipo_viviendas = document.getElementById("datos_tipo_viviendas");
+    const datos_techos = document.getElementById("datos_techos");
+    const datos_paredes = document.getElementById("datos_paredes");
+    const datos_pisos = document.getElementById("datos_pisos");
+    const datos_cuarto = document.getElementById("datos_cuarto");
+    const datos_combustibles_cocina = document.getElementById("datos_combustibles_cocina");
+    const datos_servicios_higienicos = document.getElementById("datos_servicios_higienicos");
+    const datos_viviendas = document.getElementById("datos_viviendas");
+    const datos_pago_vivienda = document.getElementById("datos_pago_vivienda");
+    const datos_agua = document.getElementById("datos_agua");
+    const datos_pago_agua = document.getElementById("datos_pago_agua");
+    const datos_pago_luz = document.getElementById("datos_pago_luz");
+    const datos_cantidad_luz = document.getElementById("datos_cantidad_luz");
+    const datos_internet = document.getElementById("datos_internet");
+    const datos_pago_internet = document.getElementById("datos_pago_internet");
+    const datos_tv_cable = document.getElementById("datos_tv_cable");
+    const datos_tv_pago = document.getElementById("datos_tv_pago");
+    const datos_eliminacion_basura = document.getElementById("datos_eliminacion_basura");
+    const datos_lugares_mayor_frecuencia_viveres = document.getElementById("datos_lugares_mayor_frecuencia_viveres");
+    const datos_gastos_viveres_alimentacion = document.getElementById("datos_gastos_viveres_alimentacion");
+    const datos_medio_transporte = document.getElementById("datos_medio_transporte");
+    const datos_estado_transporte = document.getElementById("datos_estado_transporte");
+    const datos_terrenos = document.getElementById("datos_terrenos");
+    const datos_celular = document.getElementById("datos_celular");
+    const datos_cantidad_celulare = document.getElementById("datos_cantidad_celulare");
+    const datos_plan_celular = document.getElementById("datos_plan_celular");
+
+    document.getElementById("datosForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Stop the form from submitting
+
+        if (datos_provincia.value === "") {
+            alertify.error("Por favor selecciona una provincia");
+            datos_provincia.focus();
+            return;
+        }
+
+        if (datos_canton.value === "") {
+            alertify.error("Por favor selecciona un cantón");
+            datos_canton.focus();
+            return;
+        }
+
+        if (datos_parroquias.value == "") {
+            alertify.error("Por favor selecciona una parroquia");
+            datos_parroquias.focus();
+            return;
+        }
+
+        if (datos_comunidades.value.trim() === "") {
+            alertify.error("Por favor escribe una comunidad");
+            datos_comunidades.focus();
+            return;
+        }
+
+        if (datos_barrios.value.trim() === "") {
+            alertify.error("Por favor escribe un barrio");
+            datos_barrios.focus();
+            return;
+        }
+
+
+
+        if (datos_tipo_viviendas.value.trim() === "") {
+            alertify.error("Por favor escribe el tipo vivienda");
+            datos_tipo_viviendas.focus();
+            return;
+        }
+
+        if (datos_techos.value.trim() === "") {
+            alertify.error("Por favor escribe tipo de techo");
+            datos_techos.focus();
+            return;
+        }
+
+        if (datos_paredes.value.trim() === "") {
+            alertify.error("Por favor escribe tipo de pared");
+            datos_paredes.focus();
+            return;
+        }
+
+        if (datos_pisos.value.trim() === "") {
+            alertify.error("Por favor escribe un tipo de piso");
+            datos_pisos.focus();
+            return;
+        }
+
+        if (isNaN(datos_cuarto.value) || parseInt(datos_cuarto.value) <= 0) {
+            alertify.error("Por favor ingresa un número válido de cuartos");
+            datos_cuarto.focus();
+            return;
+        }
+
+        if (datos_combustibles_cocina.value.trim() === "") {
+            alertify.error("Por favor escribe un tipo de combustible");
+            datos_combustibles_cocina.focus();
+            return;
+        }
+
+        if (datos_servicios_higienicos.value.trim() === "") {
+            alertify.error("Por favor escribe un servicio higienico");
+            datos_servicios_higienicos.focus();
+            return;
+        }
+
+        if (datos_viviendas.value.trim() === "") {
+            alertify.error("Por favor escribe los datos de la vivienda");
+            datos_viviendas.focus();
+            return;
+        }
+
+        if (datos_pago_vivienda.value.trim() === "") {
+            alertify.error("Por favor escribe el pago de la vivienda");
+            datos_pago_vivienda.focus();
+            return;
+        }
+
+        if (datos_agua.value.trim() === "") {
+            alertify.error("Por favor escribe los datos de agua");
+            datos_agua.focus();
+            return;
+        }
+
+        if (datos_pago_agua.value.trim() === "") {
+            alertify.error("El campo 'Pago de Agua' es obligatorio");
+            datos_pago_agua.focus();
+            return;
+        }
+
+        if (datos_pago_luz.value.trim() === "") {
+            alertify.error("Por favor escribe los datos de la luz");
+            datos_pago_luz.focus();
+            return;
+        }
+
+        if (isNaN(datos_cantidad_luz.value) || parseInt(datos_cantidad_luz.value) <= 0) {
+            alertify.error("Por favor ingresa una cantidad válida de luz consumida");
+            datos_cantidad_luz.focus();
+            return;
+        }
+
+
+        // nuevos 
+        // ingresos 
+        // de datos
+
+        if (datos_internet.value.trim() === "") {
+            alertify.error("Por favor escribe datos del internet");
+            datos_internet.focus();
+            return;
+        }
+
+        if (datos_pago_internet.value.trim() === "") {
+            alertify.error("Por favor escribe la cantidad del pago de internet");
+            datos_pago_internet.focus();
+            return;
+        }
+
+        if (datos_tv_cable.value.trim() === "") {
+            alertify.error("Por favor escribe los datos de tv cable");
+            datos_tv_cable.focus();
+            return;
+        }
+
+        if (datos_tv_pago.value.trim() === "") {
+            alertify.error("Por favor escribe la cantidad de pagos tv");
+            datos_tv_pago.focus();
+            return;
+        }
+
+        if (datos_eliminacion_basura.value.trim() === "") {
+            alertify.error("Por favor escribe donde se elimina la basura");
+            datos_eliminacion_basura.focus();
+            return;
+        }
+
+        if (datos_lugares_mayor_frecuencia_viveres.value.trim() === "") {
+            alertify.error("Por favor escribe dónde frecuenta para hacer las compras del hogar");
+            datos_lugares_mayor_frecuencia_viveres.focus();
+            return;
+        }
+
+        if (datos_gastos_viveres_alimentacion.value.trim() === "") {
+            alertify.error("Por favor escribe cuanto sale en compras");
+            datos_gastos_viveres_alimentacion.focus();
+            return;
+        }
+
+        if (datos_medio_transporte.value.trim() === "") {
+            alertify.error("Por favor escribe el medio de transporte que usa");
+            datos_medio_transporte.focus();
+            return;
+        }
+
+        if (datos_estado_transporte.value.trim() === "") {
+            alertify.error("Por favor escribe el estado de su transporte");
+            datos_estado_transporte.focus();
+            return;
+        }
+
+        if (datos_terrenos.value.trim() === "") {
+            alertify.error("Por favor escribe si tiene terrenos");
+            datos_terrenos.focus();
+            return;
+        }
+
+        if (datos_celular.value.trim() === "") {
+            alertify.error("Por favor escribe si tienes celular");
+            datos_celular.focus();
+            return;
+        }
+
+        if (isNaN(datos_cantidad_celulare.value) || parseInt(datos_cantidad_celulare.value) <= 0) {
+            alertify.error("Por favor ingresa una cantidad válida de celulares");
+            datos_cantidad_celulare.focus();
+            return;
+        }
+
+
+        if (datos_plan_celular.value.trim() === "") {
+            alertify.error("Por favor escribe que plan de celular tiene");
+            datos_plan_celular.focus();
+            return;
+        }
+
+        // If all validations pass:
+        alertify.success("Formulario válido, enviando...");
+        this.submit(); // Now send the form
+
+
+    });
+</script>
 
 </html>

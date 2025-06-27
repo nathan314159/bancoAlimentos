@@ -33,7 +33,10 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/formGeneralInformation", $routes)) {
-                echo view('generalInformation/body');
+                echo view("layout/header");
+                echo view("layout/aside");
+                echo view("generalInformation/body");
+                echo view("layout/footer");
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
             }
@@ -82,4 +85,6 @@ class GeneralInformation extends BaseController
         ];
         $this->form->insertUsuario($userData);
     }
+
+
 }

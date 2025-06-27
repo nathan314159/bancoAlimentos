@@ -12,10 +12,12 @@ $routes->get('/demoMain', 'Principal::demoMain');
 $routes->post('/verifyUser', 'Principal::verifyUser');
 $routes->post('/enterUser', 'Principal::enterUser');
 $routes->get('/logout', 'Principal::logout');
+
 //Routes for create users - main
 $routes->get('/createAccountView', 'Principal::createAccountView');
 $routes->post('/create', 'register\RegisterController::create');
 
+// datos generales 
 $routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
 $routes->post('/insertDatosGenerales', 'GeneralInformation::create');
 
