@@ -37,9 +37,9 @@
                 <div class="card-body">
                     <h2 class="title"><b>Crear cuenta</b></h2>
                     <form method="POST" action="<?= base_url('/registerUser') ?>">
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <div class="mb-3">
+                        <div class="row row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
                                     <label class="label">Nombres</label>
                                     <input class="input--style-4" type="text" name="users_nombre" id="users_nombre">
                                 </div>
@@ -71,9 +71,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Fecha de nacimiento</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4" type="date" name="users_fecha_de_nacimiento" id="users_fecha_de_nacimiento">
-                                    </div>
+                                    <input class="input--style-4" type="date" name="users_fecha_de_nacimiento" id="users_fecha_de_nacimiento">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -121,11 +119,23 @@
                         </div>
 
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Crear cuenta</button>
+                            <button class="btn btn--radius-2 btn--blue" type="button" id="btn_registerUser" onclick="registerUser();">Crear cuenta</button>
                         </div>
                     </form>
+                    <br>
+                    <div class="row">
+                        <a href="<?= base_url() ?>"
+                            class="login-button">
+                            ¿Ya tienes cuenta? Inicia sesión
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+
+
+
+                    </div>
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -143,6 +153,9 @@
     <!-- Alertify -->
     <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>
     <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.min.js"></script>
+
+    <!-- Register control -->
+    <script src="<?php echo base_url(); ?>/assets/js/operations/register.js"></script>
 
 </body>
 

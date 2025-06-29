@@ -5,20 +5,21 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-//Main route
+//Routes for main page
 $routes->get('/', 'Principal::index');
-$routes->get('/demoMain', 'Principal::demoMain');
-//Dashboard
+$routes->get('/demoMain', 'Principal::demoMain'); //Delete this route when the system is finished
+
+//Routes for login and verify user
 $routes->post('/verifyUser', 'Principal::verifyUser');
 $routes->post('/enterUser', 'Principal::enterUser');
 $routes->get('/logout', 'Principal::logout');
 
 //Routes for create users - main
 $routes->get('/createAccountView', 'Principal::createAccountView');
-$routes->post('/create', 'register\RegisterController::create');
+$routes->post('/registerUser', 'Principal::registerUser');
+$routes->post('/findUserMail', 'Principal::findUserMail');
 
-// datos generales 
+//Routes for form general information 
 $routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
 $routes->post('/insertDatosGenerales', 'GeneralInformation::create');
 
-$routes->post('/registerUser', 'Principal::insertUser');

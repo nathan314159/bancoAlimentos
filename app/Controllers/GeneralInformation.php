@@ -33,8 +33,9 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/formGeneralInformation", $routes)) {
+                $arrayFunction = ['function'=>'formulario'];
                 echo view("layout/header");
-                echo view("layout/aside");
+                echo view("layout/aside", $arrayFunction);
                 echo view("generalInformation/body");
                 echo view("layout/footer");
             } else {

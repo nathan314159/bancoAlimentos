@@ -50,8 +50,8 @@
 <!-- Custom scripts for all pages-->
 <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
-<!-- Session control -->
-<script src="<?php echo base_url(); ?>/assets/js/operations/login.js"></script>
+<!-- JS for General Information -->
+<script src="<?php echo base_url(); ?>/assets/js/operations/generalInformation.js"></script>
 
 <!-- Alertify -->
 <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>

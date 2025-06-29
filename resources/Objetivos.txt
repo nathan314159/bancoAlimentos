@@ -1,0 +1,13 @@
+Objetivos a realizar en pagina
+
+28/06/2025
+
+- Validar con JS el registro de usuarios *HECHO*
+- Crear un boton para regresar a login *HECHO*
+- Verificar que el correo electronico y cedula no sea repetido *HECHO*
+- Encriptar contraseña al registrar y desencriptar al hacer login. En la BDD debe estar encriptada. *HECHO*
+- Modificar la vista de formulario general para adaptarla a lo planeado. *HECHO*
+- Hacer funcionar los selects en la vista de formulario general con JS.
+- Verificar que haga insert comprobando que no haya campos vacíos, es decir, en caso de haber campos vacíos debe indicarle al usuario que hay campos vacíos.
+- Añadir parentescos al formulario general.
+- Crear la vista de datos generales para visualizar todos los registros incluyendo los parentescos. Los parentescos deben visualizarse en un botones en una columna llamada Parentescos.

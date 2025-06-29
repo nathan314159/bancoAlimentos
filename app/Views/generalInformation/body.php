@@ -1,422 +1,264 @@
-<!DOCTYPE html>
-<html lang="es">
-
-
-<head>
-
-    <meta charset="UTF-8">
-    <title>Formulario de Datos</title>
-
-    <!-- AlertifyJS CSS -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-    <!-- AlertifyJS JS -->
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-
-    <style>
-        form {
-            max-width: 800px;
-            margin: auto;
-            padding: 1em;
-            background: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        label {
-            display: block;
-            margin-top: 1em;
-            font-weight: bold;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin-top: 0.3em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            margin-top: 2em;
-            padding: 0.7em 1.5em;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-    </style>
-</head>
-
-<body>
-
+<div class="container">
+    <h3 class="mb-4 text-center"><b>Formulario para datos generales y parentescos</b></h3>
+    <hr>
     <form id="datosForm" action="<?php echo base_url('/insertDatosGenerales'); ?>" method="POST">
-        <h2>Formulario de Datos</h2>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="datos_provincia" class="font-weight-bold">Provincia</label>
+                <select class="form-control" id="datos_provincia" name="datos_provincia">
+                    <option value="">-- Selecciona una provincia --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_canton" class="font-weight-bold">Cantón</label>
+                <select class="form-control" id="datos_canton" name="datos_canton">
+                    <option value="">-- Selecciona un cantón --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_parroquias" class="font-weight-bold">Parroquia</label>
+                <select class="form-control" id="datos_parroquias" name="datos_parroquias">
+                    <option value="">-- Selecciona una parroquia --</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_provincia">Provincia</label>
-        <select id="datos_provincia" name="datos_provincia">
-            <option value="">-- Selecciona una provincia --</option>
-        </select>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="datos_comunidades" class="font-weight-bold">Comunidad</label>
+                <input type="text" class="form-control" id="datos_comunidades" name="datos_comunidades">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="datos_barrios" class="font-weight-bold">Barrio</label>
+                <input type="text" class="form-control" id="datos_barrios" name="datos_barrios">
+            </div>
+        </div>
 
-        <label for="datos_canton">Cantón</label>
-        <select id="datos_canton" name="datos_canton">
-            <option value="">-- Selecciona una cantón --</option>
-        </select>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="datos_tipo_viviendas" class="font-weight-bold">Tipo de vivienda</label>
+                <select class="form-control" id="datos_tipo_viviendas" name="datos_tipo_viviendas">
+                    <option value="">-- Selecciona Tipo de Vivienda --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="datos_techos" class="font-weight-bold">Tipo de techo</label>
+                <select class="form-control" id="datos_techos" name="datos_techos">
+                    <option value="">-- Selecciona Tipo de Techo --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="datos_paredes" class="font-weight-bold">Tipo de pared</label>
+                <select class="form-control" id="datos_paredes" name="datos_paredes">
+                    <option value="">-- Selecciona Tipo de Pared --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="datos_pisos" class="font-weight-bold">Tipo de piso</label>
+                <select class="form-control" id="datos_pisos" name="datos_pisos">
+                    <option value="">-- Selecciona Tipo de Piso --</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_parroquias">Parroquia</label>
-        <select id="datos_parroquias" name="datos_parroquias">
-            <option value="">-- Selecciona una parroquias --</option>
-        </select>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="datos_cuarto" class="font-weight-bold">¿Cuántos cuartos?</label>
+                <input type="number" step="1" min="0" class="form-control" id="datos_cuarto" name="datos_cuarto" value="0">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_combustibles_cocina" class="font-weight-bold">Combustible para cocina</label>
+                <select class="form-control" id="datos_combustibles_cocina" name="datos_combustibles_cocina">
+                    <option value="">-- Selecciona Tipo de combustibles cocina --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_servicios_higienicos" class="font-weight-bold">Servicios higiénicos</label>
+                <select class="form-control" id="datos_servicios_higienicos" name="datos_servicios_higienicos">
+                    <option value="">-- Selecciona Tipo de Servicios Higiénicos --</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_comunidades">Comunidades</label>
-        <input type="text" id="datos_comunidades" name="datos_comunidades">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="datos_viviendas" class="font-weight-bold">Tipo de vivienda</label>
+                <select class="form-control" id="datos_viviendas" name="datos_viviendas">
+                    <option value="">-- Selecciona Tipo Vivienda --</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_pago_vivienda" class="font-weight-bold">Pago de la vivienda</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_pago_vivienda" name="datos_pago_vivienda" value="0">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_agua" class="font-weight-bold">Servicio de agua</label>
+                <select class="form-control" id="datos_agua" name="datos_agua">
+                    <option value="">-- Selecciona Tipo Servicio de Agua --</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_barrios">Barrios</label>
-        <input type="text" id="datos_barrios" name="datos_barrios">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="datos_pago_agua" class="font-weight-bold">Pago de agua</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_pago_agua" name="datos_pago_agua" value="0">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_pago_luz" class="font-weight-bold">Pago de luz</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_pago_luz" name="datos_pago_luz" value="0">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="datos_cantidad_luz" class="font-weight-bold">Cantidad de luz consumida</label>
+                <input type="number" class="form-control" id="datos_cantidad_luz" name="datos_cantidad_luz" value="0">
+            </div>
+        </div>
 
-        <label for="datos_tipo_viviendas">Tipo de Vivienda</label>
-        <select id="datos_tipo_viviendas" name="datos_tipo_viviendas">
-            <option value="">-- Selecciona Tipo de Vivienda --</option>
-        </select>
+        <div class="form-row">
+            <!-- Select Sí/No for internet service -->
+            <div class="form-group col-md-4">
+                <label for="datos_internet" class="font-weight-bold">¿Posee servicio de internet?</label>
+                <select class="form-control" id="datos_internet" name="datos_internet" onchange="toggleInternetPago()">
+                    <option value="">-- Seleccione --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
 
-        <label for="datos_techos">Tipo de Techo</label>
-        <select id="datos_techos" name="datos_techos">
-            <option value="">-- Selecciona Tipo de Techo --</option>
-        </select>
+            <!-- Internet payment input (editable if Yes, readonly if No) -->
+            <div class="form-group col-md-4">
+                <label for="datos_pago_internet" class="font-weight-bold">Pago de internet</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_pago_internet" name="datos_pago_internet" value="0" readonly>
+            </div>
 
-        <label for="datos_paredes">Tipo de Pared</label>
-        <select id="datos_paredes" name="datos_paredes">
-            <option value="">-- Selecciona Tipo de Pared --</option>
-        </select>
+            <!-- Select Sí/No for TV cable -->
+            <div class="form-group col-md-4">
+                <label for="datos_tv_cable" class="font-weight-bold">¿Posee TV por cable?</label>
+                <select class="form-control" id="datos_tv_cable" name="datos_tv_cable" onchange="toggleTvPago()">
+                    <option value="">-- Seleccione --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_pisos">Tipo de Piso</label>
-        <select id="datos_pisos" name="datos_pisos">
-            <option value="">-- Selecciona Tipo de Pisos --</option>
-        </select>
+        <div class="form-row">
+            <!-- TV cable payment input (editable if Yes, readonly if No) -->
+            <div class="form-group col-md-4">
+                <label for="datos_tv_pago" class="font-weight-bold">Pago de TV por cable</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_tv_pago" name="datos_tv_pago" value="0" readonly>
+            </div>
 
-        <label for="datos_cuarto">¿Cuantos Cuartos?</label>
-        <input type="text" id="datos_cuarto" name="datos_cuarto">
+            <div class="form-group col-md-4">
+                <label for="datos_eliminacion_basura" class="font-weight-bold">Eliminación de basura</label>
+                <select class="form-control" id="datos_eliminacion_basura" name="datos_eliminacion_basura">
+                    <option value="">-- Selecciona Tipo Eliminación de Basura --</option>
+                </select>
+            </div>
 
-        <label for="datos_combustibles_cocina">Combustible para Cocina</label>
-        <select id="datos_combustibles_cocina" name="datos_combustibles_cocina">
-            <option value="">-- Selecciona Tipo de combustibles cocina --</option>
-        </select>
+            <div class="form-group col-md-4">
+                <label for="datos_lugares_mayor_frecuencia_viveres" class="font-weight-bold">Lugares frecuentes de compra de víveres</label>
+                <select class="form-control" id="datos_lugares_mayor_frecuencia_viveres" name="datos_lugares_mayor_frecuencia_viveres">
+                    <option value="">-- Selecciona Donde Compra los Víveres --</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_servicios_higienicos">Servicios Higiénicos</label>
-        <select id="datos_servicios_higienicos" name="datos_servicios_higienicos">
-            <option value="">-- Selecciona Tipo de Servicios Higiénicos --</option>
-        </select>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="datos_gastos_viveres_alimentacion" class="font-weight-bold">Gastos en alimentación</label>
+                <input type="number" step="0.01" min="0" class="form-control" id="datos_gastos_viveres_alimentacion" name="datos_gastos_viveres_alimentacion" value="0">
+            </div>
 
-        <label for="datos_viviendas">Tipo de Viviendas</label>
-        <select id="datos_viviendas" name="datos_viviendas">
-            <option value="">-- Selecciona Tipo Vivienda --</option>
-        </select>
+            <div class="form-group col-md-3">
+                <label for="datos_medio_transporte" class="font-weight-bold">Medio de transporte</label>
+                <select class="form-control" id="datos_medio_transporte" name="datos_medio_transporte">
+                    <option value="">-- Selecciona Tipo Medio de Transporte --</option>
+                </select>
+            </div>
 
-        <label for="datos_pago_vivienda">Pago por Vivienda</label>
-        <input type="text" id="datos_pago_vivienda" name="datos_pago_vivienda">
+            <div class="form-group col-md-3">
+                <label for="datos_estado_transporte" class="font-weight-bold">Estado del transporte</label>
+                <select class="form-control" id="datos_estado_transporte" name="datos_estado_transporte">
+                    <option value="">-- Selecciona el Estado del Transporte --</option>
+                </select>
+            </div>
 
-        <label for="datos_agua">Servicio de Agua</label>
-        <select id="datos_agua" name="datos_agua">
-            <option value="">-- Selecciona Tipo Servicio de Agua --</option>
-        </select>
+            <!-- Vehicles table -->
+            <div class="form-group col-md-12 mt-3">
+                <label class="font-weight-bold">Vehículos</label>
+                <table class="table table-bordered" id="tablaVehiculos">
+                    <thead>
+                        <tr>
+                            <th>Tipo de vehículo</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be added dynamically -->
+                    </tbody>
+                </table>
+                <!-- Inputs to add vehicles -->
+                <div class="form-row">
+                    <div class="col-md-5">
+                        <input type="text" id="inputTipoVehiculo" class="form-control" placeholder="Tipo de vehículo">
+                    </div>
+                    <div class="col-md-5">
+                        <select id="selectEstadoVehiculo" class="form-control">
+                            <option value="">-- Estado --</option>
+                            <option value="Bueno">Bueno</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Malo">Malo</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-success" onclick="agregarVehiculo()">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <label for="datos_pago_agua">Pago de Agua</label>
-        <input type="text" id="datos_pago_agua" name="datos_pago_agua">
+        <div class="form-row">
+            <!-- Select Sí/No for terrenos -->
+            <div class="form-group col-md-4">
+                <label for="datos_terrenos" class="font-weight-bold">¿Posee terrenos?</label>
+                <select class="form-control" id="datos_terrenos" name="datos_terrenos">
+                    <option value="">-- Seleccione --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
 
-        <label for="datos_pago_luz">Pago de Luz</label>
-        <input type="text" id="datos_pago_luz" name="datos_pago_luz">
+            <!-- Select Sí/No for celular -->
+            <div class="form-group col-md-4">
+                <label for="datos_celular" class="font-weight-bold">¿Posee celular?</label>
+                <select class="form-control" id="datos_celular" name="datos_celular" onchange="toggleCantidadCelulares()">
+                    <option value="">-- Seleccione --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
 
-        <label for="datos_cantidad_luz">Cantidad de Luz Consumida</label>
-        <input type="number" id="datos_cantidad_luz" name="datos_cantidad_luz">
+            <!-- Number of cellphones (editable if Yes, readonly if No) -->
+            <div class="form-group col-md-4">
+                <label for="datos_cantidad_celulare" class="font-weight-bold">Cantidad de celulares</label>
+                <input type="number" step="1" min="0" class="form-control" id="datos_cantidad_celulare" name="datos_cantidad_celulare" value="0" readonly>
+            </div>
+        </div>
 
-        <label for="datos_internet">Servicio de Internet</label>
-        <input type="text" id="datos_internet" name="datos_internet">
+        <div class="form-row">
+            <!-- Select Sí/No for celular plan -->
+            <div class="form-group col-md-6">
+                <label for="datos_plan_celular" class="font-weight-bold">¿Tiene plan de celular?</label>
+                <select class="form-control" id="datos_plan_celular" name="datos_plan_celular">
+                    <option value="">-- Seleccione --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="datos_pago_internet">Pago de Internet</label>
-        <input type="text" id="datos_pago_internet" name="datos_pago_internet">
-
-        <label for="datos_tv_cable">TV por Cable</label>
-        <input type="text" id="datos_tv_cable" name="datos_tv_cable">
-
-        <label for="datos_tv_pago">TV de Pago</label>
-        <input type="text" id="datos_tv_pago" name="datos_tv_pago">
-
-        <label for="datos_eliminacion_basura">Eliminación de Basura</label>
-        <select id="datos_eliminacion_basura" name="datos_eliminacion_basura">
-            <option value="">-- Selecciona Tipo Eliminación de Basura --</option>
-        </select>
-
-        <label for="datos_lugares_mayor_frecuencia_viveres">Lugares Frecuentes de Compra de Víveres</label>
-        <select id="datos_lugares_mayor_frecuencia_viveres" name="datos_lugares_mayor_frecuencia_viveres">
-            <option value="">-- Selecciona Donde Compra los Víveres --</option>
-        </select>
-
-        <label for="datos_gastos_viveres_alimentacion">Gastos en Alimentación</label>
-        <input type="text" id="datos_gastos_viveres_alimentacion" name="datos_gastos_viveres_alimentacion">
-
-        <label for="datos_medio_transporte">Medio de Transporte</label>
-        <select id="datos_medio_transporte" name="datos_medio_transporte">
-            <option value="">-- Selecciona Tipo Medio de Transposte --</option>
-        </select>
-
-        <label for="datos_estado_transporte">Estado del Transporte</label>
-        <select id="datos_estado_transporte" name="datos_estado_transporte">
-            <option value="">-- Selecciona el Estado del Transporte --</option>
-        </select>
-
-        <label for="datos_terrenos">¿Posee Terrenos?</label>
-        <input type="text" id="datos_terrenos" name="datos_terrenos">
-
-        <label for="datos_celular">¿Posee Celular?</label>
-        <input type="text" id="datos_celular" name="datos_celular">
-
-        <label for="datos_cantidad_celulare">Cantidad de Celulares</label>
-        <input type="number" id="datos_cantidad_celulare" name="datos_cantidad_celulare">
-
-        <label for="datos_plan_celular">Plan de Celular</label>
-        <input type="text" id="datos_plan_celular" name="datos_plan_celular">
-
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
     </form>
-
-</body>
-<script>
-    const datos_provincia = document.getElementById("datos_provincia");
-    const datos_canton = document.getElementById("datos_canton");
-    const datos_parroquias = document.getElementById("datos_parroquias");
-    const datos_comunidades = document.getElementById("datos_comunidades");
-    const datos_barrios = document.getElementById("datos_barrios");
-    const datos_tipo_viviendas = document.getElementById("datos_tipo_viviendas");
-    const datos_techos = document.getElementById("datos_techos");
-    const datos_paredes = document.getElementById("datos_paredes");
-    const datos_pisos = document.getElementById("datos_pisos");
-    const datos_cuarto = document.getElementById("datos_cuarto");
-    const datos_combustibles_cocina = document.getElementById("datos_combustibles_cocina");
-    const datos_servicios_higienicos = document.getElementById("datos_servicios_higienicos");
-    const datos_viviendas = document.getElementById("datos_viviendas");
-    const datos_pago_vivienda = document.getElementById("datos_pago_vivienda");
-    const datos_agua = document.getElementById("datos_agua");
-    const datos_pago_agua = document.getElementById("datos_pago_agua");
-    const datos_pago_luz = document.getElementById("datos_pago_luz");
-    const datos_cantidad_luz = document.getElementById("datos_cantidad_luz");
-    const datos_internet = document.getElementById("datos_internet");
-    const datos_pago_internet = document.getElementById("datos_pago_internet");
-    const datos_tv_cable = document.getElementById("datos_tv_cable");
-    const datos_tv_pago = document.getElementById("datos_tv_pago");
-    const datos_eliminacion_basura = document.getElementById("datos_eliminacion_basura");
-    const datos_lugares_mayor_frecuencia_viveres = document.getElementById("datos_lugares_mayor_frecuencia_viveres");
-    const datos_gastos_viveres_alimentacion = document.getElementById("datos_gastos_viveres_alimentacion");
-    const datos_medio_transporte = document.getElementById("datos_medio_transporte");
-    const datos_estado_transporte = document.getElementById("datos_estado_transporte");
-    const datos_terrenos = document.getElementById("datos_terrenos");
-    const datos_celular = document.getElementById("datos_celular");
-    const datos_cantidad_celulare = document.getElementById("datos_cantidad_celulare");
-    const datos_plan_celular = document.getElementById("datos_plan_celular");
-
-    document.getElementById("datosForm").addEventListener("submit", function(e) {
-        e.preventDefault(); // Stop the form from submitting
-
-        if (datos_provincia.value === "") {
-            alertify.error("Por favor selecciona una provincia");
-            datos_provincia.focus();
-            return;
-        }
-
-        if (datos_canton.value === "") {
-            alertify.error("Por favor selecciona un cantón");
-            datos_canton.focus();
-            return;
-        }
-
-        if (datos_parroquias.value == "") {
-            alertify.error("Por favor selecciona una parroquia");
-            datos_parroquias.focus();
-            return;
-        }
-
-        if (datos_comunidades.value.trim() === "") {
-            alertify.error("Por favor escribe una comunidad");
-            datos_comunidades.focus();
-            return;
-        }
-
-        if (datos_barrios.value.trim() === "") {
-            alertify.error("Por favor escribe un barrio");
-            datos_barrios.focus();
-            return;
-        }
-
-
-
-        if (datos_tipo_viviendas.value.trim() === "") {
-            alertify.error("Por favor escribe el tipo vivienda");
-            datos_tipo_viviendas.focus();
-            return;
-        }
-
-        if (datos_techos.value.trim() === "") {
-            alertify.error("Por favor escribe tipo de techo");
-            datos_techos.focus();
-            return;
-        }
-
-        if (datos_paredes.value.trim() === "") {
-            alertify.error("Por favor escribe tipo de pared");
-            datos_paredes.focus();
-            return;
-        }
-
-        if (datos_pisos.value.trim() === "") {
-            alertify.error("Por favor escribe un tipo de piso");
-            datos_pisos.focus();
-            return;
-        }
-
-        if (isNaN(datos_cuarto.value) || parseInt(datos_cuarto.value) <= 0) {
-            alertify.error("Por favor ingresa un número válido de cuartos");
-            datos_cuarto.focus();
-            return;
-        }
-
-        if (datos_combustibles_cocina.value.trim() === "") {
-            alertify.error("Por favor escribe un tipo de combustible");
-            datos_combustibles_cocina.focus();
-            return;
-        }
-
-        if (datos_servicios_higienicos.value.trim() === "") {
-            alertify.error("Por favor escribe un servicio higienico");
-            datos_servicios_higienicos.focus();
-            return;
-        }
-
-        if (datos_viviendas.value.trim() === "") {
-            alertify.error("Por favor escribe los datos de la vivienda");
-            datos_viviendas.focus();
-            return;
-        }
-
-        if (datos_pago_vivienda.value.trim() === "") {
-            alertify.error("Por favor escribe el pago de la vivienda");
-            datos_pago_vivienda.focus();
-            return;
-        }
-
-        if (datos_agua.value.trim() === "") {
-            alertify.error("Por favor escribe los datos de agua");
-            datos_agua.focus();
-            return;
-        }
-
-        if (datos_pago_agua.value.trim() === "") {
-            alertify.error("El campo 'Pago de Agua' es obligatorio");
-            datos_pago_agua.focus();
-            return;
-        }
-
-        if (datos_pago_luz.value.trim() === "") {
-            alertify.error("Por favor escribe los datos de la luz");
-            datos_pago_luz.focus();
-            return;
-        }
-
-        if (isNaN(datos_cantidad_luz.value) || parseInt(datos_cantidad_luz.value) <= 0) {
-            alertify.error("Por favor ingresa una cantidad válida de luz consumida");
-            datos_cantidad_luz.focus();
-            return;
-        }
-
-
-        // nuevos 
-        // ingresos 
-        // de datos
-
-        if (datos_internet.value.trim() === "") {
-            alertify.error("Por favor escribe datos del internet");
-            datos_internet.focus();
-            return;
-        }
-
-        if (datos_pago_internet.value.trim() === "") {
-            alertify.error("Por favor escribe la cantidad del pago de internet");
-            datos_pago_internet.focus();
-            return;
-        }
-
-        if (datos_tv_cable.value.trim() === "") {
-            alertify.error("Por favor escribe los datos de tv cable");
-            datos_tv_cable.focus();
-            return;
-        }
-
-        if (datos_tv_pago.value.trim() === "") {
-            alertify.error("Por favor escribe la cantidad de pagos tv");
-            datos_tv_pago.focus();
-            return;
-        }
-
-        if (datos_eliminacion_basura.value.trim() === "") {
-            alertify.error("Por favor escribe donde se elimina la basura");
-            datos_eliminacion_basura.focus();
-            return;
-        }
-
-        if (datos_lugares_mayor_frecuencia_viveres.value.trim() === "") {
-            alertify.error("Por favor escribe dónde frecuenta para hacer las compras del hogar");
-            datos_lugares_mayor_frecuencia_viveres.focus();
-            return;
-        }
-
-        if (datos_gastos_viveres_alimentacion.value.trim() === "") {
-            alertify.error("Por favor escribe cuanto sale en compras");
-            datos_gastos_viveres_alimentacion.focus();
-            return;
-        }
-
-        if (datos_medio_transporte.value.trim() === "") {
-            alertify.error("Por favor escribe el medio de transporte que usa");
-            datos_medio_transporte.focus();
-            return;
-        }
-
-        if (datos_estado_transporte.value.trim() === "") {
-            alertify.error("Por favor escribe el estado de su transporte");
-            datos_estado_transporte.focus();
-            return;
-        }
-
-        if (datos_terrenos.value.trim() === "") {
-            alertify.error("Por favor escribe si tiene terrenos");
-            datos_terrenos.focus();
-            return;
-        }
-
-        if (datos_celular.value.trim() === "") {
-            alertify.error("Por favor escribe si tienes celular");
-            datos_celular.focus();
-            return;
-        }
-
-        if (isNaN(datos_cantidad_celulare.value) || parseInt(datos_cantidad_celulare.value) <= 0) {
-            alertify.error("Por favor ingresa una cantidad válida de celulares");
-            datos_cantidad_celulare.focus();
-            return;
-        }
-
-
-        if (datos_plan_celular.value.trim() === "") {
-            alertify.error("Por favor escribe que plan de celular tiene");
-            datos_plan_celular.focus();
-            return;
-        }
-
-        // If all validations pass:
-        alertify.success("Formulario válido, enviando...");
-        this.submit(); // Now send the form
-
-
-    });
-</script>
-
-</html>
+</div>

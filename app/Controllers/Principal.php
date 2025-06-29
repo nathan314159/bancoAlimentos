@@ -50,36 +50,58 @@ class Principal extends BaseController
     public function verifyUser()
     {
         try {
-            $user = $this->users->where([
-                'users_email' => $this->request->getPost('users_email'),
-                'users_contrasenia' => $this->request->getPost('users_contrasenia'),
-                'users_estado' => 1
-            ])->first();
+            $user = $this->users
+                ->where('users_email', $this->request->getPost('users_email'))
+                ->where('users_estado', 1)
+                ->first();
 
-            echo $user != null ? 1 : 0;
+            if ($user && password_verify($this->request->getPost('users_contrasenia'), $user['users_contrasenia'])) {
+                echo 1;
+            } else {
+                echo 0;
+            }
         } catch (\Exception $e) {
-            echo 'Error en verifyUser: ' . $e->getMessage(); //Indica el mensaje exacto de error
+            echo 'Error en verifyUser: ' . $e->getMessage();
         }
     }
+
 
 
     // Basic function for enter user to the system
     public function enterUser()
     {
-        $user = $this->users->where(['users_email' => $this->request->getPost('users_email'), 'users_contrasenia' => $this->request->getPost('users_contrasenia')])->first();
-        print_r($user);
-        if ($user != null) {
-            $this->session->set(sessionVariables($this->users->searchSessionVariables($user['id_users'])));
+        $email = $this->request->getPost('users_email');
+        $password = $this->request->getPost('users_contrasenia');
+
+        // Search email
+        $user = $this->users
+            ->where('users_email', $email)
+            ->first();
+
+        // Verify user and password
+        if ($user && password_verify($password, $user['users_contrasenia'])) {
+            // Success login: Enter user
+            $this->session->set(
+                sessionVariables(
+                    $this->users->searchSessionVariables($user['id_users'])
+                )
+            );
+
             redirectUser($this->users->searchRolUser($user['id_users']));
         } else {
-            echo "<script>if (window.history.replaceState) { // verificamos disponibilidad
+            // Failed login: clean browsing history and return to login
+            echo "<script>
+            if (window.history.replaceState) {
                 window.history.replaceState(null, null, window.location.href);
-            }</script>";
+            }
+            </script>";
 
             echo view('login/body.php');
         }
     }
 
+
+    //Function for close session
     public function logout()
     {
         echo "<script>if (window.history.replaceState) { // verificamos disponibilidad
@@ -108,21 +130,38 @@ class Principal extends BaseController
         echo 'welcome ' . session('rol_nombre');
     }
 
-    public function insertUser(){
+
+    //Find repeated mail when create account
+    public function findUserMail()
+    {
+        try {
+            $user = $this->users
+                ->where('users_email', $this->request->getPost('users_email'))
+                ->orWhere('users_cedula', $this->request->getPost('users_cedula'))
+                ->first();
+
+            echo $user != null ? 0 : 1;
+        } catch (\Exception $e) {
+            echo 'Error en verifyUser: ' . $e->getMessage(); //Indica el mensaje exacto de error
+        }
+    }
+
+    // Register user
+    public function registerUser()
+    {
         $user = [
-            'users_nombre'        => $this->request->getPost("users_nombre"),
-            'users_nombreUsuario' => $this->request->getPost("users_nombreUsuario"),
-            'users_apellido'      => $this->request->getPost("users_apellido"),
-            'users_cedula'        => $this->request->getPost("users_cedula"),
-            'users_fecha_de_nacimiento'        => $this->request->getPost("users_fecha_de_nacimiento"),
-            'users_email'         => $this->request->getPost("users_email"),
-            'users_telefono'      => $this->request->getPost("users_telefono"),
-            'users_contrasenia'   => $this->request->getPost("users_contrasenia"),
+            'users_nombre'              => $this->request->getPost("users_nombre"),
+            'users_nombreUsuario'       => $this->request->getPost("users_nombreUsuario"),
+            'users_apellido'            => $this->request->getPost("users_apellido"),
+            'users_cedula'              => $this->request->getPost("users_cedula"),
+            'users_fecha_de_nacimiento' => $this->request->getPost("users_fecha_de_nacimiento"),
+            'users_email'               => $this->request->getPost("users_email"),
+            'users_telefono'            => $this->request->getPost("users_telefono"),
+            'users_contrasenia'         => password_hash($this->request->getPost("users_contrasenia"), PASSWORD_DEFAULT), // store the hashed password
         ];
 
         $this->user_rol->insertUserRolDefault($this->users->registerUser($user));
+
+        principalPage();
     }
-
-
-
 }

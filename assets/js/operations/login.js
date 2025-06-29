@@ -1,3 +1,5 @@
+//AJAX for login user
+
 var verifier = 0;
 function enterUser() {
   let users_email = $("#users_email").val();

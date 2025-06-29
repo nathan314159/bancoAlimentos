@@ -94,8 +94,6 @@ class UsersMod extends Model
         return $query->getRowArray(); // Return a single user as an associative array
     }
 
-
-
     public function registerUser($userInfo)
     {
         $db = \Config\Database::connect();
