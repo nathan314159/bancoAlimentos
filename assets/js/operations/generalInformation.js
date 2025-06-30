@@ -128,21 +128,23 @@ function loadAllParishes() {
 // Extraer código del cantón a partir del nombre del cantón:
 function cantonToCode(selectedCanton) {
   // Busca la primera parroquia que tenga ese cantón y devuelve su código
-  const p = allParishes.find(parroquia => {
+  const p = allParishes.find((parroquia) => {
     // Extraer parte del código que corresponde al cantón, ejemplo 'PARR-IB-URB' -> 'IB'
-    const codigoParts = parroquia.itc_codigo.split('-');
+    const codigoParts = parroquia.itc_codigo.split("-");
     const cantonCode = codigoParts[1]; // índice 1 es el código cantón
     // Verificar si el nombre del cantón está en la descripción (minusculas)
-    return parroquia.itc_descripcion.toLowerCase().includes(selectedCanton.toLowerCase());
+    return parroquia.itc_descripcion
+      .toLowerCase()
+      .includes(selectedCanton.toLowerCase());
   });
   if (p) {
-    return p.itc_codigo.split('-')[1]; // devolver código cantón encontrado
+    return p.itc_codigo.split("-")[1]; // devolver código cantón encontrado
   }
   return null;
 }
 
 function filterParishes() {
-  const selectedCanton = $("#datos_canton").val(); // ej: "Ibarra"
+  const selectedCanton = $("#datos_canton").val(); // Ej: "Ibarra", "Tulcán"
   const tipoParroquia = $("#datos_tipo_parroquia").val(); // "urbano" o "rural"
 
   if (!selectedCanton || !tipoParroquia) {
@@ -152,89 +154,27 @@ function filterParishes() {
     return;
   }
 
-  const cantonCode = cantonToCode(selectedCanton);
-  if (!cantonCode) {
-    $("#datos_parroquias").html(
-      "<option disabled selected value=''>-- Cantón no encontrado --</option>"
-    );
-    return;
-  }
-
-  const tipoParroquiaCod =
-    tipoParroquia === "urbano" ? "URB" : tipoParroquia === "rural" ? "RURAL" : "";
-
-  const filtered = allParishes.filter(p => {
-    const codigo = p.itc_codigo.toUpperCase();
-    return codigo === `PARR-${cantonCode}-${tipoParroquiaCod}`;
-  });
-
-  let options = "<option disabled selected value=''>-- Selecciona una parroquia --</option>";
-  filtered.forEach(p => {
-    options += `<option value="${p.id_item}">${p.itc_nombre}</option>`;
-  });
-
-  $("#datos_parroquias").html(options);
-}
-
-
-// Filter parishes based on selected canton and tipo parroquia
-/*function filterParishes() {
-  const selectedCanton = $("#datos_canton").val(); // Ej: "Tulcán", "San Gabriel"
-  const tipoParroquia = $("#datos_tipo_parroquia").val(); // "urbano" o "rural"
-
-  if (!selectedCanton || !tipoParroquia) {
-    $("#datos_parroquias").html(
-      "<option disabled selected value=''>-- Selecciona una parroquia --</option>"
-    );
-    return;
-  }
-
-  // Mapa de cantones con nombres EXACTOS que vienen del select (incluyendo tildes y espacios)
-  const cantonMap = {
-    // Imbabura
-    Ibarra: "IB",
-    Otavalo: "OT",
-    Cotacachi: "CO",
-    "Antonio Ante": "AA", // corregí código AN a AA porque en tus datos es AA
-    Pimampiro: "PI",
-    Urcuquí: "UR",
-
-    // Carchi
-    Tulcán: "TU",
-    Bolívar: "BO",
-    Espejo: "ES",
-    Montúfar: "MO",
-    "San Gabriel": "SG",
-  };
-
-  const cantonPrefix = cantonMap[selectedCanton] || "";
-  if (!cantonPrefix) {
-    $("#datos_parroquias").html(
-      "<option disabled selected value=''>-- Cantones no disponibles --</option>"
-    );
-    return;
-  }
-
-  const tipoParroquiaCod =
-    tipoParroquia === "urbano"
-      ? "URB"
-      : tipoParroquia === "rural"
-      ? "RURAL"
-      : "";
+  // Normalize valores a minúsculas para comparar de forma segura
+  const cantonLower = selectedCanton.toLowerCase();
+  const tipoLower =
+  tipoParroquia.toLowerCase() === "urbano" ? "urbana" : "rural";
 
   const filtered = allParishes.filter((p) => {
-    const codigo = p.itc_codigo.toUpperCase();
-    return codigo.includes(`PARR-${cantonPrefix}-${tipoParroquiaCod}`);
+    const desc = p.itc_descripcion?.toLowerCase() || "";
+    return (
+      desc.includes(`parroquia ${tipoLower}`) && desc.includes(cantonLower)
+    );
   });
 
   let options =
     "<option disabled selected value=''>-- Selecciona una parroquia --</option>";
   filtered.forEach((p) => {
+    console.log(p)
     options += `<option value="${p.id_item}">${p.itc_nombre}</option>`;
   });
 
   $("#datos_parroquias").html(options);
-}*/
+}
 
 // Toggle internet payment input editable or readonly
 function toggleInternetPago() {
