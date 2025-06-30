@@ -9,19 +9,31 @@
                     <option value="">-- Selecciona una provincia --</option>
                 </select>
             </div>
+
             <div class="form-group col-md-4">
                 <label for="datos_canton" class="font-weight-bold">Cantón</label>
                 <select class="form-control" id="datos_canton" name="datos_canton">
-                    <option value="">-- Selecciona un cantón --</option>
+                    <option value="" disabled selected>-- Selecciona un cantón --</option>
                 </select>
             </div>
+
+            <!-- Nuevo select: Tipo de Parroquia -->
+            <div class="form-group col-md-4">
+                <label for="datos_tipo_parroquia" class="font-weight-bold">Tipo de Parroquia</label>
+                <select class="form-control" id="datos_tipo_parroquia" name="datos_tipo_parroquia" disabled>
+                    <option value="" disabled selected>-- Selecciona un cantón --</option>
+                </select>
+            </div>
+
             <div class="form-group col-md-4">
                 <label for="datos_parroquias" class="font-weight-bold">Parroquia</label>
                 <select class="form-control" id="datos_parroquias" name="datos_parroquias">
-                    <option value="">-- Selecciona una parroquia --</option>
+                    <option value="" disabled selected>-- Selecciona una parroquia --</option>
                 </select>
             </div>
         </div>
+
+        <hr>
 
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -259,6 +271,6 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        <button type="button" class="btn btn-primary mt-3" onclick="selectProvinces();">Enviar</button>
     </form>
 </div>

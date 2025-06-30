@@ -7,6 +7,7 @@ use App\Models\GeneralInformationMod;
 use App\Models\UsersMod;
 use App\Models\RolAccessMod;
 use App\Models\UserRolMod;
+use App\Models\ItemCatalogMod;
 
 class GeneralInformation extends BaseController
 {
@@ -14,6 +15,7 @@ class GeneralInformation extends BaseController
     protected $users;
     protected $rol_access;
     protected $user_rol;
+    protected $item_catalog;
 
 
     public function __construct()
@@ -23,6 +25,7 @@ class GeneralInformation extends BaseController
         $this->rol_access = new RolAccessMod();
         $this->user_rol = new UserRolMod();
         $this->form = new GeneralInformationMod();
+        $this->item_catalog = new ItemCatalogMod();
     }
 
     public function formGeneralInformation()
@@ -33,7 +36,7 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/formGeneralInformation", $routes)) {
-                $arrayFunction = ['function'=>'formulario'];
+                $arrayFunction = ['function' => 'formulario'];
                 echo view("layout/header");
                 echo view("layout/aside", $arrayFunction);
                 echo view("generalInformation/body");
@@ -88,4 +91,51 @@ class GeneralInformation extends BaseController
     }
 
 
+    public function getProvinces()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getProvinces", $routes)) {
+                $provinces = $this->item_catalog->obtainActiveProvinces();
+                echo json_encode($provinces);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getCities()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getCities", $routes)) {
+                $cities = $this->item_catalog->obtainActiveCities();
+                echo json_encode($cities);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getParishes()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getCities", $routes)) {
+                $parishes = $this->item_catalog->obtainActiveParishes();
+                echo json_encode($parishes);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
 }
