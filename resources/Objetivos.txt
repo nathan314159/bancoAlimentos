@@ -7,7 +7,12 @@ Objetivos a realizar en pagina
 - Verificar que el correo electronico y cedula no sea repetido *HECHO*
 - Encriptar contraseña al registrar y desencriptar al hacer login. En la BDD debe estar encriptada. *HECHO*
 - Modificar la vista de formulario general para adaptarla a lo planeado. *HECHO*
-- Hacer funcionar los selects en la vista de formulario general con JS. *EN PROCESO*
+- Hacer funcionar los selects en la vista de formulario general con JS. *HECHO*
 - Verificar que haga insert comprobando que no haya campos vacíos, es decir, en caso de haber campos vacíos debe indicarle al usuario que hay campos vacíos.
 - Añadir parentescos al formulario general.
 - Crear la vista de datos generales para visualizar todos los registros incluyendo los parentescos. Los parentescos deben visualizarse en un botones en una columna llamada Parentescos.
+
+AGREGAR LO SIGUIENTE
+
+- Campo en tabla tbl_datos_generales llamada datos_tipo_parroquias
+- Campos para registrar la persona atendida en tbl_datos_generales

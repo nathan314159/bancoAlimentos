@@ -27,7 +27,7 @@
 
             <div class="form-group col-md-4">
                 <label for="datos_parroquias" class="font-weight-bold">Parroquia</label>
-                <select class="form-control" id="datos_parroquias" name="datos_parroquias">
+                <select class="form-control" id="datos_parroquias" name="datos_parroquias" disabled>
                     <option value="" disabled selected>-- Selecciona una parroquia --</option>
                 </select>
             </div>
@@ -94,9 +94,9 @@
 
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="datos_viviendas" class="font-weight-bold">Tipo de vivienda</label>
+                <label for="datos_viviendas" class="font-weight-bold">Vivienda</label>
                 <select class="form-control" id="datos_viviendas" name="datos_viviendas">
-                    <option value="">-- Selecciona Tipo Vivienda --</option>
+                    <option value="">-- Selecciona Vivienda --</option>
                 </select>
             </div>
             <div class="form-group col-md-4">
@@ -213,15 +213,16 @@
                 </table>
                 <!-- Inputs to add vehicles -->
                 <div class="form-row">
-                    <div class="col-md-5">
-                        <input type="text" id="inputTipoVehiculo" class="form-control" placeholder="Tipo de vehículo">
+                    <div class="form-group col-md-5">
+                        <label for="datos_medio_transporte2" class="font-weight-bold">Tipo de vehículo</label>
+                        <select class="form-control" id="datos_medio_transporte2" name="datos_medio_transporte2">
+                            <option value="">-- Selecciona Tipo Medio de Transporte --</option>
+                        </select>
                     </div>
-                    <div class="col-md-5">
-                        <select id="selectEstadoVehiculo" class="form-control">
-                            <option value="">-- Estado --</option>
-                            <option value="Bueno">Bueno</option>
-                            <option value="Regular">Regular</option>
-                            <option value="Malo">Malo</option>
+                    <div class="form-group col-md-5">
+                        <label for="datos_estado_transporte2" class="font-weight-bold">Estado del transporte</label>
+                        <select class="form-control" id="datos_estado_transporte2" name="datos_estado_transporte2">
+                            <option value="">-- Selecciona el Estado del Transporte --</option>
                         </select>
                     </div>
                     <div class="col-md-2">

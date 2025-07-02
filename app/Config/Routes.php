@@ -25,4 +25,15 @@ $routes->post('/insertDatosGenerales', 'GeneralInformation::create');
 $routes->get('/getProvinces', 'GeneralInformation::getProvinces');
 $routes->get('/getCities', 'GeneralInformation::getCities');
 $routes->get('/getParishes', 'GeneralInformation::getParishes');
-
+$routes->get('/getTypesHousing', 'GeneralInformation::getTypesHousing');
+$routes->get('/getRoofTypes', 'GeneralInformation::getRoofTypes');
+$routes->get('/getWallTypes', 'GeneralInformation::getWallTypes');
+$routes->get('/getFloorTypes', 'GeneralInformation::getFloorTypes');
+$routes->get('/getCookingFuel', 'GeneralInformation::getCookingFuel');
+$routes->get('/getHygienicServices', 'GeneralInformation::getHygienicServices');
+$routes->get('/getHousing', 'GeneralInformation::getHousing');
+$routes->get('/getWaterServices', 'GeneralInformation::getWaterServices');
+$routes->get('/getGarbageRemoval', 'GeneralInformation::getGarbageRemoval');
+$routes->get('/getFrequentShopPlaces', 'GeneralInformation::getFrequentShopPlaces');
+$routes->get('/getVehiclesTypes', 'GeneralInformation::getVehiclesTypes');
+$routes->get('/getTransportStatus', 'GeneralInformation::getTransportStatus');

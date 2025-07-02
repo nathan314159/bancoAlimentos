@@ -96,7 +96,7 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/getProvinces", $routes)) {
-                $provinces = $this->item_catalog->obtainActiveProvinces();
+                $provinces = $this->item_catalog->obtainActiveSelect('PROV');
                 echo json_encode($provinces);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
@@ -112,7 +112,7 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/getCities", $routes)) {
-                $cities = $this->item_catalog->obtainActiveCities();
+                $cities = $this->item_catalog->obtainActiveSelect('CANT');
                 echo json_encode($cities);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
@@ -128,8 +128,201 @@ class GeneralInformation extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/getCities", $routes)) {
-                $parishes = $this->item_catalog->obtainActiveParishes();
+                $parishes = $this->item_catalog->obtainActiveSelect('PARR');
                 echo json_encode($parishes);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+
+    public function getTypesHousing()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getTypesHousing", $routes)) {
+                $typesHousing = $this->item_catalog->obtainActiveSelect('TIPOVIVIENDA');
+                echo json_encode($typesHousing);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getRoofTypes()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getRoofTypes", $routes)) {
+                $roofTypes = $this->item_catalog->obtainActiveSelect('TIPOTECHO');
+                echo json_encode($roofTypes);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getWallTypes()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getWallTypes", $routes)) {
+                $wallTypes = $this->item_catalog->obtainActiveSelect('TIPOPARED');
+                echo json_encode($wallTypes);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getFloorTypes()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getFloorTypes", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('TIPOPISO');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getCookingFuel()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getCookingFuel", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('COMB-COCINA');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getHygienicServices()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getHygienicService", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('SERV-HIG');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getHousing()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getHousing", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('ALOJAMIENTO');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getWaterServices()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getWaterServices", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('SERV-AGUA');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getGarbageRemoval()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getGarbageRemoval", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('ELM-BAS');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getFrequentShopPlaces()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getFrequentShopPlaces", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('LUG-FREC-COMPRA');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getVehiclesTypes()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getVehiclesTypes", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('TIP-VEHICULOS');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+        
+    }
+
+    public function getTransportStatus()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getTransportStatus", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('EST-TRANSPORTE');
+                echo json_encode($itemSelected);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
             }

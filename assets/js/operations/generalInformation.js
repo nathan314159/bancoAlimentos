@@ -3,21 +3,33 @@ let allParishes = []; // Store all parishes globally
 $(document).ready(function () {
   selectProvinces();
   loadAllParishes();
+  selectTypesHousing();
+  selectRoofTypes();
+  selectWallTypes();
+  selectFloorTypes();
+  selectCookingFuel();
+  selectHygienicServices();
+  selectHousing();
+  selectWaterServices();
+  selectGarbageRemoval();
+  selectFrequentShopPlaces();
+  selectVehiclesTypes();
+  selectTransportStatus();
 
   // When province changes, load cantons
   $("#datos_provincia").on("change", function () {
     let selectedProvinciaNombre = $(this).find("option:selected").text().trim();
     selectCitiesByProvincia(selectedProvinciaNombre);
 
-    // Reset and disable tipo parroquia
+    // Reset y desactiva tipo de parroquia
     $("#datos_tipo_parroquia")
       .prop("disabled", true)
       .html("<option value=''>-- Selecciona tipo de parroquia --</option>");
 
-    // Reset parroquias
-    $("#datos_parroquias").html(
-      "<option value=''>-- Selecciona una parroquia --</option>"
-    );
+    // Reset y desactiva parroquias
+    $("#datos_parroquias")
+      .prop("disabled", true)
+      .html("<option value=''>-- Selecciona una parroquia --</option>");
   });
 
   // When canton changes, show tipo parroquia options
@@ -25,23 +37,21 @@ $(document).ready(function () {
     const tipoParroquia = $("#datos_tipo_parroquia");
 
     if ($(this).val() !== "") {
-      tipoParroquia.prop("disabled", false);
-      tipoParroquia.html(`
-        <option value="">-- Selecciona tipo de parroquia --</option>
-        <option value="urbano">Urbano</option>
-        <option value="rural">Rural</option>
-      `);
+      tipoParroquia.prop("disabled", false).html(`
+      <option value="">-- Selecciona tipo de parroquia --</option>
+      <option value="urbano">Urbano</option>
+      <option value="rural">Rural</option>
+    `);
     } else {
-      tipoParroquia.prop("disabled", true);
-      tipoParroquia.html(
-        "<option value=''>-- Selecciona tipo de parroquia --</option>"
-      );
+      tipoParroquia
+        .prop("disabled", true)
+        .html("<option value=''>-- Selecciona tipo de parroquia --</option>");
     }
 
-    // Reset parroquias
-    $("#datos_parroquias").html(
-      "<option value=''>-- Selecciona una parroquia --</option>"
-    );
+    // Reset y desactiva parroquias
+    $("#datos_parroquias")
+      .prop("disabled", true)
+      .html("<option value=''>-- Selecciona una parroquia --</option>");
   });
 
   // When tipo parroquia changes, show filtered parroquias
@@ -144,20 +154,21 @@ function cantonToCode(selectedCanton) {
 }
 
 function filterParishes() {
-  const selectedCanton = $("#datos_canton").val(); // Ej: "Ibarra", "Tulcán"
-  const tipoParroquia = $("#datos_tipo_parroquia").val(); // "urbano" o "rural"
+  const selectedCanton = $("#datos_canton").val();
+  const tipoParroquia = $("#datos_tipo_parroquia").val();
 
   if (!selectedCanton || !tipoParroquia) {
-    $("#datos_parroquias").html(
-      "<option disabled selected value=''>-- Selecciona una parroquia --</option>"
-    );
+    $("#datos_parroquias")
+      .prop("disabled", true)
+      .html(
+        "<option disabled selected value=''>-- Selecciona una parroquia --</option>"
+      );
     return;
   }
 
-  // Normalize valores a minúsculas para comparar de forma segura
   const cantonLower = selectedCanton.toLowerCase();
   const tipoLower =
-  tipoParroquia.toLowerCase() === "urbano" ? "urbana" : "rural";
+    tipoParroquia.toLowerCase() === "urbano" ? "urbana" : "rural";
 
   const filtered = allParishes.filter((p) => {
     const desc = p.itc_descripcion?.toLowerCase() || "";
@@ -169,11 +180,314 @@ function filterParishes() {
   let options =
     "<option disabled selected value=''>-- Selecciona una parroquia --</option>";
   filtered.forEach((p) => {
-    console.log(p)
     options += `<option value="${p.id_item}">${p.itc_nombre}</option>`;
   });
 
-  $("#datos_parroquias").html(options);
+  $("#datos_parroquias").prop("disabled", false).html(options);
+}
+
+// Load types of housing
+function selectTypesHousing() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getTypesHousing",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Vivienda --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_tipo_viviendas").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de vivienda. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Roof Types
+function selectRoofTypes() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getRoofTypes",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Techo --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_techos").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de techo. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Wall Types
+function selectWallTypes() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getWallTypes",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Pared --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_paredes").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de pared. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Floor Types
+function selectFloorTypes() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getFloorTypes",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Piso --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_pisos").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de piso. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Cooking Fuel
+function selectCookingFuel() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getCookingFuel",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de combustibles cocina --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_combustibles_cocina").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de combustibles cocina. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Hygienic Services
+function selectHygienicServices() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getHygienicServices",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Servicios Higiénicos --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_servicios_higienicos").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipos de servicios higiénicos. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Housing
+function selectHousing() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getHousing",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Vivienda --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_viviendas").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de viviendas. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Water Services
+function selectWaterServices() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getWaterServices",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo Servicio de Agua --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_agua").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de servicios de agua. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Garbage Removal
+function selectGarbageRemoval() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getGarbageRemoval",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo Eliminación de Basura --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_eliminacion_basura").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de eliminación de basura. Contacte al administrador."
+      );
+    },
+  });
+}
+
+
+
+// Load Frequent Shop Places
+function selectFrequentShopPlaces() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getFrequentShopPlaces",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Donde Compra los Víveres --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_lugares_mayor_frecuencia_viveres").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista donde compra los víveres. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Vehicles Types
+function selectVehiclesTypes() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getVehiclesTypes",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Tipo de Medio de Transporte --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["itc_nombre"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_medio_transporte").html(tags);
+      $("#datos_medio_transporte2").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de tipo de vehículos. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load Transport Status
+function selectTransportStatus() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getTransportStatus",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona el Estado de Transporte --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["itc_nombre"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_estado_transporte").html(tags);
+      $("#datos_estado_transporte2").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de estados de transporte. Contacte al administrador."
+      );
+    },
+  });
 }
 
 // Toggle internet payment input editable or readonly
@@ -225,8 +539,8 @@ function toggleCantidadCelulares() {
 
 // Add vehicle to table
 function agregarVehiculo() {
-  const tipo = document.getElementById("inputTipoVehiculo").value.trim();
-  const estado = document.getElementById("selectEstadoVehiculo").value;
+  const tipo = document.getElementById("datos_medio_transporte2").value.trim();
+  const estado = document.getElementById("datos_estado_transporte2").value;
 
   if (!tipo) {
     alert("Ingrese el tipo de vehículo");
@@ -261,8 +575,8 @@ function agregarVehiculo() {
   tbody.appendChild(row);
 
   // Clear inputs
-  document.getElementById("inputTipoVehiculo").value = "";
-  document.getElementById("selectEstadoVehiculo").value = "";
+  /*document.getElementById("inputTipoVehiculo").value = "";
+  document.getElementById("selectEstadoVehiculo").value = "";*/
 }
 
 // Validate integer input: only allow whole numbers (no decimals)
