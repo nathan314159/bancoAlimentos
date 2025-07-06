@@ -12,6 +12,12 @@ Objetivos a realizar en pagina
 - Añadir parentescos al formulario general.
 - Crear la vista de datos generales para visualizar todos los registros incluyendo los parentescos. Los parentescos deben visualizarse en un botones en una columna llamada Parentescos.
 
+
+- Renderizar la tabla de datos generales con parentescos
+- Eliminar registros de tabla de datos generales con parentescos
+
+- No vamos a hacer la modificación de datos de perfiles ni gestión de datos de perfiles
+
 AGREGAR LO SIGUIENTE
 
 - Campo en tabla tbl_datos_generales llamada datos_tipo_parroquias

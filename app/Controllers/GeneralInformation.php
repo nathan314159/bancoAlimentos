@@ -49,46 +49,72 @@ class GeneralInformation extends BaseController
         }
     }
 
-    public function create()
+    public function insertGeneralInformation()
     {
-        $userData = [
-            'id_users' => 3,
-            'datos_provincia'        => $this->request->getPost('datos_provincia'),
-            'datos_canton'      => $this->request->getPost('datos_canton'),
-            'datos_parroquias'         => $this->request->getPost('datos_parroquias'),
-            'datos_comunidades'        => $this->request->getPost('datos_comunidades'),
-            'datos_barrios'      => $this->request->getPost('datos_barrios'),
-            'datos_tipo_viviendas' => $this->request->getPost('datos_tipo_viviendas'),
-            'datos_techos'        => $this->request->getPost('datos_techos'),
-            'datos_paredes' => $this->request->getPost('datos_paredes'),
-            'datos_pisos'        => $this->request->getPost('datos_pisos'),
-            'datos_cuarto'      => $this->request->getPost('datos_cuarto'),
-            'datos_combustibles_cocina'         => $this->request->getPost('datos_combustibles_cocina'),
-            'datos_servicios_higienicos'        => $this->request->getPost('datos_servicios_higienicos'),
-            'datos_barrios'      => $this->request->getPost('datos_barrios'),
-            'datos_viviendas' => $this->request->getPost('datos_viviendas'),
-            'datos_pago_vivienda' => $this->request->getPost('datos_pago_vivienda'),
-            'datos_agua' => $this->request->getPost('datos_agua'),
-            'datos_pago_agua' => $this->request->getPost('datos_pago_agua'),
-            'datos_pago_luz' => $this->request->getPost('datos_pago_luz'),
-            'datos_cantidad_luz' => $this->request->getPost('datos_cantidad_luz'),
-            'datos_internet' => $this->request->getPost('datos_internet'),
-            'datos_pago_internet' => $this->request->getPost('datos_pago_internet'),
-            'datos_tv_cable' => $this->request->getPost('datos_tv_cable'),
-            'datos_tv_pago' => $this->request->getPost('datos_tv_pago'),
-            'datos_eliminacion_basura' => $this->request->getPost('datos_eliminacion_basura'),
-            'datos_lugares_mayor_frecuencia_viveres' => $this->request->getPost('datos_lugares_mayor_frecuencia_viveres'),
-            'datos_gastos_viveres_alimentacion' => $this->request->getPost('datos_gastos_viveres_alimentacion'),
-            'datos_medio_transporte' => $this->request->getPost('datos_medio_transporte'),
-            'datos_estado_transporte' => $this->request->getPost('datos_estado_transporte'),
-            'datos_servicios_higienicos' => $this->request->getPost('datos_servicios_higienicos'),
-            'datos_terrenos' => $this->request->getPost('datos_terrenos'),
-            'datos_celular' => $this->request->getPost('datos_celular'),
-            'datos_cantidad_celulare' => $this->request->getPost('datos_cantidad_celulare'),
-            'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
-        ];
-        $this->form->insertUsuario($userData);
+
+
+
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/insertGeneralInformation", $routes)) {
+                // Obtener arrays de transporte
+                $mediosTransporte = $this->request->getPost('datos_medio_transporte') ?? [];
+                $estadosTransporte = $this->request->getPost('datos_estado_transporte') ?? [];
+
+                // Convertir arrays en cadenas separadas por "/"
+                $mediosTransporteStr = is_array($mediosTransporte) ? implode('/', $mediosTransporte) : '';
+                $estadosTransporteStr = is_array($estadosTransporte) ? implode('/', $estadosTransporte) : '';
+
+                $userData = [
+                    'id_users' => 3,
+                    'datos_provincia' => $this->request->getPost('datos_provincia'),
+                    'datos_canton' => $this->request->getPost('datos_canton'),
+                    'datos_parroquias' => $this->request->getPost('datos_parroquias'),
+                    'datos_tipo_parroquias' => $this->request->getPost('datos_tipo_parroquias'),
+                    'datos_comunidades' => $this->request->getPost('datos_comunidades'),
+                    'datos_barrios' => $this->request->getPost('datos_barrios'),
+                    'datos_tipo_viviendas' => $this->request->getPost('datos_tipo_viviendas'),
+                    'datos_techos' => $this->request->getPost('datos_techos'),
+                    'datos_paredes' => $this->request->getPost('datos_paredes'),
+                    'datos_pisos' => $this->request->getPost('datos_pisos'),
+                    'datos_cuarto' => $this->request->getPost('datos_cuarto'),
+                    'datos_combustibles_cocina' => $this->request->getPost('datos_combustibles_cocina'),
+                    'datos_servicios_higienicos' => $this->request->getPost('datos_servicios_higienicos'),
+                    'datos_viviendas' => $this->request->getPost('datos_viviendas'),
+                    'datos_pago_vivienda' => $this->request->getPost('datos_pago_vivienda'),
+                    'datos_agua' => $this->request->getPost('datos_agua'),
+                    'datos_pago_agua' => $this->request->getPost('datos_pago_agua'),
+                    'datos_pago_luz' => $this->request->getPost('datos_pago_luz'),
+                    'datos_cantidad_luz' => $this->request->getPost('datos_cantidad_luz'),
+                    'datos_internet' => $this->request->getPost('datos_internet'),
+                    'datos_pago_internet' => $this->request->getPost('datos_pago_internet'),
+                    'datos_tv_cable' => $this->request->getPost('datos_tv_cable'),
+                    'datos_tv_pago' => $this->request->getPost('datos_tv_pago'),
+                    'datos_eliminacion_basura' => $this->request->getPost('datos_eliminacion_basura'),
+                    'datos_lugares_mayor_frecuencia_viveres' => $this->request->getPost('datos_lugares_mayor_frecuencia_viveres'),
+                    'datos_gastos_viveres_alimentacion' => $this->request->getPost('datos_gastos_viveres_alimentacion'),
+
+                    // Convertidos a string
+                    'datos_medio_transporte' => $mediosTransporteStr,
+                    'datos_estado_transporte' => $estadosTransporteStr,
+
+                    'datos_terrenos' => $this->request->getPost('datos_terrenos'),
+                    'datos_celular' => $this->request->getPost('datos_celular'),
+                    'datos_cantidad_celulare' => $this->request->getPost('datos_cantidad_celulare'),
+                    'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
+                ];
+
+                $this->form->insertUsuario($userData);
+
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
     }
+
 
 
     public function getProvinces()
@@ -104,7 +130,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getCities()
@@ -120,7 +145,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getParishes()
@@ -136,7 +160,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
 
@@ -153,7 +176,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getRoofTypes()
@@ -169,7 +191,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getWallTypes()
@@ -185,7 +206,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getFloorTypes()
@@ -201,7 +221,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getCookingFuel()
@@ -217,7 +236,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getHygienicServices()
@@ -233,7 +251,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getHousing()
@@ -249,7 +266,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getWaterServices()
@@ -265,7 +281,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getGarbageRemoval()
@@ -281,7 +296,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getFrequentShopPlaces()
@@ -297,7 +311,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getVehiclesTypes()
@@ -313,7 +326,6 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 
     public function getTransportStatus()
@@ -329,6 +341,5 @@ class GeneralInformation extends BaseController
         } else {
             echo view('login/body.php');
         }
-        
     }
 }

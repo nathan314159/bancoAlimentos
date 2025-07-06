@@ -56,8 +56,8 @@ class GeneralInformationMod extends Model
     // Dates
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
-    protected $createdField  = 'users_created_at';
-    protected $updatedField  = 'users_updated_at';
+    protected $createdField  = 'datos_created_at';
+    protected $updatedField  = 'datos_updated_at';
     // protected $deletedField  = 'deleted_at';
 
     public function insertUsuario($data)

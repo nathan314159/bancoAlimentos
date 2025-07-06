@@ -125,7 +125,6 @@ function loadAllParishes() {
     dataType: "json",
     success: function (info) {
       allParishes = info; // Store for filtering later
-      console.log(allParishes);
     },
     error: function () {
       console.log(
@@ -411,8 +410,6 @@ function selectGarbageRemoval() {
   });
 }
 
-
-
 // Load Frequent Shop Places
 function selectFrequentShopPlaces() {
   let baseURL =
@@ -539,44 +536,45 @@ function toggleCantidadCelulares() {
 
 // Add vehicle to table
 function agregarVehiculo() {
-  const tipo = document.getElementById("datos_medio_transporte2").value.trim();
-  const estado = document.getElementById("datos_estado_transporte2").value;
+  const tipo = document.getElementById("datos_medio_transporte").value.trim();
+  const estado = document.getElementById("datos_estado_transporte").value;
 
   if (!tipo) {
-    alert("Ingrese el tipo de vehículo");
+    alertify.error("Ingrese el tipo de vehículo");
     return;
   }
   if (!estado) {
-    alert("Seleccione el estado del vehículo");
+    alertify.error("Seleccione el estado del vehículo");
     return;
   }
 
   const tbody = document.querySelector("#tablaVehiculos tbody");
   const row = document.createElement("tr");
 
+  // Celdas visibles
   const tdTipo = document.createElement("td");
   tdTipo.textContent = tipo;
+
   const tdEstado = document.createElement("td");
   tdEstado.textContent = estado;
 
-  // Delete button for each row
-  const tdAccion = document.createElement("td");
-  const btnEliminar = document.createElement("button");
-  btnEliminar.textContent = "Eliminar";
-  btnEliminar.className = "btn btn-danger btn-sm";
-  btnEliminar.type = "button";
-  btnEliminar.onclick = () => row.remove();
-  tdAccion.appendChild(btnEliminar);
+  const tdAcciones = document.createElement("td");
+  tdAcciones.innerHTML =
+    '<button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">Eliminar</button>';
 
+  // Inputs ocultos para enviar con POST
+  const inputTipo = `<input type="hidden" name="datos_medio_transporte[]" value="${tipo}">`;
+  const inputEstado = `<input type="hidden" name="datos_estado_transporte[]" value="${estado}">`;
+
+  // Agregar inputs ocultos dentro de celdas
+  tdTipo.innerHTML += inputTipo;
+  tdEstado.innerHTML += inputEstado;
+
+  // Armar fila
   row.appendChild(tdTipo);
   row.appendChild(tdEstado);
-  row.appendChild(tdAccion);
-
+  row.appendChild(tdAcciones);
   tbody.appendChild(row);
-
-  // Clear inputs
-  /*document.getElementById("inputTipoVehiculo").value = "";
-  document.getElementById("selectEstadoVehiculo").value = "";*/
 }
 
 // Validate integer input: only allow whole numbers (no decimals)
@@ -615,6 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "datos_pago_agua",
     "datos_pago_luz",
     "datos_gastos_viveres_alimentacion",
+    "datos_parentesco_ingreso_mensual",
   ];
 
   decimalInputs.forEach((id) => {
@@ -625,7 +624,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Inputs that only allow integers (no decimals)
-  const integerInputs = ["datos_cuarto", "datos_cantidad_celulare"];
+  const integerInputs = [
+    "datos_cuarto",
+    "datos_cantidad_celulare",
+    "datos_parentesco_edad",
+  ];
 
   integerInputs.forEach((id) => {
     const el = document.getElementById(id);
@@ -634,3 +637,75 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Add relationship
+function addRelationship() {
+  const get = (id) => document.getElementById(id).value.trim();
+  const getText = (id) => {
+    const el = document.getElementById(id);
+    return el.options[el.selectedIndex]?.text || "";
+  };
+
+  const datos = {
+    nombres: get("datos_parentesco_nombres"),
+    apellidos: get("datos_parentesco_apellidos"),
+    documento: get("datos_parentesco_documento"),
+    telefono: get("datos_parentesco_celular_telf"),
+    etnia: get("datos_parentesco_etnia"),
+    etniaText: getText("datos_parentesco_etnia"),
+    genero: get("datos_parentesco_genero"),
+    generoText: getText("datos_parentesco_genero"),
+    educacion: get("datos_parentesco_nivel_educacion"),
+    educacionText: getText("datos_parentesco_nivel_educacion"),
+    nacimiento: get("datos_parentesco_fecha_de_nacimiento"),
+    edad: get("datos_parentesco_edad"),
+    estado_civil: get("datos_parentesco_estado_civil"),
+    estado_civilText: getText("datos_parentesco_estado_civil"),
+    discapacidad: get("datos_parentesco_discapacidad"),
+    discapacidadText: getText("datos_parentesco_discapacidad"),
+    enfermedad: get("datos_parentesco_enfermedad_catastrofica"),
+    trabaja: get("datos_parentesco_trabaja"),
+    ocupacion: get("datos_parentesco_ocupacion"),
+    ingreso: get("datos_parentesco_ingreso_mensual"),
+    parentesco: get("datos_parentesco_parentesco"),
+  };
+
+  if (!datos.nombres || !datos.apellidos || !datos.documento) {
+    alert(
+      "Por favor llena al menos los campos obligatorios: nombres, apellidos y documento."
+    );
+    return;
+  }
+
+  const tbody = document.querySelector("#tablaParentesco tbody");
+  const row = document.createElement("tr");
+
+  row.innerHTML = `
+    <td>${datos.nombres}<input type="hidden" name="parentesco_nombres[]" value="${datos.nombres}"></td>
+    <td>${datos.apellidos}<input type="hidden" name="parentesco_apellidos[]" value="${datos.apellidos}"></td>
+    <td>${datos.documento}<input type="hidden" name="parentesco_documento[]" value="${datos.documento}"></td>
+    <td>${datos.telefono}<input type="hidden" name="parentesco_telefono[]" value="${datos.telefono}"></td>
+    <td>${datos.etniaText}<input type="hidden" name="parentesco_etnia[]" value="${datos.etnia}"></td>
+    <td>${datos.generoText}<input type="hidden" name="parentesco_genero[]" value="${datos.genero}"></td>
+    <td>${datos.educacionText}<input type="hidden" name="parentesco_nivel_educacion[]" value="${datos.educacion}"></td>
+    <td>${datos.nacimiento}<input type="hidden" name="parentesco_nacimiento[]" value="${datos.nacimiento}"></td>
+    <td>${datos.edad}<input type="hidden" name="parentesco_edad[]" value="${datos.edad}"></td>
+    <td>${datos.estado_civilText}<input type="hidden" name="parentesco_estado_civil[]" value="${datos.estado_civil}"></td>
+    <td>${datos.discapacidadText}<input type="hidden" name="parentesco_discapacidad[]" value="${datos.discapacidad}"></td>
+    <td>${datos.enfermedad}<input type="hidden" name="parentesco_enfermedad[]" value="${datos.enfermedad}"></td>
+    <td>${datos.trabaja}<input type="hidden" name="parentesco_trabaja[]" value="${datos.trabaja}"></td>
+    <td>${datos.ocupacion}<input type="hidden" name="parentesco_ocupacion[]" value="${datos.ocupacion}"></td>
+    <td>${datos.ingreso}<input type="hidden" name="parentesco_ingreso[]" value="${datos.ingreso}"></td>
+    <td>${datos.parentesco}<input type="hidden" name="parentesco_parentesco[]" value="${datos.parentesco}"></td>
+    <td><button type="button" class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Eliminar</button></td>
+  `;
+
+  tbody.appendChild(row);
+
+  console.log(datos);
+
+  // Clean form
+  document
+    .querySelectorAll(".form-row input, .form-row select")
+    .forEach((el) => (el.value = ""));
+}

@@ -32,7 +32,9 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
-                    <img src="<?php echo base_url(); ?>assets/login/images/img-04.png" alt="IMG">
+                    <img src="<?php echo base_url(); ?>/resources/Versión-circular-Fondo-Blanco.png"
+                        alt="Logo"
+                        >
                 </div>
 
                 <form class="login100-form validate-form" method="post" action="<?= base_url('/enterUser') ?>">

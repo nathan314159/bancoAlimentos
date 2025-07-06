@@ -21,7 +21,7 @@ $routes->post('/findUserMail', 'Principal::findUserMail');
 
 //Routes for form general information 
 $routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
-$routes->post('/insertDatosGenerales', 'GeneralInformation::create');
+$routes->post('/insertGeneralInformation', 'GeneralInformation::insertGeneralInformation');
 $routes->get('/getProvinces', 'GeneralInformation::getProvinces');
 $routes->get('/getCities', 'GeneralInformation::getCities');
 $routes->get('/getParishes', 'GeneralInformation::getParishes');
