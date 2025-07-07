@@ -81,7 +81,7 @@ class GeneralInformationMod extends Model
     {
         $db = \Config\Database::connect();
         $builder = $db->table('tbl_datos_generales');
-        return $builder->where('id', $id)->update($data);
+        return $builder->where('id_datos_generales', $id)->update($data);
     }
 
     // public function findUser($userName)

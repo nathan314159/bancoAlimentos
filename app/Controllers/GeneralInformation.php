@@ -224,8 +224,8 @@ class GeneralInformation extends BaseController
                     }
 
                     $this->generalInformationRelationship->insert([
-                        'id_datos_parentescos' => $idGeneral,
-                        'id_datos_generales' => $idRelacion,
+                        'id_datos_generales' => $idGeneral,       
+                        'id_datos_parentescos' => $idRelacion,   
                     ]);
                 }
 
