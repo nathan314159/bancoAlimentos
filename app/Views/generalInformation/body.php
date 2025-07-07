@@ -81,44 +81,32 @@
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_documento" class="font-weight-bold">Documento</label>
-                <input type="text" class="form-control" id="datos_parentesco_documento" name="datos_parentesco_documento">
+                <input type="number" class="form-control" id="datos_parentesco_documento" name="datos_parentesco_documento">
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_celular_telf" class="font-weight-bold">Celular/Teléfono</label>
-                <input type="text" class="form-control" id="datos_parentesco_celular_telf" name="datos_parentesco_celular_telf">
+                <input type="number" class="form-control" id="datos_parentesco_celular_telf" name="datos_parentesco_celular_telf">
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_etnia" class="font-weight-bold">Etnia</label>
                 <select class="form-control" id="datos_parentesco_etnia" name="datos_parentesco_etnia">
-                    <option value="">-- Selecciona Etnia --</option>
-                    <option value="1">Mestizo</option>
-                    <option value="2">Afroecuatoriano</option>
-                    <option value="3">Indígena</option>
-                    <option value="4">Montubio</option>
+                    <option value="" disabled selected>-- Selecciona Etnia --</option>
                 </select>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_genero" class="font-weight-bold">Género</label>
                 <select class="form-control" id="datos_parentesco_genero" name="datos_parentesco_genero">
-                    <option value="">-- Selecciona Género --</option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
-                    <option value="3">Otro</option>
+                    <option value="" disabled selected>-- Selecciona Género --</option>
                 </select>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_nivel_educacion" class="font-weight-bold">Nivel de Educación</label>
                 <select class="form-control" id="datos_parentesco_nivel_educacion" name="datos_parentesco_nivel_educacion">
-                    <option value="">-- Selecciona Nivel de Educación --</option>
-                    <option value="1">Primaria</option>
-                    <option value="2">Secundaria</option>
-                    <option value="3">Bachillerato</option>
-                    <option value="4">Universitaria</option>
-                    <option value="5">Ninguna</option>
+                    <option value="" disabled selected>-- Selecciona Nivel de Educación --</option>
                 </select>
             </div>
 
@@ -135,19 +123,14 @@
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_estado_civil" class="font-weight-bold">Estado Civil</label>
                 <select class="form-control" id="datos_parentesco_estado_civil" name="datos_parentesco_estado_civil">
-                    <option value="">-- Selecciona Estado Civil --</option>
-                    <option value="1">Soltero/a</option>
-                    <option value="2">Casado/a</option>
-                    <option value="3">Unión libre</option>
-                    <option value="4">Separado/a</option>
-                    <option value="5">Viudo/a</option>
+                    <option value="" disabled selected>-- Selecciona Estado Civil --</option>
                 </select>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_discapacidad" class="font-weight-bold">Discapacidad</label>
                 <select class="form-control" id="datos_parentesco_discapacidad" name="datos_parentesco_discapacidad">
-                    <option value="">-- Selecciona --</option>
+                    <option value="" disabled selected>-- Selecciona --</option>
                     <option value="1">Sí</option>
                     <option value="2">No</option>
                 </select>
@@ -155,17 +138,21 @@
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_enfermedad_catastrofica" class="font-weight-bold">Enfermedad Catastrófica</label>
-                <input type="text" class="form-control" id="datos_parentesco_enfermedad_catastrofica" name="datos_parentesco_enfermedad_catastrofica">
+                <input type="text" class="form-control" id="datos_parentesco_enfermedad_catastrofica" name="datos_parentesco_enfermedad_catastrofica" value="Ninguna" readonly>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_trabaja" class="font-weight-bold">¿Trabaja?</label>
-                <input type="text" class="form-control" id="datos_parentesco_trabaja" name="datos_parentesco_trabaja">
+                <select class="form-control" id="datos_parentesco_trabaja" name="datos_parentesco_trabaja">
+                    <option value="" disabled selected>-- Selecciona --</option>
+                    <option value="1">Sí</option>
+                    <option value="2">No</option>
+                </select>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="datos_parentesco_ocupacion" class="font-weight-bold">Ocupación</label>
-                <input type="text" class="form-control" id="datos_parentesco_ocupacion" name="datos_parentesco_ocupacion">
+                <input type="text" class="form-control" id="datos_parentesco_ocupacion" name="datos_parentesco_ocupacion" value="Ninguna" readonly>
             </div>
 
             <div class="form-group col-md-4">
@@ -426,6 +413,6 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        <button type="button" class="btn btn-primary mt-3" onclick="validarFormularioDatosGenerales()">Enviar</button>
     </form>
 </div>

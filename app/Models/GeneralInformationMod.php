@@ -14,8 +14,10 @@ class GeneralInformationMod extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         "id_users",
+        "datos_parentesco_id",
         "datos_provincia",
         "datos_canton",
+        "datos_tipo_parroquias",
         "datos_parroquias",
         "datos_comunidades",
         "datos_barrios",
@@ -73,6 +75,13 @@ class GeneralInformationMod extends Model
 
         // Retornar el ID del último registro insertado
         return $db->insertID();
+    }
+
+    public function updateUsuario($id, $data)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('tbl_datos_generales');
+        return $builder->where('id', $id)->update($data);
     }
 
     // public function findUser($userName)

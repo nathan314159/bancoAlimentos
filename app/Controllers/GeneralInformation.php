@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\GeneralInformationMod;
+use App\Models\RelationshipMod;
+use App\Models\GeneralInformationRelationshipMod;
 use App\Models\UsersMod;
 use App\Models\RolAccessMod;
 use App\Models\UserRolMod;
@@ -12,6 +14,8 @@ use App\Models\ItemCatalogMod;
 class GeneralInformation extends BaseController
 {
     protected $form;
+    protected $relationship;
+    protected $generalInformationRelationship;
     protected $users;
     protected $rol_access;
     protected $user_rol;
@@ -25,6 +29,8 @@ class GeneralInformation extends BaseController
         $this->rol_access = new RolAccessMod();
         $this->user_rol = new UserRolMod();
         $this->form = new GeneralInformationMod();
+        $this->relationship = new RelationshipMod();
+        $this->generalInformationRelationship = new GeneralInformationRelationshipMod();
         $this->item_catalog = new ItemCatalogMod();
     }
 
@@ -49,11 +55,8 @@ class GeneralInformation extends BaseController
         }
     }
 
-    public function insertGeneralInformation()
+    /*public function insertGeneralInformation()
     {
-
-
-
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/insertGeneralInformation", $routes)) {
@@ -105,6 +108,135 @@ class GeneralInformation extends BaseController
                 ];
 
                 $this->form->insertUsuario($userData);
+
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+    */
+
+    public function insertGeneralInformation()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/insertGeneralInformation", $routes)) {
+                // -------------------------------
+                // Obtener arrays de transporte
+                // -------------------------------
+                $mediosTransporte = $this->request->getPost('datos_medio_transporte') ?? [];
+                $estadosTransporte = $this->request->getPost('datos_estado_transporte') ?? [];
+
+                $mediosTransporteStr = is_array($mediosTransporte) ? implode('/', $mediosTransporte) : '';
+                $estadosTransporteStr = is_array($estadosTransporte) ? implode('/', $estadosTransporte) : '';
+
+                // -------------------------------
+                // Insertar datos generales
+                // -------------------------------
+                $userData = [
+                    'id_users' => session('id_users'),
+                    'datos_provincia' => $this->request->getPost('datos_provincia'),
+                    'datos_canton' => $this->request->getPost('datos_canton'),
+                    'datos_parroquias' => $this->request->getPost('datos_parroquias'),
+                    'datos_tipo_parroquias' => $this->request->getPost('datos_tipo_parroquia'),
+                    'datos_comunidades' => $this->request->getPost('datos_comunidades'),
+                    'datos_barrios' => $this->request->getPost('datos_barrios'),
+                    'datos_tipo_viviendas' => $this->request->getPost('datos_tipo_viviendas'),
+                    'datos_techos' => $this->request->getPost('datos_techos'),
+                    'datos_paredes' => $this->request->getPost('datos_paredes'),
+                    'datos_pisos' => $this->request->getPost('datos_pisos'),
+                    'datos_cuarto' => $this->request->getPost('datos_cuarto'),
+                    'datos_combustibles_cocina' => $this->request->getPost('datos_combustibles_cocina'),
+                    'datos_servicios_higienicos' => $this->request->getPost('datos_servicios_higienicos'),
+                    'datos_viviendas' => $this->request->getPost('datos_viviendas'),
+                    'datos_pago_vivienda' => $this->request->getPost('datos_pago_vivienda'),
+                    'datos_agua' => $this->request->getPost('datos_agua'),
+                    'datos_pago_agua' => $this->request->getPost('datos_pago_agua'),
+                    'datos_pago_luz' => $this->request->getPost('datos_pago_luz'),
+                    'datos_cantidad_luz' => $this->request->getPost('datos_cantidad_luz'),
+                    'datos_internet' => $this->request->getPost('datos_internet'),
+                    'datos_pago_internet' => $this->request->getPost('datos_pago_internet'),
+                    'datos_tv_cable' => $this->request->getPost('datos_tv_cable'),
+                    'datos_tv_pago' => $this->request->getPost('datos_tv_pago'),
+                    'datos_eliminacion_basura' => $this->request->getPost('datos_eliminacion_basura'),
+                    'datos_lugares_mayor_frecuencia_viveres' => $this->request->getPost('datos_lugares_mayor_frecuencia_viveres'),
+                    'datos_gastos_viveres_alimentacion' => $this->request->getPost('datos_gastos_viveres_alimentacion'),
+                    'datos_medio_transporte' => $mediosTransporteStr,
+                    'datos_estado_transporte' => $estadosTransporteStr,
+                    'datos_terrenos' => $this->request->getPost('datos_terrenos'),
+                    'datos_celular' => $this->request->getPost('datos_celular'),
+                    'datos_cantidad_celulare' => $this->request->getPost('datos_cantidad_celulare'),
+                    'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
+                    'datos_parentesco_id' => null, // se actualizará luego
+                ];
+
+                $idGeneral = $this->form->insertUsuario($userData); // ← Debes tener este método
+
+                // -------------------------------
+                // Insertar parentescos
+                // -------------------------------
+                $nombres = $this->request->getPost('parentesco_nombres') ?? [];
+                $apellidos = $this->request->getPost('parentesco_apellidos') ?? [];
+                $documentos = $this->request->getPost('parentesco_documento') ?? [];
+                $telefonos = $this->request->getPost('parentesco_telefono') ?? [];
+                $etnias = $this->request->getPost('parentesco_etnia') ?? [];
+                $generos = $this->request->getPost('parentesco_genero') ?? [];
+                $educacion = $this->request->getPost('parentesco_nivel_educacion') ?? [];
+                $nacimientos = $this->request->getPost('parentesco_nacimiento') ?? [];
+                $edades = $this->request->getPost('parentesco_edad') ?? [];
+                $estado_civil = $this->request->getPost('parentesco_estado_civil') ?? [];
+                $discapacidad = $this->request->getPost('parentesco_discapacidad') ?? [];
+                $enfermedad = $this->request->getPost('parentesco_enfermedad') ?? [];
+                $trabaja = $this->request->getPost('parentesco_trabaja') ?? [];
+                $ocupacion = $this->request->getPost('parentesco_ocupacion') ?? [];
+                $ingreso = $this->request->getPost('parentesco_ingreso') ?? [];
+                $parentescos = $this->request->getPost('parentesco_parentesco') ?? [];
+
+                $primerIdParentesco = null;
+
+                for ($i = 0; $i < count($nombres); $i++) {
+                    $relData = [
+                        'datos_parentesco_nombres' => $nombres[$i],
+                        'datos_parentesco_apellidos' => $apellidos[$i],
+                        'datos_parentesco_documento' => $documentos[$i],
+                        'datos_parentesco_celular_telf' => $telefonos[$i],
+                        'datos_parentesco_etnia' => $etnias[$i],
+                        'datos_parentesco_genero' => $generos[$i],
+                        'datos_parentesco_nivel_educacion' => $educacion[$i],
+                        'datos_parentesco_fecha_de_nacimiento' => $nacimientos[$i],
+                        'datos_parentesco_edad' => $edades[$i],
+                        'datos_parentesco_estado_civil' => $estado_civil[$i],
+                        'datos_parentesco_discapacidad' => $discapacidad[$i],
+                        'datos_parentesco_enfermedad_catastrofica' => $enfermedad[$i],
+                        'datos_parentesco_trabaja' => $trabaja[$i],
+                        'datos_parentesco_ocupacion' => $ocupacion[$i],
+                        'datos_parentesco_ingreso_mensual' => $ingreso[$i],
+                        'datos_parentesco_parentesco' => $parentescos[$i],
+                    ];
+
+                    $idRelacion = $this->relationship->insertReturnId($relData);
+
+                    if ($i == 0) {
+                        $primerIdParentesco = $idRelacion;
+                    }
+
+                    $this->generalInformationRelationship->insert([
+                        'id_datos_parentescos' => $idGeneral,
+                        'id_datos_generales' => $idRelacion,
+                    ]);
+                }
+
+                // -------------------------------
+                // Actualizar registro general con primer ID de parentesco
+                // -------------------------------
+                if ($primerIdParentesco !== null) {
+                    $this->form->updateUsuario($idGeneral, [
+                        'datos_parentesco_id' => $primerIdParentesco
+                    ]);
+                }
 
                 redirectUser($this->users->searchRolUser(session('id_users')));
             } else {
@@ -334,6 +466,66 @@ class GeneralInformation extends BaseController
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/getTransportStatus", $routes)) {
                 $itemSelected = $this->item_catalog->obtainActiveSelect('EST-TRANSPORTE');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function getEthnicity()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getEthnicity", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('ETNIA');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function getGenders()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getEthnicity", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('GENERO');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function getEducationLevel()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getEthnicity", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('NIV-EDU');
+                echo json_encode($itemSelected);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function getMaritalStatus()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getEthnicity", $routes)) {
+                $itemSelected = $this->item_catalog->obtainActiveSelect('EST-CIV');
                 echo json_encode($itemSelected);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));

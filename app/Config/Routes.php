@@ -37,3 +37,8 @@ $routes->get('/getGarbageRemoval', 'GeneralInformation::getGarbageRemoval');
 $routes->get('/getFrequentShopPlaces', 'GeneralInformation::getFrequentShopPlaces');
 $routes->get('/getVehiclesTypes', 'GeneralInformation::getVehiclesTypes');
 $routes->get('/getTransportStatus', 'GeneralInformation::getTransportStatus');
+$routes->get('/getTransportStatus', 'GeneralInformation::getTransportStatus');
+$routes->get('/getEthnicity', 'GeneralInformation::getEthnicity');
+$routes->get('/getGenders', 'GeneralInformation::getGenders');
+$routes->get('/getEducationLevel', 'GeneralInformation::getEducationLevel');
+$routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');

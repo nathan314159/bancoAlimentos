@@ -15,6 +15,10 @@ $(document).ready(function () {
   selectFrequentShopPlaces();
   selectVehiclesTypes();
   selectTransportStatus();
+  selectEthnicity();
+  selectGenders();
+  selectEducationLevel();
+  selectMaritalStatus();
 
   // When province changes, load cantons
   $("#datos_provincia").on("change", function () {
@@ -487,6 +491,106 @@ function selectTransportStatus() {
   });
 }
 
+// Load ethnicity
+function selectEthnicity() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getEthnicity",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Etnia --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_parentesco_etnia").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de etnias. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load genders
+function selectGenders() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getGenders",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Género --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_parentesco_genero").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de géneros. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load education level
+function selectEducationLevel() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getEducationLevel",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Nivel de Educación --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_parentesco_nivel_educacion").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de niveles de educación. Contacte al administrador."
+      );
+    },
+  });
+}
+
+// Load marital status
+function selectMaritalStatus() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  $.ajax({
+    url: baseURL + "/getMaritalStatus",
+    type: "get",
+    dataType: "json",
+    success: function (info) {
+      let tags =
+        "<option disabled selected value=''>-- Selecciona Estado Civil --</option>";
+      info.forEach(function (elemento) {
+        tags += `<option value='${elemento["id_item"]}'>${elemento["itc_nombre"]}</option>`;
+      });
+      $("#datos_parentesco_estado_civil").html(tags);
+    },
+    error: function () {
+      console.log(
+        "No se pudo obtener la lista de niveles de educación. Contacte al administrador."
+      );
+    },
+  });
+}
+
 // Toggle internet payment input editable or readonly
 function toggleInternetPago() {
   const internet = document.getElementById("datos_internet").value;
@@ -602,6 +706,40 @@ function validarDecimales(event) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const selectTrabaja = document.getElementById("datos_parentesco_trabaja");
+  const inputOcupacion = document.getElementById("datos_parentesco_ocupacion");
+
+  selectTrabaja.addEventListener("change", function () {
+    if (this.value === "1") {
+      inputOcupacion.readOnly = false;
+      inputOcupacion.value = "";
+    } else if (this.value === "2") {
+      inputOcupacion.readOnly = true;
+      inputOcupacion.value = "Ninguna";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectDiscapacidad = document.getElementById(
+    "datos_parentesco_discapacidad"
+  );
+  const inputDiscapacidad = document.getElementById(
+    "datos_parentesco_enfermedad_catastrofica"
+  );
+
+  selectDiscapacidad.addEventListener("change", function () {
+    if (this.value === "1") {
+      inputDiscapacidad.readOnly = false;
+      inputDiscapacidad.value = "";
+    } else if (this.value === "2") {
+      inputDiscapacidad.readOnly = true;
+      inputDiscapacidad.value = "Ninguna";
+    }
+  });
+});
+
 // Attach validation functions to specific inputs on page load
 document.addEventListener("DOMContentLoaded", () => {
   // Inputs that allow decimals (with 2 decimal places max)
@@ -628,6 +766,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "datos_cuarto",
     "datos_cantidad_celulare",
     "datos_parentesco_edad",
+    "datos_parentesco_documento",
+    "datos_parentesco_celular_telf",
+    "datos_parentesco_edad",
   ];
 
   integerInputs.forEach((id) => {
@@ -639,6 +780,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Add relationship
+/*
 function addRelationship() {
   const get = (id) => document.getElementById(id).value.trim();
   const getText = (id) => {
@@ -665,6 +807,7 @@ function addRelationship() {
     discapacidadText: getText("datos_parentesco_discapacidad"),
     enfermedad: get("datos_parentesco_enfermedad_catastrofica"),
     trabaja: get("datos_parentesco_trabaja"),
+    trabajaText: getText("datos_parentesco_trabaja"),
     ocupacion: get("datos_parentesco_ocupacion"),
     ingreso: get("datos_parentesco_ingreso_mensual"),
     parentesco: get("datos_parentesco_parentesco"),
@@ -693,7 +836,7 @@ function addRelationship() {
     <td>${datos.estado_civilText}<input type="hidden" name="parentesco_estado_civil[]" value="${datos.estado_civil}"></td>
     <td>${datos.discapacidadText}<input type="hidden" name="parentesco_discapacidad[]" value="${datos.discapacidad}"></td>
     <td>${datos.enfermedad}<input type="hidden" name="parentesco_enfermedad[]" value="${datos.enfermedad}"></td>
-    <td>${datos.trabaja}<input type="hidden" name="parentesco_trabaja[]" value="${datos.trabaja}"></td>
+    <td>${datos.trabajaText}<input type="hidden" name="parentesco_trabaja[]" value="${datos.trabajaText}"></td>
     <td>${datos.ocupacion}<input type="hidden" name="parentesco_ocupacion[]" value="${datos.ocupacion}"></td>
     <td>${datos.ingreso}<input type="hidden" name="parentesco_ingreso[]" value="${datos.ingreso}"></td>
     <td>${datos.parentesco}<input type="hidden" name="parentesco_parentesco[]" value="${datos.parentesco}"></td>
@@ -708,4 +851,216 @@ function addRelationship() {
   document
     .querySelectorAll(".form-row input, .form-row select")
     .forEach((el) => (el.value = ""));
+}
+*/
+function addRelationship() {
+  const get = (id) => document.getElementById(id);
+  const getValue = (id) => get(id).value.trim();
+  const getText = (id) => {
+    const el = get(id);
+    return el.options[el.selectedIndex]?.text || "";
+  };
+
+  const datos = {
+    nombres: get("datos_parentesco_nombres"),
+    apellidos: get("datos_parentesco_apellidos"),
+    documento: get("datos_parentesco_documento"),
+    telefono: get("datos_parentesco_celular_telf"),
+    etnia: get("datos_parentesco_etnia"),
+    genero: get("datos_parentesco_genero"),
+    educacion: get("datos_parentesco_nivel_educacion"),
+    nacimiento: get("datos_parentesco_fecha_de_nacimiento"),
+    edad: get("datos_parentesco_edad"),
+    estado_civil: get("datos_parentesco_estado_civil"),
+    discapacidad: get("datos_parentesco_discapacidad"),
+    enfermedad: get("datos_parentesco_enfermedad_catastrofica"),
+    trabaja: get("datos_parentesco_trabaja"),
+    ocupacion: get("datos_parentesco_ocupacion"),
+    ingreso: get("datos_parentesco_ingreso_mensual"),
+    parentesco: get("datos_parentesco_parentesco"),
+  };
+
+  const camposFaltantes = [];
+
+  for (const key in datos) {
+    const campo = datos[key];
+    const valor = campo.value.trim();
+    if (!valor) {
+      camposFaltantes.push({
+        id: campo.id,
+        nombre: campo.labels?.[0]?.innerText || campo.id,
+      });
+      campo.classList.add("border", "border-danger");
+      setTimeout(() => campo.classList.remove("border", "border-danger"), 3000);
+    }
+  }
+
+  if (camposFaltantes.length > 0) {
+    camposFaltantes.forEach((campo) => {
+      alertify.error(`Falta completar: ${campo.nombre}`);
+    });
+    return;
+  }
+
+  // Construcción del objeto limpio
+  const limpio = {
+    nombres: datos.nombres.value,
+    apellidos: datos.apellidos.value,
+    documento: datos.documento.value,
+    telefono: datos.telefono.value,
+    etnia: datos.etnia.value,
+    etniaText: getText("datos_parentesco_etnia"),
+    genero: datos.genero.value,
+    generoText: getText("datos_parentesco_genero"),
+    educacion: datos.educacion.value,
+    educacionText: getText("datos_parentesco_nivel_educacion"),
+    nacimiento: datos.nacimiento.value,
+    edad: datos.edad.value,
+    estado_civil: datos.estado_civil.value,
+    estado_civilText: getText("datos_parentesco_estado_civil"),
+    discapacidad: datos.discapacidad.value,
+    discapacidadText: getText("datos_parentesco_discapacidad"),
+    enfermedad: datos.enfermedad.value,
+    trabaja: datos.trabaja.value,
+    trabajaText: getText("datos_parentesco_trabaja"),
+    ocupacion: datos.ocupacion.value,
+    ingreso: datos.ingreso.value,
+    parentesco: datos.parentesco.value,
+  };
+
+  const tbody = document.querySelector("#tablaParentesco tbody");
+  const row = document.createElement("tr");
+
+  row.innerHTML = `
+    <td>${limpio.nombres}<input type="hidden" name="parentesco_nombres[]" value="${limpio.nombres}"></td>
+    <td>${limpio.apellidos}<input type="hidden" name="parentesco_apellidos[]" value="${limpio.apellidos}"></td>
+    <td>${limpio.documento}<input type="hidden" name="parentesco_documento[]" value="${limpio.documento}"></td>
+    <td>${limpio.telefono}<input type="hidden" name="parentesco_telefono[]" value="${limpio.telefono}"></td>
+    <td>${limpio.etniaText}<input type="hidden" name="parentesco_etnia[]" value="${limpio.etnia}"></td>
+    <td>${limpio.generoText}<input type="hidden" name="parentesco_genero[]" value="${limpio.genero}"></td>
+    <td>${limpio.educacionText}<input type="hidden" name="parentesco_nivel_educacion[]" value="${limpio.educacion}"></td>
+    <td>${limpio.nacimiento}<input type="hidden" name="parentesco_nacimiento[]" value="${limpio.nacimiento}"></td>
+    <td>${limpio.edad}<input type="hidden" name="parentesco_edad[]" value="${limpio.edad}"></td>
+    <td>${limpio.estado_civilText}<input type="hidden" name="parentesco_estado_civil[]" value="${limpio.estado_civil}"></td>
+    <td>${limpio.discapacidadText}<input type="hidden" name="parentesco_discapacidad[]" value="${limpio.discapacidad}"></td>
+    <td>${limpio.enfermedad}<input type="hidden" name="parentesco_enfermedad[]" value="${limpio.enfermedad}"></td>
+    <td>${limpio.trabajaText}<input type="hidden" name="parentesco_trabaja[]" value="${limpio.trabajaText}"></td>
+    <td>${limpio.ocupacion}<input type="hidden" name="parentesco_ocupacion[]" value="${limpio.ocupacion}"></td>
+    <td>${limpio.ingreso}<input type="hidden" name="parentesco_ingreso[]" value="${limpio.ingreso}"></td>
+    <td>${limpio.parentesco}<input type="hidden" name="parentesco_parentesco[]" value="${limpio.parentesco}"></td>
+    <td><button type="button" class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Eliminar</button></td>
+  `;
+
+  tbody.appendChild(row);
+
+  // Limpiar formulario
+  [
+    "datos_parentesco_nombres",
+    "datos_parentesco_apellidos",
+    "datos_parentesco_documento",
+    "datos_parentesco_celular_telf",
+    "datos_parentesco_etnia",
+    "datos_parentesco_genero",
+    "datos_parentesco_nivel_educacion",
+    "datos_parentesco_fecha_de_nacimiento",
+    "datos_parentesco_edad",
+    "datos_parentesco_estado_civil",
+    "datos_parentesco_discapacidad",
+    "datos_parentesco_enfermedad_catastrofica",
+    "datos_parentesco_trabaja",
+    "datos_parentesco_ocupacion",
+    "datos_parentesco_ingreso_mensual",
+    "datos_parentesco_parentesco",
+  ].forEach((id) => {
+    const campo = document.getElementById(id);
+    if (campo) {
+      if (id === "datos_parentesco_ocupacion") {
+        campo.value = "Ninguna";
+        campo.readOnly = true;
+      } else {
+        campo.value = "";
+      }
+    }
+  });
+}
+
+function validarFormularioDatosGenerales() {
+  const campos = document.querySelectorAll(
+    `#datos_provincia,
+     #datos_canton,
+     #datos_tipo_parroquia,
+     #datos_parroquias,
+     #datos_comunidades,
+     #datos_barrios,
+     #datos_tipo_viviendas,
+     #datos_techos,
+     #datos_paredes,
+     #datos_pisos,
+     #datos_cuarto,
+     #datos_combustibles_cocina,
+     #datos_servicios_higienicos,
+     #datos_viviendas,
+     #datos_pago_vivienda,
+     #datos_agua,
+     #datos_pago_agua,
+     #datos_pago_luz,
+     #datos_cantidad_luz,
+     #datos_internet,
+     #datos_pago_internet,
+     #datos_tv_cable,
+     #datos_tv_pago,
+     #datos_eliminacion_basura,
+     #datos_lugares_mayor_frecuencia_viveres,
+     #datos_gastos_viveres_alimentacion,
+     #datos_medio_transporte,
+     #datos_estado_transporte,
+     #datos_terrenos,
+     #datos_celular,
+     #datos_cantidad_celulare,
+     #datos_plan_celular`
+  );
+
+  let errores = 0;
+
+  // Validar campos vacíos
+  campos.forEach((campo) => {
+    const valor = campo.value.trim();
+    const label = campo.labels?.[0]?.innerText || campo.id;
+
+    if (valor === "") {
+      errores++;
+      campo.classList.add("border", "border-danger");
+      setTimeout(() => campo.classList.remove("border", "border-danger"), 3000);
+      alertify.error(`El campo "${label}" es obligatorio`);
+    }
+  });
+
+  // Validar tabla de parentesco
+  const parentescoFilas = document.querySelectorAll(
+    "#tablaParentesco tbody tr"
+  );
+  if (parentescoFilas.length === 0) {
+    errores++;
+    alertify.error(
+      "Debe ingresar al menos un familiar en la tabla de parentesco"
+    );
+  }
+
+  // Validar tabla de vehículos
+  const vehiculoFilas = document.querySelectorAll("#tablaVehiculos tbody tr");
+  if (vehiculoFilas.length === 0) {
+    errores++;
+    alertify.error(
+      "Debe ingresar al menos un vehículo en la tabla de vehículos"
+    );
+  }
+
+  // Enviar si no hay errores
+  if (errores === 0) {
+    const boton = document.querySelector('button[type="button"].btn-primary');
+    if (boton) {
+      boton.setAttribute("type", "submit");
+      boton.click(); // disparamos el submit
+    }
+  }
 }
