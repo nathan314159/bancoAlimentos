@@ -2,17 +2,25 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
+use App\Models\GeneralInformationMod;
+use App\Models\RelationshipMod;
+use App\Models\GeneralInformationRelationshipMod;
 use App\Models\UsersMod;
 use App\Models\RolAccessMod;
 use App\Models\UserRolMod;
+use App\Models\ItemCatalogMod;
 
-class Users extends BaseController
+class GeneralInformationRecords extends BaseController
 {
+    protected $form;
+    protected $relationship;
+    protected $generalInformationRelationship;
     protected $users;
     protected $rol_access;
     protected $user_rol;
+    protected $item_catalog;
 
-    public $session = null;
 
     public function __construct()
     {
@@ -20,25 +28,25 @@ class Users extends BaseController
         $this->users = new UsersMod();
         $this->rol_access = new RolAccessMod();
         $this->user_rol = new UserRolMod();
+        $this->form = new GeneralInformationMod();
+        $this->relationship = new RelationshipMod();
+        $this->generalInformationRelationship = new GeneralInformationRelationshipMod();
+        $this->item_catalog = new ItemCatalogMod();
     }
 
-    public function profile()
+    public function informationRecords()
     {
         echo "<script>if (window.history.replaceState) { // verificamos disponibilidad
 			window.history.replaceState(null, null, window.location.href);
 		}</script>";
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
-            if (accessController("/profile", $routes)) {
-                $arrayFunction = ['function' => 'modificar perfil'];
-                $actualUser = $this->users->searchUserPorfile(session('id_users'));
-                
+            if (accessController("/informationRecords", $routes)) {
+                $arrayFunction = ['function' => 'datos registrados'];
                 echo view("layout/header");
                 echo view("layout/aside", $arrayFunction);
-                echo view("profile/body", ['user' => $actualUser[0]]);
+                echo view("generalInformationRecords/body");
                 echo view("layout/footer", $arrayFunction);
-                
-                //print_r($actualUser);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
             }
@@ -46,5 +54,4 @@ class Users extends BaseController
             echo view('login/body.php');
         }
     }
-
 }

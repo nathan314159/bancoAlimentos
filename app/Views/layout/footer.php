@@ -51,11 +51,26 @@
 <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
 <!-- JS for General Information -->
-<script src="<?php echo base_url(); ?>/assets/js/operations/generalInformation.js"></script>
+<?php if ($function == 'formulario') { ?>
+    <script src="<?php echo base_url(); ?>/assets/js/operations/generalInformation.js"></script>
+<?php } ?>
+
+<!-- JS for General Information Records -->
+<?php if ($function == 'datos registrados') { ?>
+    <script src="<?php echo base_url(); ?>/assets/js/operations/generalInformationRecords.js"></script>
+<?php } ?>
+
+<!-- JS for Profile-->
+<?php if ($function == 'modificar perfil') { ?>
+    <script src="<?php echo base_url(); ?>/assets/js/operations/profile.js"></script>
+<?php } ?>
 
 <!-- Alertify -->
 <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.js"></script>
 <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>/assets/js/alertify/alertify.min.js"></script>
+
+<!--DATATABLE JQUERY-->
+<script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
 
 </body>
 

@@ -79,9 +79,9 @@
                                     <label class="label" for="users_genero">Género</label>
                                     <select class="input--style-4" name="users_genero" id="users_genero">
                                         <option disabled selected>Seleccione...</option>
-                                        <option value="1">Masculino</option>
-                                        <option value="2">Femenino</option>
-                                        <option value="3">Otro</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
                                     </select>
                                 </div>
                             </div>

@@ -46,7 +46,7 @@ class GeneralInformation extends BaseController
                 echo view("layout/header");
                 echo view("layout/aside", $arrayFunction);
                 echo view("generalInformation/body");
-                echo view("layout/footer");
+                echo view("layout/footer", $arrayFunction);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
             }

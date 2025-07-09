@@ -19,8 +19,11 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!--ALERTIFY--> 
+    <!--ALERTIFY-->
     <link href="<?php echo base_url(); ?>/assets/css/alertify/alertify.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/alertify/themes/default.css" rel="stylesheet">
+
+    <!--DATATABLE JQUERY-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
 
 </head>

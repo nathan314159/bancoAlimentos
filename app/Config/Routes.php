@@ -42,3 +42,9 @@ $routes->get('/getEthnicity', 'GeneralInformation::getEthnicity');
 $routes->get('/getGenders', 'GeneralInformation::getGenders');
 $routes->get('/getEducationLevel', 'GeneralInformation::getEducationLevel');
 $routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');
+
+//Routes for general information records
+$routes->get('/informationRecords', 'GeneralInformationRecords::informationRecords');
+
+//Routes for profile
+$routes->get('/profile', 'Users::profile');

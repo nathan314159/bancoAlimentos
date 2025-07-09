@@ -117,4 +117,29 @@ class UsersMod extends Model
             return false; // O puedes devolver $db->error() si deseas saber qué falló
         }
     }
+
+    public function searchUserPorfile($idUsuario)
+    {
+        return $this->db->table('tbl_user_rol ur')
+            ->select('
+            u.id_users,
+            u.users_nombre,
+            u.users_apellido,
+            u.users_cedula,
+            u.users_email,
+            u.users_genero,
+            u.users_nombreUsuario,
+            u.users_telefono,
+            u.users_fecha_de_nacimiento,
+            u.users_estado,
+            r.id_rol,
+            r.rol_nombre
+        ')
+            ->join('tbl_users u', 'u.id_users = ur.id_users')
+            ->join('tbl_rol r', 'r.id_rol = ur.id_rol')
+            ->where('ur.id_users', $idUsuario)
+            ->limit(1)
+            ->get()
+            ->getResult();
+    }
 }

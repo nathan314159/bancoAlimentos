@@ -30,8 +30,8 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item <?php echo $function == 'datos registrados' ? 'active' : ''; ?>">
+                <a class="nav-link" href="<?php echo base_url('/informationRecords');?>">
                     <i class="fas fa-scroll"></i>
                     <span>Datos registrados</span></a>
             </li>
@@ -64,7 +64,9 @@
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
-                        <h1><b>Formulario general</b></h1>
+                        <?php echo $function == 'formulario' ? '<h1><b>Formulario general</b></h1>' : ''; ?>
+                        <?php echo $function == 'datos registrados' ? '<h1><b>Datos registrados</b></h1>' : ''; ?>
+                        <?php echo $function == 'modificar perfil' ? '<h1><b>Modificar cuenta</b></h1>' : ''; ?>
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -83,7 +85,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?php echo base_url('/profile');?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Modificar cuenta
                                 </a>

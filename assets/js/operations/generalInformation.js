@@ -7,7 +7,7 @@ $(document).ready(function () {
   selectRoofTypes();
   selectWallTypes();
   selectFloorTypes();
-  selectCookingFuel();
+  selectCookingFuel();  
   selectHygienicServices();
   selectHousing();
   selectWaterServices();
