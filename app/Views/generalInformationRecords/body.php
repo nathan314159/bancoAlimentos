@@ -44,168 +44,58 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>102</td>
-                        <td>María González</td>
-                        <td>Pichincha</td>
-                        <td>Quito</td>
-                        <td>Urbana</td>
-                        <td>La Magdalena</td>
-                        <td>Comunidad A</td>
-                        <td>Barrio X</td>
-                        <td>Casa</td>
-                        <td>Zinc</td>
-                        <td>Ladrillo</td>
-                        <td>Cemento</td>
-                        <td>4</td>
-                        <td>Gas</td>
-                        <td>Privado</td>
-                        <td>Propia</td>
-                        <td>100</td>
-                        <td>Sí</td>
-                        <td>10</td>
-                        <td>Sí</td>
-                        <td>20</td>
-                        <td>Sí</td>
-                        <td>15</td>
-                        <td>Sí</td>
-                        <td>10</td>
-                        <td>Recolectada</td>
-                        <td>Mercado</td>
-                        <td>300</td>
-                        <td>Bus/Taxi</td>
-                        <td>Bueno</td>
-                        <td>Sí</td>
-                        <td>Sí</td>
-                        <td>2</td>
-                        <td>Sí</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary me-1">Madre</button>
-                            <button class="btn btn-sm btn-success me-1">Hijo</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>204</td>
-                        <td>Carlos Pérez</td>
-                        <td>Guayas</td>
-                        <td>Guayaquil</td>
-                        <td>Rural</td>
-                        <td>Letamendi</td>
-                        <td>Comunidad B</td>
-                        <td>Barrio Y</td>
-                        <td>Departamento</td>
-                        <td>Hormigón</td>
-                        <td>Bloque</td>
-                        <td>Madera</td>
-                        <td>3</td>
-                        <td>Leña</td>
-                        <td>Compartido</td>
-                        <td>Alquilada</td>
-                        <td>120</td>
-                        <td>Sí</td>
-                        <td>12</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>Sí</td>
-                        <td>18</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>Quema</td>
-                        <td>Tiendas</td>
-                        <td>250</td>
-                        <td>Bicicleta</td>
-                        <td>Regular</td>
-                        <td>No</td>
-                        <td>No</td>
-                        <td>1</td>
-                        <td>No</td>
-                        <td>
-                            <button class="btn btn-sm btn-warning me-1">Hermano</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>305</td>
-                        <td>Luisa Martínez</td>
-                        <td>Azuay</td>
-                        <td>Cuenca</td>
-                        <td>Urbana</td>
-                        <td>El Batán</td>
-                        <td>Comunidad C</td>
-                        <td>Barrio Z</td>
-                        <td>Casa</td>
-                        <td>Teja</td>
-                        <td>Adobe</td>
-                        <td>Tierra</td>
-                        <td>2</td>
-                        <td>Gas</td>
-                        <td>Privado</td>
-                        <td>Propia</td>
-                        <td>0</td>
-                        <td>Sí</td>
-                        <td>8</td>
-                        <td>Sí</td>
-                        <td>18</td>
-                        <td>Sí</td>
-                        <td>15</td>
-                        <td>Sí</td>
-                        <td>7</td>
-                        <td>Recolectada</td>
-                        <td>Supermercado</td>
-                        <td>200</td>
-                        <td>Taxi</td>
-                        <td>Malo</td>
-                        <td>Sí</td>
-                        <td>Sí</td>
-                        <td>3</td>
-                        <td>Sí</td>
-                        <td>
-                            <button class="btn btn-sm btn-info me-1">Esposo</button>
-                            <button class="btn btn-sm btn-danger">Hija</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>410</td>
-                        <td>Pedro Ramírez</td>
-                        <td>Manabí</td>
-                        <td>Portoviejo</td>
-                        <td>Rural</td>
-                        <td>Colón</td>
-                        <td>Comunidad D</td>
-                        <td>Barrio Central</td>
-                        <td>Rancho</td>
-                        <td>Paja</td>
-                        <td>Bambú</td>
-                        <td>Tierra</td>
-                        <td>1</td>
-                        <td>Leña</td>
-                        <td>Compartido</td>
-                        <td>Prestada</td>
-                        <td>0</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>Enterrada</td>
-                        <td>Puestos</td>
-                        <td>180</td>
-                        <td>Caminando</td>
-                        <td>Bueno</td>
-                        <td>No</td>
-                        <td>No</td>
-                        <td>0</td>
-                        <td>No</td>
-                        <td>
-                            <button class="btn btn-sm btn-secondary me-1">Tío</button>
-                        </td>
-                    </tr>
+                <tbody>
+                    <?php $i = 1;
+                    foreach ($registros as $row): ?>
+                        <tr>
+                            <td><?= $i++ ?></td>
+                            <td><?= esc($row->id_users) ?></td>
+                            <td><?= esc($row->nombre_parentesco) ?> <?= esc($row->apellido_parentesco) ?></td>
+                            <td><?= esc($row->datos_provincia) ?></td>
+                            <td><?= esc($row->datos_canton) ?></td>
+                            <td><?= esc($row->datos_tipo_parroquias) ?></td>
+                            <td><?= esc($row->datos_parroquias) ?></td>
+                            <td><?= esc($row->datos_comunidades) ?></td>
+                            <td><?= esc($row->datos_barrios) ?></td>
+                            <td><?= esc($row->datos_tipo_viviendas) ?></td>
+                            <td><?= esc($row->datos_techos) ?></td>
+                            <td><?= esc($row->datos_paredes) ?></td>
+                            <td><?= esc($row->datos_pisos) ?></td>
+                            <td><?= esc($row->datos_cuarto) ?></td>
+                            <td><?= esc($row->datos_combustibles_cocina) ?></td>
+                            <td><?= esc($row->datos_servicios_higienicos) ?></td>
+                            <td><?= esc($row->datos_viviendas) ?></td>
+                            <td><?= esc($row->datos_pago_vivienda) ?></td>
+                            <td><?= esc($row->datos_agua ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_pago_agua) ?></td>
+                            <td><?= esc($row->datos_pago_luz ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_cantidad_luz) ?></td>
+                            <td><?= esc($row->datos_internet ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_pago_internet) ?></td>
+                            <td><?= esc($row->datos_tv_cable ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_tv_pago) ?></td>
+                            <td><?= esc($row->datos_eliminacion_basura) ?></td>
+                            <td><?= esc($row->datos_lugares_mayor_frecuencia_viveres) ?></td>
+                            <td><?= esc($row->datos_gastos_viveres_alimentacion) ?></td>
+                            <td><?= esc($row->datos_medio_transporte) ?></td>
+                            <td><?= esc($row->datos_estado_transporte) ?></td>
+                            <td><?= esc($row->datos_terrenos ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_celular ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_cantidad_celulare) ?></td>
+                            <td><?= esc($row->datos_plan_celular ? 'Sí' : 'No') ?></td>
+
+
+                            <td>
+                                <?php foreach ($row->parentescos as $p): ?>
+                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>">
+                                        <?= esc($p['tipo']) ?>
+                                    </button>
+                                <?php endforeach; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+
                 </tbody>
 
 

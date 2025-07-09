@@ -142,4 +142,7 @@ class UsersMod extends Model
             ->get()
             ->getResult();
     }
+
+    // nueva funcion update el usuario
+    // nueva funcion update para la clave
 }

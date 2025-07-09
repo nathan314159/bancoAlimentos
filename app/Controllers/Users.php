@@ -47,4 +47,7 @@ class Users extends BaseController
         }
     }
 
+    // funcion con post una para actualizar el perfil
+    // otra para actualizar contraseña
+    
 }
