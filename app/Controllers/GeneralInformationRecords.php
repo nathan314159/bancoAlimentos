@@ -35,50 +35,87 @@ class GeneralInformationRecords extends BaseController
     }
 
     public function informationRecords()
-{
-    echo "<script>if (window.history.replaceState) {
+    {
+        echo "<script>if (window.history.replaceState) {
         window.history.replaceState(null, null, window.location.href);
     }</script>";
 
-    if ($this->session->has('id_users')) {
-        $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
 
-        if (accessController("/informationRecords", $routes)) {
-            $arrayFunction = ['function' => 'datos registrados'];
+            if (accessController("/informationRecords", $routes)) {
+                $arrayFunction = ['function' => 'datos registrados'];
 
-            // ✅ Aquí transformamos los datos crudos en estructura agrupada
-            $registros_crudos = $this->form->showGeneralInformation();
+                // ✅ Aquí transformamos los datos crudos en estructura agrupada
+                $registros_crudos = $this->form->showGeneralInformation();
 
-            $registros = [];
-            foreach ($registros_crudos as $row) {
-                $id = $row->id_datos_generales;
+                $registros = [];
+                foreach ($registros_crudos as $row) {
+                    $id = $row->id_datos_generales;
 
-                if (!isset($registros[$id])) {
-                    $registros[$id] = $row;
-                    $registros[$id]->parentescos = [];
+                    if (!isset($registros[$id])) {
+                        $registros[$id] = $row;
+                        $registros[$id]->parentescos = [];
+                    }
+
+                    $nombreCompleto = trim("{$row->nombre_parentesco} {$row->apellido_parentesco}");
+                    $registros[$id]->parentescos[] = [
+                        'id_parentesco' => $row->id_datos_parentesco,
+                        'nombre' => $nombreCompleto,
+                        'tipo' => $row->parentesco
+                    ];
                 }
 
-                $nombreCompleto = trim("{$row->nombre_parentesco} {$row->apellido_parentesco}");
-                $registros[$id]->parentescos[] = [
-                    'nombre' => $nombreCompleto,
-                    'tipo' => $row->parentesco
-                ];
+                $data['registros'] = array_values($registros); // lista limpia
+
+                // Vistas
+                echo view("layout/header");
+                echo view("layout/aside", $arrayFunction);
+                echo view("generalInformationRecords/body", $data);
+                echo view("layout/footer", $arrayFunction);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
             }
-
-            $data['registros'] = array_values($registros); // lista limpia
-
-            // Vistas
-            echo view("layout/header");
-            echo view("layout/aside", $arrayFunction);
-            echo view("generalInformationRecords/body", $data);
-            echo view("layout/footer", $arrayFunction);
-
         } else {
-            redirectUser($this->users->searchRolUser(session('id_users')));
+            echo view('login/body.php');
         }
-    } else {
-        echo view('login/body.php');
     }
-}
 
+
+    public function getRelationShipId()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getRelationShipId", $routes)) {
+                $relationship = $this->generalInformationRelationship->getRelationShipId($this->request->getPost('id_datos_parentesco'));
+                echo json_encode($relationship);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function deleteGeneralInformationRecord()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/deleteGeneralInformationRecord", $routes)) {
+                //1.Obtener todos los id de parentescos
+                $relationShipIdArray = $this->generalInformationRelationship->getParentescosByDatosGeneralesId(21);
+                //2. Cambiar el estado del id de datos generales a 0 
+                //$this->generalInformationRelationship->desactivarDatosGenerales($this->request->getPost('id_datos_generales'));
+                //3. Cambiar los estados de parentescos a 0
+                //$this->generalInformationRelationship->desactivarParentescos($relationShipIdArray);
+                //4. Cambiar los estados de datos_generales_parentesco a 0
+                //$this->generalInformationRelationship->desactivarGeneralesParentescos($this->request->getPost('id_datos_generales'));
+                print_r($relationShipIdArray);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
 }

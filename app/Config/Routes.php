@@ -45,6 +45,8 @@ $routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');
 
 //Routes for general information records
 $routes->get('/informationRecords', 'GeneralInformationRecords::informationRecords');
+$routes->post('/getRelationShipId', 'GeneralInformationRecords::getRelationShipId');
+$routes->get('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
 
 //Routes for profile
 $routes->get('/profile', 'Users::profile');

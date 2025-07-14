@@ -5,7 +5,6 @@
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
-                        <th>ID Usuario</th>
                         <th>Persona Atendida</th>
                         <th>Provincia</th>
                         <th>Cantón</th>
@@ -40,16 +39,18 @@
                         <th>Cantidad Celulares</th>
                         <th>Plan Celular</th>
                         <th>Parentescos</th>
+                        <?php if (session('rol_nombre') == 'Administrador') { ?>
+                            <th>Acciones</th>
+                        <?php } ?>
                     </tr>
                 </thead>
 
-                <tbody>
+
                 <tbody>
                     <?php $i = 1;
                     foreach ($registros as $row): ?>
                         <tr>
-                            <td><?= $i++ ?></td>
-                            <td><?= esc($row->id_users) ?></td>
+                            <td><?= $i++ ?><input type="hidden" value=<?php echo $row->id_users; ?></td>
                             <td><?= esc($row->nombre_parentesco) ?> <?= esc($row->apellido_parentesco) ?></td>
                             <td><?= esc($row->datos_provincia) ?></td>
                             <td><?= esc($row->datos_canton) ?></td>
@@ -83,20 +84,25 @@
                             <td><?= esc($row->datos_celular ? 'Sí' : 'No') ?></td>
                             <td><?= esc($row->datos_cantidad_celulare) ?></td>
                             <td><?= esc($row->datos_plan_celular ? 'Sí' : 'No') ?></td>
-
-
                             <td>
                                 <?php foreach ($row->parentescos as $p): ?>
-                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>">
+                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>">
                                         <?= esc($p['tipo']) ?>
                                     </button>
                                 <?php endforeach; ?>
                             </td>
+                            <?php if (session('rol_nombre') == 'Administrador') { ?>
+                                <td>
+                                    <button class="btn btn-sm btn-danger me-1" title="Eliminar" onclick="deleteGeneralInformation(<?= esc($row->id_datos_generales) ?>)">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
 
-                </tbody>
+
 
 
             </table>

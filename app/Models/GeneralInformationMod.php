@@ -47,7 +47,8 @@ class GeneralInformationMod extends Model
         "datos_terrenos",
         "datos_celular",
         "datos_cantidad_celulare",
-        "datos_plan_celular"
+        "datos_plan_celular",
+        "datos_estado"
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -127,6 +128,7 @@ public function showGeneralInformation()
         dg.datos_cantidad_celulare,
         dg.datos_plan_celular,
 
+        dp.id_datos_parentesco AS id_datos_parentesco,
         dp.datos_parentesco_nombres AS nombre_parentesco,
         dp.datos_parentesco_apellidos AS apellido_parentesco,
         dp.datos_parentesco_parentesco AS parentesco
