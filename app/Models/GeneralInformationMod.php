@@ -137,9 +137,5 @@ public function showGeneralInformation()
     return $builder->get()->getResult();
 }
 
-
-
-
-
     // select de parentesco
 }
