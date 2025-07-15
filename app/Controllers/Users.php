@@ -32,12 +32,12 @@ class Users extends BaseController
             if (accessController("/profile", $routes)) {
                 $arrayFunction = ['function' => 'modificar perfil'];
                 $actualUser = $this->users->searchUserPorfile(session('id_users'));
-                
+
                 echo view("layout/header");
                 echo view("layout/aside", $arrayFunction);
                 echo view("profile/body", ['user' => $actualUser[0]]);
                 echo view("layout/footer", $arrayFunction);
-                
+
                 //print_r($actualUser);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
@@ -48,6 +48,36 @@ class Users extends BaseController
     }
 
     // funcion con post una para actualizar el perfil
+    public function updateProfile()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/updateProfile", $routes)) {
+                $this->users->actualizarContacto(session('id_users'), $this->request->getPost("users_email"), $this->request->getPost("users_telefono"));
+                session_destroy();
+                principalPage();
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
     // otra para actualizar contraseña
-    
+    public function updateProfilePassword()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/updateProfilePassword", $routes)) {
+                $this->users->actualizarContrasenia(session('id_users'), password_hash($this->request->getPost("users_contrasenia"), PASSWORD_DEFAULT));
+                session_destroy();
+                principalPage();
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
 }

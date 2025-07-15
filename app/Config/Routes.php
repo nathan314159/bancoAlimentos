@@ -14,10 +14,12 @@ $routes->post('/verifyUser', 'Principal::verifyUser');
 $routes->post('/enterUser', 'Principal::enterUser');
 $routes->get('/logout', 'Principal::logout');
 
-//Routes for create users - main
+//Routes for users - main
 $routes->get('/createAccountView', 'Principal::createAccountView');
 $routes->post('/registerUser', 'Principal::registerUser');
 $routes->post('/findUserMail', 'Principal::findUserMail');
+$routes->post('/updateProfile', 'Users::updateProfile');
+$routes->post('/updateProfilePassword', 'Users::updateProfilePassword');
 
 //Routes for form general information 
 $routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
@@ -46,7 +48,7 @@ $routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');
 //Routes for general information records
 $routes->get('/informationRecords', 'GeneralInformationRecords::informationRecords');
 $routes->post('/getRelationShipId', 'GeneralInformationRecords::getRelationShipId');
-$routes->get('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
+$routes->post('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
 
 //Routes for profile
 $routes->get('/profile', 'Users::profile');

@@ -135,6 +135,7 @@ public function showGeneralInformation()
     ");
     $builder->join('tbl_datos_generales_parentesco dgp', 'dgp.id_datos_generales = dg.id_datos_generales');
     $builder->join('tbl_datos_parentesco dp', 'dp.id_datos_parentesco = dgp.id_datos_parentescos');
+    $builder->where('datos_estado', 1);
 
     return $builder->get()->getResult();
 }

@@ -13,7 +13,7 @@ class UsersMod extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["users_nombre", "users_nombreUsuario", "users_apellido", "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
+    protected $allowedFields    = ["users_nombre", "users_nombreUsuario", "users_apellido", "users_contrasenia",  "users_cedula", "users_email", "users_telefono", "users_estado", "users_activation_token", "users_reset_token", "users_reset_token_expires_at"];
 
     protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
@@ -144,5 +144,19 @@ class UsersMod extends Model
     }
 
     // nueva funcion update el usuario
+    public function actualizarContacto($idUser, $email, $telefono)
+    {
+        return $this->update($idUser, [
+            'users_email' => $email,
+            'users_telefono' => $telefono
+        ]);
+    }
+
     // nueva funcion update para la clave
+    public function actualizarContrasenia($idUser, $contrasenia)
+    {
+        return $this->update($idUser, [
+            'users_contrasenia' => $contrasenia
+        ]);
+    }
 }

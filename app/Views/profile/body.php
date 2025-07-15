@@ -8,7 +8,7 @@
             <div class="card shadow border-primary">
                 <div class="card-body">
                     <h5 class="card-title text-primary text-center mb-3"><b>Datos del Usuario</b></h5>
-                    <form id="formUsuario" action="<?php echo base_url('/insertarUsuario'); ?>" method="POST">
+                    <form id="formUsuario" action="<?php echo base_url('/updateProfile'); ?>" method="POST">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="users_nombre" class="font-weight-bold">Nombre</label>
@@ -79,7 +79,7 @@
             <div class="card shadow border-secondary">
                 <div class="card-body">
                     <h5 class="card-title text-secondary text-center mb-3"><b>Actualizar Contraseña</b></h5>
-                    <form id="formContrasenia" action="<?php echo base_url('/actualizarContrasenia'); ?>" method="POST">
+                    <form id="formContrasenia" action="<?php echo base_url('/updateProfilePassword'); ?>" method="POST">
                         <div class="form-group">
                             <label for="users_contrasenia" class="font-weight-bold">Nueva Contraseña</label>
                             <input type="password" class="form-control" id="users_contrasenia" name="users_contrasenia" required>

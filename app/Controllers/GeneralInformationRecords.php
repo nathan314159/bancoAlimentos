@@ -102,15 +102,27 @@ class GeneralInformationRecords extends BaseController
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
             if (accessController("/deleteGeneralInformationRecord", $routes)) {
-                //1.Obtener todos los id de parentescos
-                $relationShipIdArray = $this->generalInformationRelationship->getParentescosByDatosGeneralesId(21);
-                //2. Cambiar el estado del id de datos generales a 0 
-                //$this->generalInformationRelationship->desactivarDatosGenerales($this->request->getPost('id_datos_generales'));
-                //3. Cambiar los estados de parentescos a 0
-                //$this->generalInformationRelationship->desactivarParentescos($relationShipIdArray);
-                //4. Cambiar los estados de datos_generales_parentesco a 0
-                //$this->generalInformationRelationship->desactivarGeneralesParentescos($this->request->getPost('id_datos_generales'));
-                print_r($relationShipIdArray);
+
+                $idDatosGenerales = $this->request->getPost('id_datos_generales');
+
+                // 1. Obtener todos los id de parentescos
+                $relationShipIdObjects = $this->generalInformationRelationship->getParentescosByDatosGeneralesId($idDatosGenerales);
+                $relationShipIdArray = array_map(function ($item) {
+                    return $item->id_datos_parentesco;
+                }, $relationShipIdObjects);
+
+                // 2. Cambiar el estado del id de datos generales a 0 
+                $this->generalInformationRelationship->desactivarDatosGenerales($idDatosGenerales);
+
+                // 3. Cambiar los estados de parentescos a 0
+                if (!empty($relationShipIdArray)) {
+                    $this->generalInformationRelationship->desactivarParentescos($relationShipIdArray);
+                }
+
+                // 4. Cambiar los estados de datos_generales_parentesco a 0
+                $this->generalInformationRelationship->desactivarGeneralesParentescos($idDatosGenerales);
+
+                //echo json_encode(['status' => 'ok']);
             } else {
                 redirectUser($this->users->searchRolUser(session('id_users')));
             }

@@ -54,12 +54,12 @@ function deleteGeneralInformation(id_dato) {
     window.location.origin + "/" + window.location.pathname.split("/")[1];
   $.ajax({
     url: baseURL + "/deleteGeneralInformationRecord",
-    type: "GET",
+    type: "POST",
     data: { id_datos_generales: id_dato },
     success: function (info) {
       console.log(info)
       alertify.success('El registro se ha eliminado con éxito.')
-      //windows.location.href
+      window.location.href = baseURL + "/informationRecords";
     },
     error: function () {
       console.log(
