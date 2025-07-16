@@ -681,6 +681,16 @@ function agregarVehiculo() {
   tbody.appendChild(row);
 }
 
+//Delete row vehicles
+function eliminarFila(boton) {
+  const fila = boton.closest("tr");
+  if (fila) {
+    fila.remove();
+    alertify.success("Vehículo eliminado correctamente");
+  }
+}
+
+
 // Validate integer input: only allow whole numbers (no decimals)
 function validarEnteros(event) {
   let input = event.target;
