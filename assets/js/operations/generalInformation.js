@@ -7,7 +7,7 @@ $(document).ready(function () {
   selectRoofTypes();
   selectWallTypes();
   selectFloorTypes();
-  selectCookingFuel();  
+  selectCookingFuel();
   selectHygienicServices();
   selectHousing();
   selectWaterServices();
@@ -638,10 +638,74 @@ function toggleCantidadCelulares() {
   }
 }
 
-// Add vehicle to table
+// // Add vehicle to table
+// function agregarVehiculo() {
+//   const tipo = document.getElementById("datos_medio_transporte").value.trim();
+//   const estado = document.getElementById("datos_estado_transporte").value;
+
+//   if (!tipo) {
+//     alertify.error("Ingrese el tipo de vehículo");
+//     return;
+//   }
+//   if (!estado) {
+//     alertify.error("Seleccione el estado del vehículo");
+//     return;
+//   }
+
+//   const tbody = document.querySelector("#tablaVehiculos tbody");
+//   const row = document.createElement("tr");
+
+//   // Celdas visibles
+//   const tdTipo = document.createElement("td");
+//   tdTipo.textContent = tipo;
+
+//   const tdEstado = document.createElement("td");
+//   tdEstado.textContent = estado;
+
+//   const tdAcciones = document.createElement("td");
+//   tdAcciones.innerHTML =
+//     '<button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">Eliminar</button>';
+
+//   // Inputs ocultos para enviar con POST
+//   const inputTipo = `<input type="hidden" name="datos_medio_transporte[]" value="${tipo}">`;
+//   const inputEstado = `<input type="hidden" name="datos_estado_transporte[]" value="${estado}">`;
+
+//   // Agregar inputs ocultos dentro de celdas
+//   tdTipo.innerHTML += inputTipo;
+//   tdEstado.innerHTML += inputEstado;
+
+//   // Armar fila
+//   row.appendChild(tdTipo);
+//   row.appendChild(tdEstado);
+//   row.appendChild(tdAcciones);
+//   tbody.appendChild(row);
+// }
+
+// //Event for put 0 vehicles
+// document.getElementById("datos_medio_transporte").addEventListener("change", function () {
+//   const tipo = this.value;
+//   const estadoSelect = document.getElementById("datos_estado_transporte");
+
+//   if (tipo === "Ninguno") {
+//     estadoSelect.value = "Ninguno";
+//   }
+// });
+
+// //Delete row vehicles
+// function eliminarFila(boton) {
+//   const fila = boton.closest("tr");
+//   if (fila) {g
+//     fila.remove();
+//     alertify.success("Vehículo eliminado correctamente");
+//   }
+// }
+
 function agregarVehiculo() {
-  const tipo = document.getElementById("datos_medio_transporte").value.trim();
-  const estado = document.getElementById("datos_estado_transporte").value;
+  const tipoSelect = document.getElementById("datos_medio_transporte");
+  const estadoSelect = document.getElementById("datos_estado_transporte");
+  const tipo = tipoSelect.value.trim();
+  const estado = estadoSelect.value;
+  const tbody = document.querySelector("#tablaVehiculos tbody");
 
   if (!tipo) {
     alertify.error("Ingrese el tipo de vehículo");
@@ -652,44 +716,84 @@ function agregarVehiculo() {
     return;
   }
 
-  const tbody = document.querySelector("#tablaVehiculos tbody");
+  alertify.success('Vehículo ingresado');
+
+  // Si selecciona "Ninguno", limpiar tabla y dejar solo esa fila
+  if (tipo === "Ninguno") {
+    tbody.innerHTML = ""; // eliminar todas las filas
+    alertify.success("Se ha seleccionado 'Ninguno' en vehículos")
+    const row = document.createElement("tr");
+
+    // Celdas visibles
+    const tdTipo = document.createElement("td");
+    tdTipo.textContent = tipo;
+    const tdEstado = document.createElement("td");
+    tdEstado.textContent = estado;
+    const tdAcciones = document.createElement("td");
+    tdAcciones.innerHTML =
+      '<button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">Eliminar</button>';
+
+    // Inputs ocultos
+    tdTipo.innerHTML += `<input type="hidden" name="datos_medio_transporte[]" value="${tipo}">`;
+    tdEstado.innerHTML += `<input type="hidden" name="datos_estado_transporte[]" value="${estado}">`;
+
+    row.appendChild(tdTipo);
+    row.appendChild(tdEstado);
+    row.appendChild(tdAcciones);
+    tbody.appendChild(row);
+
+    // Desactivar select y botón
+    tipoSelect.disabled = true;
+    estadoSelect.disabled = true;
+    document.querySelector(".btn.btn-success").disabled = true;
+    return;
+  }
+
+  // Agregar fila normal
   const row = document.createElement("tr");
 
-  // Celdas visibles
   const tdTipo = document.createElement("td");
   tdTipo.textContent = tipo;
-
   const tdEstado = document.createElement("td");
   tdEstado.textContent = estado;
-
   const tdAcciones = document.createElement("td");
   tdAcciones.innerHTML =
     '<button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">Eliminar</button>';
 
-  // Inputs ocultos para enviar con POST
-  const inputTipo = `<input type="hidden" name="datos_medio_transporte[]" value="${tipo}">`;
-  const inputEstado = `<input type="hidden" name="datos_estado_transporte[]" value="${estado}">`;
+  tdTipo.innerHTML += `<input type="hidden" name="datos_medio_transporte[]" value="${tipo}">`;
+  tdEstado.innerHTML += `<input type="hidden" name="datos_estado_transporte[]" value="${estado}">`;
 
-  // Agregar inputs ocultos dentro de celdas
-  tdTipo.innerHTML += inputTipo;
-  tdEstado.innerHTML += inputEstado;
-
-  // Armar fila
   row.appendChild(tdTipo);
   row.appendChild(tdEstado);
   row.appendChild(tdAcciones);
   tbody.appendChild(row);
 }
 
-//Delete row vehicles
-function eliminarFila(boton) {
-  const fila = boton.closest("tr");
-  if (fila) {
-    fila.remove();
-    alertify.success("Vehículo eliminado correctamente");
+// Detectar cambio a "Ninguno" y asignar estado automáticamente
+document
+  .getElementById("datos_medio_transporte")
+  .addEventListener("change", function () {
+    if (this.value === "Ninguno") {
+      document.getElementById("datos_estado_transporte").value = "Ninguno";
+    }
+  });
+
+// Función para eliminar fila
+function eliminarFila(button) {
+  const row = button.closest("tr");
+  const tipo = row.children[0].textContent.trim();
+
+  row.remove();
+  alertify.error("Se ha eliminado un vehículo.")
+
+  // Si el tipo era "Ninguno", volver a habilitar select y botón
+  if (tipo === "Ninguno") {
+    alertify.success("Se puede volver a seleccionar vehículos")
+    document.getElementById("datos_medio_transporte").disabled = false;
+    document.getElementById("datos_estado_transporte").disabled = false;
+    document.querySelector(".btn.btn-success").disabled = false;
   }
 }
-
 
 // Validate integer input: only allow whole numbers (no decimals)
 function validarEnteros(event) {
@@ -958,10 +1062,11 @@ function addRelationship() {
     <td>${limpio.ocupacion}<input type="hidden" name="parentesco_ocupacion[]" value="${limpio.ocupacion}"></td>
     <td>${limpio.ingreso}<input type="hidden" name="parentesco_ingreso[]" value="${limpio.ingreso}"></td>
     <td>${limpio.parentesco}<input type="hidden" name="parentesco_parentesco[]" value="${limpio.parentesco}"></td>
-    <td><button type="button" class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Eliminar</button></td>
+    <td><button type="button" class="btn btn-danger btn-sm" onclick="this.closest('tr').remove(alertify.error('Parentesco eliminado'))">Eliminar</button></td>
   `;
 
   tbody.appendChild(row);
+  alertify.success('Parentesco agregado con éxito');
 
   // Limpiar formulario
   [

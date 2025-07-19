@@ -413,6 +413,14 @@
             </div>
         </div>
 
+        <div class="form-row">
+            <!-- Campo para poner observacion -->
+            <div class="form-group col-md-12">
+                <label for="datos_observacion" class="font-weight-bold">Observaciones</label>
+                <textarea class="form-control" id="datos_observacion" name="datos_observacion" rows="3" placeholder="Escriba las observaciones aquí..."></textarea>
+            </div>
+        </div>
+
         <button type="button" class="btn btn-primary mt-3" onclick="validarFormularioDatosGenerales()">Enviar</button>
     </form>
 </div>

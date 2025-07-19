@@ -5,7 +5,7 @@
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
-                        <th>Persona Atendida</th>
+                        <th>Usuario</th>
                         <th>Provincia</th>
                         <th>Cantón</th>
                         <th>Tipo Parroquia</th>
@@ -19,7 +19,7 @@
                         <th>Nº Cuartos</th>
                         <th>Combustible Cocina</th>
                         <th>Servicios Higiénicos</th>
-                        <th>Tipo Vivienda</th>
+                        <th>Vivienda (Alojamiento)</th>
                         <th>Pago Vivienda</th>
                         <th>Agua</th>
                         <th>Pago Agua</th>
@@ -39,6 +39,7 @@
                         <th>Cantidad Celulares</th>
                         <th>Plan Celular</th>
                         <th>Parentescos</th>
+                        <th>Observaciones</th>
                         <?php if (session('rol_nombre') == 'Administrador') { ?>
                             <th>Acciones</th>
                         <?php } ?>
@@ -50,22 +51,25 @@
                     <?php $i = 1;
                     foreach ($registros as $row): ?>
                         <tr>
-                            <td><?= $i++ ?><input type="hidden" value=<?php echo $row->id_users; ?></td>
+                            <td><?= $i++ ?><input type="hidden" value=<?= esc($row->id_users); ?>></td>
                             <td><?= esc($row->nombre_parentesco) ?> <?= esc($row->apellido_parentesco) ?></td>
-                            <td><?= esc($row->datos_provincia) ?></td>
+
+                            <td><?= esc($row->nombre_provincia) ?></td>
                             <td><?= esc($row->datos_canton) ?></td>
                             <td><?= esc($row->datos_tipo_parroquias) ?></td>
-                            <td><?= esc($row->datos_parroquias) ?></td>
+                            <td><?= esc($row->nombre_parroquia) ?></td>
                             <td><?= esc($row->datos_comunidades) ?></td>
                             <td><?= esc($row->datos_barrios) ?></td>
-                            <td><?= esc($row->datos_tipo_viviendas) ?></td>
-                            <td><?= esc($row->datos_techos) ?></td>
-                            <td><?= esc($row->datos_paredes) ?></td>
-                            <td><?= esc($row->datos_pisos) ?></td>
+
+                            <td><?= esc($row->nombre_tipo_vivienda) ?></td>
+                            <td><?= esc($row->nombre_techo) ?></td>
+                            <td><?= esc($row->nombre_pared) ?></td>
+                            <td><?= esc($row->nombre_piso) ?></td>
+
                             <td><?= esc($row->datos_cuarto) ?></td>
-                            <td><?= esc($row->datos_combustibles_cocina) ?></td>
-                            <td><?= esc($row->datos_servicios_higienicos) ?></td>
-                            <td><?= esc($row->datos_viviendas) ?></td>
+                            <td><?= esc($row->nombre_combustible) ?></td>
+                            <td><?= esc($row->nombre_servicios) ?></td>
+                            <td><?= esc($row->nombre_vivienda) ?></td>
                             <td><?= esc($row->datos_pago_vivienda) ?></td>
                             <td><?= esc($row->datos_agua ? 'Sí' : 'No') ?></td>
                             <td><?= esc($row->datos_pago_agua) ?></td>
@@ -75,8 +79,8 @@
                             <td><?= esc($row->datos_pago_internet) ?></td>
                             <td><?= esc($row->datos_tv_cable ? 'Sí' : 'No') ?></td>
                             <td><?= esc($row->datos_tv_pago) ?></td>
-                            <td><?= esc($row->datos_eliminacion_basura) ?></td>
-                            <td><?= esc($row->datos_lugares_mayor_frecuencia_viveres) ?></td>
+                            <td><?= esc($row->nombre_eliminacion_basura) ?></td>
+                            <td><?= esc($row->nombre_frecuencia_viveres) ?></td>
                             <td><?= esc($row->datos_gastos_viveres_alimentacion) ?></td>
                             <td><?= esc($row->datos_medio_transporte) ?></td>
                             <td><?= esc($row->datos_estado_transporte) ?></td>
@@ -91,6 +95,7 @@
                                     </button>
                                 <?php endforeach; ?>
                             </td>
+                            <td><?= esc($row->datos_observacion) ?></td>
                             <?php if (session('rol_nombre') == 'Administrador') { ?>
                                 <td>
                                     <button class="btn btn-sm btn-danger me-1" title="Eliminar" onclick="deleteGeneralInformation(<?= esc($row->id_datos_generales) ?>)">

@@ -22,3 +22,9 @@ AGREGAR LO SIGUIENTE
 
 - Campo en tabla tbl_datos_generales llamada datos_tipo_parroquias *HECHO*
 - Campos para registrar la persona atendida en tbl_datos_generales *HECHO*
+
+
+
+19/07/2025
+
+- Corregir la tabla de datos registrados. Salen los id en vez de los nombres. Deben salir los nombres.

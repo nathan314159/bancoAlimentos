@@ -37,8 +37,8 @@ class GeneralInformationRecords extends BaseController
     public function informationRecords()
     {
         echo "<script>if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
-    }</script>";
+            window.history.replaceState(null, null, window.location.href);
+        }</script>";
 
         if ($this->session->has('id_users')) {
             $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
@@ -47,7 +47,7 @@ class GeneralInformationRecords extends BaseController
                 $arrayFunction = ['function' => 'datos registrados'];
 
                 // ✅ Aquí transformamos los datos crudos en estructura agrupada
-                $registros_crudos = $this->form->showGeneralInformation();
+                $registros_crudos = $this->form->showGeneralInformation(session('id_users'));
 
                 $registros = [];
                 foreach ($registros_crudos as $row) {
