@@ -58,6 +58,7 @@
 <!-- JS for General Information Records -->
 <?php if ($function == 'datos registrados') { ?>
     <script src="<?php echo base_url(); ?>/assets/js/operations/generalInformationRecords.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <?php } ?>
 
 <!-- JS for Profile-->

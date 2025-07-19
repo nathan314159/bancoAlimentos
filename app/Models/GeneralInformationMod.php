@@ -49,6 +49,7 @@ class GeneralInformationMod extends Model
         "datos_cantidad_celulare",
         "datos_plan_celular",
         "datos_observacion",
+        "datos_resultado",
         "datos_estado"
     ];
 
@@ -188,11 +189,25 @@ class GeneralInformationMod extends Model
             dg.datos_cantidad_celulare,
             dg.datos_plan_celular,
             dg.datos_observacion,
+            dg.datos_resultado,
 
             dp.id_datos_parentesco AS id_datos_parentesco,
             dp.datos_parentesco_nombres AS nombre_parentesco,
             dp.datos_parentesco_apellidos AS apellido_parentesco,
-            dp.datos_parentesco_parentesco AS parentesco
+            dp.datos_parentesco_parentesco AS parentesco,
+            dp.datos_parentesco_documento,
+            dp.datos_parentesco_celular_telf,
+            dp.datos_parentesco_etnia,
+            dp.datos_parentesco_genero,
+            dp.datos_parentesco_nivel_educacion,
+            dp.datos_parentesco_fecha_de_nacimiento,
+            dp.datos_parentesco_edad,
+            dp.datos_parentesco_estado_civil,
+            dp.datos_parentesco_discapacidad,
+            dp.datos_parentesco_enfermedad_catastrofica,
+            dp.datos_parentesco_trabaja,
+            dp.datos_parentesco_ocupacion,
+            dp.datos_parentesco_ingreso_mensual
         ");
 
         // JOINs con tbl_item_catalogo usando alias para cada campo relacionado

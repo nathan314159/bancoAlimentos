@@ -30,7 +30,7 @@ document.querySelectorAll("#generalRecordsTable button").forEach((btn) => {
         $("#p_nacimiento").val(info.datos_parentesco_fecha_de_nacimiento);
         $("#p_edad").val(info.datos_parentesco_edad);
         $("#p_estado_civil").val(info.estado_civil);
-        $("#p_discapacidad").val(info.discapacidad);
+        $("#p_discapacidad").val(info.datos_parentesco_discapacidad);
         $("#p_enfermedad").val(info.datos_parentesco_enfermedad_catastrofica);
         $("#p_trabaja").val(info.datos_parentesco_trabaja);
         $("#p_ocupacion").val(info.datos_parentesco_ocupacion);
@@ -57,8 +57,8 @@ function deleteGeneralInformation(id_dato) {
     type: "POST",
     data: { id_datos_generales: id_dato },
     success: function (info) {
-      console.log(info)
-      alertify.success('El registro se ha eliminado con éxito.')
+      console.log(info);
+      alertify.success("El registro se ha eliminado con éxito.");
       window.location.href = baseURL + "/informationRecords";
     },
     error: function () {
@@ -68,3 +68,24 @@ function deleteGeneralInformation(id_dato) {
     },
   });
 }
+
+document
+  .getElementById("formExportExcel")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const desde = document.getElementById("fechaDesde").value;
+    const hasta = document.getElementById("fechaHasta").value;
+
+    if (!desde || !hasta) {
+      alertify.error("Debe seleccionar ambas fechas");
+      return;
+    }
+
+    if (desde > hasta) {
+      alertify.error(
+        'La fecha "Desde" no puede ser mayor que la fecha "Hasta"'
+      );
+      return;
+    }
+  });

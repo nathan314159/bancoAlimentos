@@ -716,12 +716,12 @@ function agregarVehiculo() {
     return;
   }
 
-  alertify.success('Vehículo ingresado');
+  alertify.success("Vehículo ingresado");
 
   // Si selecciona "Ninguno", limpiar tabla y dejar solo esa fila
   if (tipo === "Ninguno") {
     tbody.innerHTML = ""; // eliminar todas las filas
-    alertify.success("Se ha seleccionado 'Ninguno' en vehículos")
+    alertify.success("Se ha seleccionado 'Ninguno' en vehículos");
     const row = document.createElement("tr");
 
     // Celdas visibles
@@ -784,11 +784,11 @@ function eliminarFila(button) {
   const tipo = row.children[0].textContent.trim();
 
   row.remove();
-  alertify.error("Se ha eliminado un vehículo.")
+  alertify.error("Se ha eliminado un vehículo.");
 
   // Si el tipo era "Ninguno", volver a habilitar select y botón
   if (tipo === "Ninguno") {
-    alertify.success("Se puede volver a seleccionar vehículos")
+    alertify.success("Se puede volver a seleccionar vehículos");
     document.getElementById("datos_medio_transporte").disabled = false;
     document.getElementById("datos_estado_transporte").disabled = false;
     document.querySelector(".btn.btn-success").disabled = false;
@@ -1066,7 +1066,7 @@ function addRelationship() {
   `;
 
   tbody.appendChild(row);
-  alertify.success('Parentesco agregado con éxito');
+  alertify.success("Parentesco agregado con éxito");
 
   // Limpiar formulario
   [
@@ -1242,3 +1242,168 @@ function validarFormularioDatosGenerales() {
     form.submit();
   }
 }
+
+// function evaluarResultado() {
+//   let ingresoMensual = 0;
+
+//   // 1. Obtener ingreso mensual del primer registro
+//   const parentescoTabla = document.querySelector("#tablaParentesco tbody");
+//   if (parentescoTabla.rows.length > 0) {
+//     const fila = parentescoTabla.rows[0];
+//     const ingresoCell = fila.cells[14]; // columna 15 → index 14
+//     ingresoMensual = parseFloat(ingresoCell.textContent) || 0;
+//   }
+
+//   // 2. Sumar gastos de los campos del formulario
+//   const gastoVivienda =
+//     parseFloat(document.getElementById("datos_pago_vivienda").value) || 0;
+//   const gastoAgua =
+//     parseFloat(document.getElementById("datos_pago_agua").value) || 0;
+//   const gastoLuz =
+//     parseFloat(document.getElementById("datos_pago_luz").value) || 0;
+//   const gastoInternet =
+//     parseFloat(document.getElementById("datos_pago_internet").value) || 0;
+//   const gastoTv =
+//     parseFloat(document.getElementById("datos_tv_pago").value) || 0;
+//   const gastoViveres =
+//     parseFloat(
+//       document.getElementById("datos_gastos_viveres_alimentacion").value
+//     ) || 0;
+
+//   const totalGastos =
+//     gastoVivienda +
+//     gastoAgua +
+//     gastoLuz +
+//     gastoInternet +
+//     gastoTv +
+//     gastoViveres;
+//   const diferencia = ingresoMensual - totalGastos;
+
+//   // 3. Evaluar vehículos
+//   let tieneVehiculoBuenoORegular = false;
+//   const tablaVehiculos = document.querySelectorAll("#tablaVehiculos tbody tr");
+
+//   tablaVehiculos.forEach((fila) => {
+//     const estado = fila.cells[1].textContent.trim();
+//     if (estado === "Bueno" || estado === "Regular") {
+//       tieneVehiculoBuenoORegular = true;
+//     }
+//   });
+
+//   // 4. Lógica para cambiar automáticamente el select de resultado
+//   const resultadoSelect = document.getElementById("datos_resultado");
+
+//   if (tieneVehiculoBuenoORegular) {
+//     resultadoSelect.value = "No aprobado";
+//   } else if (diferencia < 0) {
+//     resultadoSelect.value = "Aprobado";
+//   } else {
+//     resultadoSelect.value = "No aprobado";
+//   }
+// }
+
+// Ejecutar la evaluación automáticamente al cambiar valores relevantes
+
+function evaluarResultado() {
+  let ingresoMensual = 0;
+
+  // 1. Obtener ingreso mensual del primer registro
+  const parentescoTabla = document.querySelector("#tablaParentesco tbody");
+  if (parentescoTabla.rows.length > 0) {
+    const fila = parentescoTabla.rows[0];
+    const ingresoCell = fila.cells[14]; // columna 15 → index 14
+    ingresoMensual = parseFloat(ingresoCell.textContent) || 0;
+  }
+
+  // 2. Sumar gastos de los campos del formulario
+  const gastoVivienda =
+    parseFloat(document.getElementById("datos_pago_vivienda").value) || 0;
+  const gastoAgua =
+    parseFloat(document.getElementById("datos_pago_agua").value) || 0;
+  const gastoLuz =
+    parseFloat(document.getElementById("datos_pago_luz").value) || 0;
+  const gastoInternet =
+    parseFloat(document.getElementById("datos_pago_internet").value) || 0;
+  const gastoTv =
+    parseFloat(document.getElementById("datos_tv_pago").value) || 0;
+  const gastoViveres =
+    parseFloat(
+      document.getElementById("datos_gastos_viveres_alimentacion").value
+    ) || 0;
+
+  const totalGastos =
+    gastoVivienda +
+    gastoAgua +
+    gastoLuz +
+    gastoInternet +
+    gastoTv +
+    gastoViveres;
+  const diferencia = ingresoMensual - totalGastos;
+
+  // 3. Evaluar vehículos
+  let tieneVehiculoBuenoORegular = false;
+  const tablaVehiculos = document.querySelectorAll("#tablaVehiculos tbody tr");
+
+  tablaVehiculos.forEach((fila) => {
+    const estado = fila.cells[1].textContent.trim();
+    if (estado === "Bueno" || estado === "Regular") {
+      tieneVehiculoBuenoORegular = true;
+    }
+  });
+
+  // 4. Lógica para cambiar automáticamente el select de resultado
+  const resultadoSelect = document.getElementById("datos_resultado");
+  if (tieneVehiculoBuenoORegular) {
+    resultadoSelect.value = "No aprobado";
+  } else if (diferencia < 0) {
+    resultadoSelect.value = "Aprobado";
+  } else {
+    resultadoSelect.value = "No aprobado";
+  }
+
+  // 5. Actualizar texto del criterio
+  const criterioDiv = document.getElementById("criterioMensaje");
+  const observacionText = document.getElementById("datos_observacion");
+  let mensaje = "";
+
+  if (diferencia < 0) {
+    mensaje = "Los gastos exceden al ingreso mensual";
+  } else {
+    mensaje = "Los gastos no exceden al ingreso mensual";
+  }
+
+  if (tieneVehiculoBuenoORegular) {
+    mensaje += " y se detectan vehículos con estado regular o bueno";
+  } else {
+    mensaje += " y no se detectan vehículos con estado regular o bueno";
+  }
+
+  criterioDiv.textContent = mensaje;
+  observacionText.value = mensaje;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const camposGasto = [
+    "datos_pago_vivienda",
+    "datos_pago_agua",
+    "datos_pago_luz",
+    "datos_pago_internet",
+    "datos_tv_pago",
+    "datos_gastos_viveres_alimentacion",
+  ];
+
+  camposGasto.forEach((id) => {
+    document.getElementById(id).addEventListener("input", evaluarResultado);
+  });
+
+  // También ejecutarlo cuando cambie el contenido de las tablas
+  const observer = new MutationObserver(evaluarResultado);
+  observer.observe(document.querySelector("#tablaParentesco tbody"), {
+    childList: true,
+    subtree: true,
+  });
+  observer.observe(document.querySelector("#tablaVehiculos tbody"), {
+    childList: true,
+    subtree: true,
+  });
+});

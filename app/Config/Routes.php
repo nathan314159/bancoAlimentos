@@ -49,6 +49,7 @@ $routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');
 $routes->get('/informationRecords', 'GeneralInformationRecords::informationRecords');
 $routes->post('/getRelationShipId', 'GeneralInformationRecords::getRelationShipId');
 $routes->post('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
+$routes->get('/exportExcel', 'GeneralInformationRecords::exportExcel');
 
 //Routes for profile
 $routes->get('/profile', 'Users::profile');

@@ -421,6 +421,25 @@
             </div>
         </div>
 
+        <div class="form-row">
+            <!-- Select Resultado -->
+            <div class="form-group col-md-6">
+                <label for="datos_resultado" class="font-weight-bold">Resultado</label>
+                <select class="form-control" id="datos_resultado" name="datos_resultado">
+                    <option value="Aprobado">Aprobado</option>
+                    <option value="No aprobado" selected>No aprobado</option>
+                </select>
+            </div>
+
+            <!-- Criterio centrado -->
+            <div class="form-group col-md-6 d-flex align-items-end justify-content-center">
+                <div class="w-100 text-center font-weight-bold" id="criterioMensaje">
+                    Criterio
+                </div>
+            </div>
+        </div>
+
+
         <button type="button" class="btn btn-primary mt-3" onclick="validarFormularioDatosGenerales()">Enviar</button>
     </form>
 </div>

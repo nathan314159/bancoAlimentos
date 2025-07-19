@@ -1,11 +1,40 @@
 <div class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="formExportExcel" action="<?php echo base_url('/exportExcel'); ?>" method="POST">
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-md-6">
+                            <label for="fechaDesde" class="font-weight-bold">Desde</label>
+                            <input type="date" class="form-control" id="fechaDesde" name="fechaDesde" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="fechaHasta" class="font-weight-bold">Cantón</label>
+                            <input type="date" class="form-control" id="fechaHasta" name="fechaHasta" required>
+                        </div>
+
+                        <div class="form-group col-md-12 text-center">
+                            <button type="submit" id="btnExportExcel" class="btn btn-primary form-control">Exportar Excel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="row justify-content-center">
         <div class="col-11">
-            <table class="table table-responsive table-bordered table-striped" id="generalRecordsTable">
+            <table class="table table-responsive table-bordered table-striped text-center" id="generalRecordsTable">
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
-                        <th>Usuario</th>
+                        <th>Usuario - Nombres y Apellidos</th>
+                        <th>Usuario - Cédula</th>
+                        <th>Usuario - Teléfono</th>
                         <th>Provincia</th>
                         <th>Cantón</th>
                         <th>Tipo Parroquia</th>
@@ -40,6 +69,7 @@
                         <th>Plan Celular</th>
                         <th>Parentescos</th>
                         <th>Observaciones</th>
+                        <th>Resultado</th>
                         <?php if (session('rol_nombre') == 'Administrador') { ?>
                             <th>Acciones</th>
                         <?php } ?>
@@ -53,6 +83,8 @@
                         <tr>
                             <td><?= $i++ ?><input type="hidden" value=<?= esc($row->id_users); ?>></td>
                             <td><?= esc($row->nombre_parentesco) ?> <?= esc($row->apellido_parentesco) ?></td>
+                            <td><?= esc($row->datos_parentesco_documento) ?></td>
+                            <td><?= esc($row->datos_parentesco_celular_telf) ?></td>
 
                             <td><?= esc($row->nombre_provincia) ?></td>
                             <td><?= esc($row->datos_canton) ?></td>
@@ -96,6 +128,7 @@
                                 <?php endforeach; ?>
                             </td>
                             <td><?= esc($row->datos_observacion) ?></td>
+                            <td><?php if (esc($row->datos_resultado) == 'Aprobado') { ?><span class="badge bg-success" style="color: white;">Aprobado</span><?php } else { ?><span class="badge bg-danger" style="color: white;">No aprobado</span><?php } ?></td>
                             <?php if (session('rol_nombre') == 'Administrador') { ?>
                                 <td>
                                     <button class="btn btn-sm btn-danger me-1" title="Eliminar" onclick="deleteGeneralInformation(<?= esc($row->id_datos_generales) ?>)">
@@ -114,6 +147,7 @@
         </div>
 
     </div>
+
 
 </div>
 

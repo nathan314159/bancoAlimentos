@@ -26,4 +26,7 @@
     <!--DATATABLE JQUERY-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
 
+    <!-- CSS for general information records-->
+    <link href="<?php echo base_url(); ?>assets/css/generalInformationRecords.css" rel="stylesheet">
+
 </head>
