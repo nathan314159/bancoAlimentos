@@ -80,4 +80,50 @@ class Users extends BaseController
             echo view('login/body.php');
         }
     }
+
+    public function getDocument()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getDocument", $routes)) {
+                $document = $this->users->searchUserDocument($this->request->getPost('document'));
+                echo json_encode($document);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function getRoles()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/getRoles", $routes)) {
+                $roles = $this->users->searchAllRoles();
+                echo json_encode($roles);
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
+
+    public function updateRolUser()
+    {
+        if ($this->session->has('id_users')) {
+            $routes = $this->rol_access->getUrlsByRolId(session('id_rol'));
+            if (accessController("/updateRolUser", $routes)) {
+                $this->users->actualizarRolUsuario($this->request->getPost("id_users"), $this->request->getPost("nuevo_rol"));
+                header("Location: " . base_url(). "profile");
+                exit;
+            } else {
+                redirectUser($this->users->searchRolUser(session('id_users')));
+            }
+        } else {
+            echo view('login/body.php');
+        }
+    }
 }

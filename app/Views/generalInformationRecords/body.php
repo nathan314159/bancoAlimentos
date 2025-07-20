@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form id="formExportExcel" action="<?php echo base_url('/exportExcel'); ?>" method="POST">
+                <form id="formExportExcel" action="<?= base_url('/exportExcel'); ?>" method="POST">
                     <div class="form-row justify-content-center">
                         <div class="form-group col-md-6">
                             <label for="fechaDesde" class="font-weight-bold">Desde</label>
@@ -10,7 +10,7 @@
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="fechaHasta" class="font-weight-bold">Cantón</label>
+                            <label for="fechaHasta" class="font-weight-bold">Hasta</label>
                             <input type="date" class="form-control" id="fechaHasta" name="fechaHasta" required>
                         </div>
 
@@ -32,6 +32,7 @@
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
+                        <th>Fecha de ingreso</th>
                         <th>Usuario - Nombres y Apellidos</th>
                         <th>Usuario - Cédula</th>
                         <th>Usuario - Teléfono</th>
@@ -82,6 +83,7 @@
                     foreach ($registros as $row): ?>
                         <tr>
                             <td><?= $i++ ?><input type="hidden" value=<?= esc($row->id_users); ?>></td>
+                            <td><?= esc($row->datos_created_at) ?></td>
                             <td><?= esc($row->nombre_parentesco) ?> <?= esc($row->apellido_parentesco) ?></td>
                             <td><?= esc($row->datos_parentesco_documento) ?></td>
                             <td><?= esc($row->datos_parentesco_celular_telf) ?></td>

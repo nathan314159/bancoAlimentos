@@ -20,6 +20,9 @@ $routes->post('/registerUser', 'Principal::registerUser');
 $routes->post('/findUserMail', 'Principal::findUserMail');
 $routes->post('/updateProfile', 'Users::updateProfile');
 $routes->post('/updateProfilePassword', 'Users::updateProfilePassword');
+$routes->post('/getDocument', 'Users::getDocument'); //Only admin
+$routes->post('/getRoles', 'Users::getRoles'); //Only admin
+$routes->post('/updateRolUser', 'Users::updateRolUser'); //Only admin
 
 //Routes for form general information 
 $routes->get('/formGeneralInformation', 'GeneralInformation::formGeneralInformation');
@@ -49,7 +52,7 @@ $routes->get('/getMaritalStatus', 'GeneralInformation::getMaritalStatus');
 $routes->get('/informationRecords', 'GeneralInformationRecords::informationRecords');
 $routes->post('/getRelationShipId', 'GeneralInformationRecords::getRelationShipId');
 $routes->post('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
-$routes->get('/exportExcel', 'GeneralInformationRecords::exportExcel');
+$routes->post('/exportExcel', 'GeneralInformationRecords::exportExcel');
 
 //Routes for profile
 $routes->get('/profile', 'Users::profile');

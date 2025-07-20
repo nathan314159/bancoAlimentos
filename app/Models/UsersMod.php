@@ -54,8 +54,24 @@ class UsersMod extends Model
             ->getResult();
     }
 
+    public function searchUserDocument($document)
+    {
+        return $this->db->table('tbl_users u')
+            ->select('u.id_users, u.users_cedula')
+            ->where('u.users_cedula', $document)
+            ->limit(1)
+            ->get()
+            ->getResult();
+    }
 
-
+    public function searchAllRoles()
+    {
+        return $this->db->table('tbl_rol r')
+            ->select('r.id_rol, r.rol_nombre')
+            ->where('r.rol_estado', 1)
+            ->get()
+            ->getResult();
+    }
 
     public function insertUsuario($data)
     {
@@ -157,6 +173,18 @@ class UsersMod extends Model
     {
         return $this->update($idUser, [
             'users_contrasenia' => $contrasenia
+        ]);
+    }
+
+    // funcion para actualizar rol
+    public function actualizarRolUsuario($idUser, $idRol)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('tbl_user_rol');
+
+        // Actualizamos el registro donde id_users = $idUser
+        return $builder->where('id_users', $idUser)->update([
+            'id_rol' => $idRol
         ]);
     }
 }

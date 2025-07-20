@@ -95,4 +95,39 @@
         </div>
     </div>
     <br>
+    <?php if (session('rol_nombre') == 'Administrador') { ?>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow border-danger">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger text-center mb-3"><b>Gestión de Usuario</b></h5>
+                        <form id="formAdminGestion" action="<?= base_url('/updateRolUser') ?>" method="POST">
+                            <div class="form-row align-items-end">
+                                <div class="form-group col-md-6">
+                                    <label for="cedula_buscar" class="font-weight-bold">Cédula del Usuario</label>
+                                    <input type="text" class="form-control" id="cedula_buscar" name="cedula_buscar" placeholder="Ingrese la cédula" required>
+                                    <input type="hidden" class="form-control" id="id_users" name="id_users" required>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <button type="button" class="btn btn-info btn-block" id="btnBuscarCedula" onclick="searchUserDocument()">Buscar</button>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="nuevo_rol" class="font-weight-bold">Seleccione Rol</label>
+                                    <select class="form-control" id="nuevo_rol" name="nuevo_rol" required disabled>
+                                        <option value="" selected disabled>Seleccione un rol</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="user_id_actualizar" id="user_id_actualizar">
+
+                            <button type="submit" class="btn btn-danger mt-3 btn-block" disabled>Actualizar Datos</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    <?php } ?>
+
 </div>

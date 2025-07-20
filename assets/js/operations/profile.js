@@ -105,3 +105,61 @@ document
       }
     );
   });
+
+// search document
+function searchUserDocument() {
+  let baseURL =
+    window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  let cedula = $("#cedula_buscar").val();
+
+  $.ajax({
+    data: { document: cedula },
+    url: baseURL + "/getDocument",
+    type: "post",
+    dataType: "json",
+    success: function (info) {
+      if (info && Object.keys(info).length > 0) {
+        alertify.success("Usuario encontrado.");
+        // Usuario encontrado: habilitar select y botón
+        $("#nuevo_rol").prop("disabled", false);
+        $("button[type=submit]").prop("disabled", false);
+        info.forEach(function (elemento) {
+          $("#id_users").val(elemento["id_users"]);
+        });
+        
+        // Llenar select con roles (segundo ajax)
+        $.ajax({
+          data: { document: cedula },
+          url: baseURL + "/getRoles",
+          type: "post",
+          dataType: "json",
+          success: function (roles) {
+            let tags =
+              "<option disabled selected value=''>Seleccione un rol</option>";
+            roles.forEach(function (elemento) {
+              tags += `<option value='${elemento["id_rol"]}'>${elemento["rol_nombre"]}</option>`;
+            });
+            $("#nuevo_rol").html(tags);
+          },
+          error: function () {
+            console.log("Ha sucedido un error cargando los roles.");
+          },
+        });
+      } else {
+        // Usuario no encontrado: deshabilitar select y botón
+        alertify.error("Usuario no encontrado con la cédula proporcionada.");
+        $("#id_users").val('');
+        $("#nuevo_rol")
+          .prop("disabled", true)
+          .html(
+            "<option disabled selected value=''>Seleccione un rol</option>"
+          );
+        $("button[type=submit]").prop("disabled", true);
+      }
+    },
+    error: function () {
+      console.log("Ha sucedido un error buscando el usuario.");
+    },
+  });
+}
