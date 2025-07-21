@@ -25,6 +25,10 @@ function redirectUser($routes)
         principalPage();
     }else if (strcmp($routes[0]->rol_nombre, "Empleado") === 0) {
         principalPage();
+    }else if (strcmp($routes[0]->rol_nombre, "Gestión Operativa") === 0) {
+        principalPage();
+    }else if (strcmp($routes[0]->rol_nombre, "Gestión Social") === 0) {
+        principalPage();
     }
 }
 

@@ -156,6 +156,7 @@ class Principal extends BaseController
             'users_cedula'              => $this->request->getPost("users_cedula"),
             'users_fecha_de_nacimiento' => $this->request->getPost("users_fecha_de_nacimiento"),
             'users_email'               => $this->request->getPost("users_email"),
+            'users_genero'               => $this->request->getPost("users_genero"),
             'users_telefono'            => $this->request->getPost("users_telefono"),
             'users_contrasenia'         => password_hash($this->request->getPost("users_contrasenia"), PASSWORD_DEFAULT), // store the hashed password
         ];

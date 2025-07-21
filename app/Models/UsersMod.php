@@ -122,6 +122,7 @@ class UsersMod extends Model
             'users_cedula'        => $userInfo['users_cedula'],
             'users_fecha_de_nacimiento'        => $userInfo['users_fecha_de_nacimiento'],
             'users_email'         => $userInfo['users_email'],
+            'users_genero'        => $userInfo['users_genero'],
             'users_telefono'      => $userInfo['users_telefono'],
             'users_contrasenia'   => $userInfo['users_contrasenia'],
             'users_estado'        => 1,
