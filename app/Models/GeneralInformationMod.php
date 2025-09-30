@@ -50,7 +50,8 @@ class GeneralInformationMod extends Model
         "datos_plan_celular",
         "datos_observacion",
         "datos_resultado",
-        "datos_estado"
+        "datos_estado",
+        'datos_consentimiento',
     ];
 
     protected bool $allowEmptyInserts = false;

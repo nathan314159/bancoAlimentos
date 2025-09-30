@@ -1407,3 +1407,36 @@ document.addEventListener("DOMContentLoaded", function () {
     subtree: true,
   });
 });
+
+function toggleFormulario() {
+    const consentimiento = document.getElementById('datos_consentimiento').checked;
+    const formulario = document.getElementById('formularioCompleto');
+
+    if(consentimiento) {
+        formulario.style.display = 'block';
+    } else {
+        formulario.style.display = 'none';
+    }
+}
+
+function toggleFormulario() {
+    const consentimiento = document.getElementById('datos_consentimiento');
+    const formulario = document.getElementById('formularioCompleto');
+
+    if(consentimiento.checked) {
+        const continuar = confirm("¿Está seguro que desea continuar con el formulario?");
+        if (continuar) {
+            // Show the form
+            formulario.style.display = 'block';
+            // Disable the checkbox so it can't be unchecked
+            consentimiento.disabled = true;
+        } else {
+            // If Cancel, uncheck the box and keep form hidden
+            consentimiento.checked = false;
+            formulario.style.display = 'none';
+        }
+    } else {
+        formulario.style.display = 'none';
+    }
+}
+

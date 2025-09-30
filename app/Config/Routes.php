@@ -7,7 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 //Routes for main page
 $routes->get('/', 'Principal::index');
-$routes->get('/demoMain', 'Principal::demoMain'); //Delete this route when the system is finished
 
 //Routes for login and verify user
 $routes->post('/verifyUser', 'Principal::verifyUser');

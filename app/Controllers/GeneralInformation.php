@@ -132,6 +132,7 @@ class GeneralInformation extends BaseController
 
                 $mediosTransporteStr = is_array($mediosTransporte) ? implode('/', $mediosTransporte) : '';
                 $estadosTransporteStr = is_array($estadosTransporte) ? implode('/', $estadosTransporte) : '';
+                $consentimiento = $this->request->getPost('datos_consentimiento');
 
                 // -------------------------------
                 // Insertar datos generales
@@ -172,8 +173,10 @@ class GeneralInformation extends BaseController
                     'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
                     'datos_observacion' => $this->request->getPost('datos_observacion'),
                     'datos_resultado' => $this->request->getPost('datos_resultado'),
+                    'datos_consentimiento' => $consentimiento,
                     'datos_parentesco_id' => null, // se actualizará luego
                 ];
+// dd($this->request->getPost());
 
                 $idGeneral = $this->form->insertUsuario($userData); // ← Debes tener este método
 
@@ -226,8 +229,8 @@ class GeneralInformation extends BaseController
                     }
 
                     $this->generalInformationRelationship->insert([
-                        'id_datos_generales' => $idGeneral,       
-                        'id_datos_parentescos' => $idRelacion,   
+                        'id_datos_generales' => $idGeneral,
+                        'id_datos_parentescos' => $idRelacion,
                     ]);
                 }
 
