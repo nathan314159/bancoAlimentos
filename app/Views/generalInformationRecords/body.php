@@ -124,6 +124,8 @@
                             <td><?= esc($row->datos_plan_celular ? 'Sí' : 'No') ?></td>
                             <td>
                                 <?php foreach ($row->parentescos as $p): ?>
+                                    <pre><?php print_r($p); ?></pre>
+
                                     <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>">
                                         <?= esc($p['tipo']) ?>
                                     </button>
@@ -166,74 +168,78 @@
             </div>
             <div class="modal-body">
                 <form id="formParentesco" class="row g-3">
+                    <input type="hidden" id="p_id" name="id_datos_parentesco">
+
                     <div class="col-md-6">
                         <label class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="p_nombres" readonly>
+                        <input type="text" class="form-control" id="p_nombres">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="p_apellidos" readonly>
+                        <input type="text" class="form-control" id="p_apellidos">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Documento</label>
-                        <input type="text" class="form-control" id="p_documento" readonly>
+                        <input type="text" class="form-control" id="p_documento">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Celular</label>
-                        <input type="text" class="form-control" id="p_celular" readonly>
+                        <input type="text" class="form-control" id="p_celular">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Etnia</label>
-                        <input type="text" class="form-control" id="p_etnia" readonly>
+                        <input type="text" class="form-control" id="p_etnia">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Género</label>
-                        <input type="text" class="form-control" id="p_genero" readonly>
+                        <input type="text" class="form-control" id="p_genero">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Nivel Educación</label>
-                        <input type="text" class="form-control" id="p_educacion" readonly>
+                        <input type="text" class="form-control" id="p_educacion">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Fecha Nacimiento</label>
-                        <input type="date" class="form-control" id="p_nacimiento" readonly>
+                        <input type="date" class="form-control" id="p_nacimiento">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Edad</label>
-                        <input type="text" class="form-control" id="p_edad" readonly>
+                        <input type="text" class="form-control" id="p_edad">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Estado Civil</label>
-                        <input type="text" class="form-control" id="p_estado_civil" readonly>
+                        <input type="text" class="form-control" id="p_estado_civil">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Discapacidad</label>
-                        <input type="text" class="form-control" id="p_discapacidad" readonly>
+                        <input type="text" class="form-control" id="p_discapacidad">
                     </div>
                     <div class="col-md-12">
                         <label class="form-label">Enfermedad Catastrófica</label>
-                        <input type="text" class="form-control" id="p_enfermedad" readonly>
+                        <input type="text" class="form-control" id="p_enfermedad">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Trabaja</label>
-                        <input type="text" class="form-control" id="p_trabaja" readonly>
+                        <input type="text" class="form-control" id="p_trabaja">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Ocupación</label>
-                        <input type="text" class="form-control" id="p_ocupacion" readonly>
+                        <input type="text" class="form-control" id="p_ocupacion">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Ingreso Mensual</label>
-                        <input type="text" class="form-control" id="p_ingreso" readonly>
+                        <input type="text" class="form-control" id="p_ingreso">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Parentesco</label>
-                        <input type="text" class="form-control" id="p_parentesco" readonly>
+                        <input type="text" class="form-control" id="p_parentesco">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-warning" id="btnUpdateParentesco">Actualizar</button>
+                <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+
             </div>
         </div>
     </div>

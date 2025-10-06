@@ -90,3 +90,62 @@ document
     }
     this.submit();
   });
+
+
+  
+// Actualizar parentesco
+
+
+
+$("#btnUpdateParentesco").on("click", function () {
+      const id = $(this).data("id"); // button's data-id
+    $("#p_id").val(id); // set the hidden input
+    
+
+
+
+  // get base URL
+  let baseURL = window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+  // collect data from modal inputs
+  const dataToUpdate = {
+    id_datos_parentesco: $("#p_id").val(),
+    datos_parentesco_nombres: $("#p_nombres").val(),
+    datos_parentesco_apellidos: $("#p_apellidos").val(),
+    datos_parentesco_documento: $("#p_documento").val(),
+    datos_parentesco_celular_telf: $("#p_celular").val(),
+    etnia: $("#p_etnia").val(),
+    genero: $("#p_genero").val(),
+    nivel_educacion: $("#p_educacion").val(),
+    datos_parentesco_fecha_de_nacimiento: $("#p_nacimiento").val(),
+    datos_parentesco_edad: $("#p_edad").val(),
+    estado_civil: $("#p_estado_civil").val(),
+    datos_parentesco_discapacidad: $("#p_discapacidad").val(),
+    datos_parentesco_enfermedad_catastrofica: $("#p_enfermedad").val(),
+    datos_parentesco_trabaja: $("#p_trabaja").val(),
+    datos_parentesco_ocupacion: $("#p_ocupacion").val(),
+    datos_parentesco_ingreso_mensual: $("#p_ingreso").val(),
+    datos_parentesco_parentesco: $("#p_parentesco").val()
+  };
+// console.log("Data to update:", dataToUpdate);
+console.log("ID to update:", $("#p_id").val());
+
+  // perform the AJAX request to update
+$.ajax({
+    url: baseURL + "/updateParentesco",
+    type: "POST",
+    data: dataToUpdate,
+    success: function (response) {
+        console.log("AJAX success response:", response);
+        alertify.success("Datos actualizados correctamente.");
+        // $("#modalParentesco").modal("hide");
+        // setTimeout(() => { location.reload(); }, 1000);
+    },
+    error: function (xhr, status, error) {
+        console.error("AJAX error:", status, error);
+        console.error("Response text:", xhr.responseText);
+        alertify.error("Error al actualizar los datos. Contacte al administrador.");
+    }
+});
+
+});

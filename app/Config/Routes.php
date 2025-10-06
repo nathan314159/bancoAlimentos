@@ -53,5 +53,8 @@ $routes->post('/getRelationShipId', 'GeneralInformationRecords::getRelationShipI
 $routes->post('/deleteGeneralInformationRecord', 'GeneralInformationRecords::deleteGeneralInformationRecord');
 $routes->post('/exportExcel', 'GeneralInformationRecords::exportExcel');
 
+// ✅ New route for updating parentesco
+$routes->post('/updateParentesco', 'GeneralInformationRecords::updateParentesco');
+
 //Routes for profile
 $routes->get('/profile', 'Users::profile');

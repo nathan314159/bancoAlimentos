@@ -62,7 +62,7 @@ class GeneralInformationRecords extends BaseController
                     $registros[$id]->parentescos[] = [
                         'id_parentesco' => $row->id_datos_parentesco,
                         'nombre' => $nombreCompleto,
-                        'tipo' => $row->parentesco
+                        'tipo' => $row->parentesco,
                     ];
                 }
 
@@ -132,6 +132,54 @@ class GeneralInformationRecords extends BaseController
             echo view('login/body.php');
         }
     }
+
+
+public function updateParentesco()
+{
+    $request = $this->request->getPost();
+    $id = $request['id_datos_parentesco'];
+
+    if (empty($id)) {
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'ID vacío'
+        ]);
+    }
+
+    $data = [
+        'datos_parentesco_nombres' => $request['datos_parentesco_nombres'],
+        'datos_parentesco_apellidos' => $request['datos_parentesco_apellidos'],
+        'datos_parentesco_documento' => $request['datos_parentesco_documento'],
+        'datos_parentesco_celular_telf' => $request['datos_parentesco_celular_telf'],
+        'etnia' => $request['etnia'],
+        'genero' => $request['genero'],
+        'nivel_educacion' => $request['nivel_educacion'],
+        'datos_parentesco_fecha_de_nacimiento' => $request['datos_parentesco_fecha_de_nacimiento'],
+        'datos_parentesco_edad' => $request['datos_parentesco_edad'],
+        'estado_civil' => $request['estado_civil'],
+        'datos_parentesco_discapacidad' => $request['datos_parentesco_discapacidad'],
+        'datos_parentesco_enfermedad_catastrofica' => $request['datos_parentesco_enfermedad_catastrofica'],
+        'datos_parentesco_trabaja' => $request['datos_parentesco_trabaja'],
+        'datos_parentesco_ocupacion' => $request['datos_parentesco_ocupacion'],
+        'datos_parentesco_ingreso_mensual' => $request['datos_parentesco_ingreso_mensual'],
+        'datos_parentesco_parentesco' => $request['datos_parentesco_parentesco'],
+    ];
+
+    $model = new \App\Models\RelationshipMod(); // Use RelationshipMod here
+    $updated = $model->update($id, $data);
+
+    if ($updated) {
+        return $this->response->setJSON(['status' => 'success']);
+    } else {
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'No se pudo actualizar'
+        ]);
+    }
+}
+
+
+
 
     public function exportExcel()
     {
