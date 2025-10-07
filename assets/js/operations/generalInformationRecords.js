@@ -97,19 +97,59 @@ document
 
 
 
+// When you click the table button to edit a parentesco
+document.querySelectorAll("#generalRecordsTable button").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const id_datos_parentesco = this.dataset.id;
+
+    let baseURL =
+      window.location.origin + "/" + window.location.pathname.split("/")[1];
+
+    $.ajax({
+      url: baseURL + "/getRelationShipId",
+      type: "POST",
+      data: { id_datos_parentesco: id_datos_parentesco },
+      dataType: "json",
+      success: function (info) {
+        if (!info) return;
+
+        // Llenar inputs del modal con los datos obtenidos
+        $("#p_id").val(info.id_datos_parentesco); // ✅ set hidden input here
+        $("#p_nombres").val(info.datos_parentesco_nombres);
+        $("#p_apellidos").val(info.datos_parentesco_apellidos);
+        $("#p_documento").val(info.datos_parentesco_documento);
+        $("#p_celular").val(info.datos_parentesco_celular_telf);
+        $("#p_etnia").val(info.etnia);
+        $("#p_genero").val(info.genero);
+        $("#p_educacion").val(info.nivel_educacion);
+        $("#p_nacimiento").val(info.datos_parentesco_fecha_de_nacimiento);
+        $("#p_edad").val(info.datos_parentesco_edad);
+        $("#p_estado_civil").val(info.estado_civil);
+        $("#p_discapacidad").val(info.datos_parentesco_discapacidad);
+        $("#p_enfermedad").val(info.datos_parentesco_enfermedad_catastrofica);
+        $("#p_trabaja").val(info.datos_parentesco_trabaja);
+        $("#p_ocupacion").val(info.datos_parentesco_ocupacion);
+        $("#p_ingreso").val(info.datos_parentesco_ingreso_mensual);
+        $("#p_parentesco").val(info.datos_parentesco_parentesco);
+
+        // Mostrar modal
+        $("#modalParentesco").modal("show");
+      },
+      error: function () {
+        console.log(
+          "No se pudo obtener los datos del parentesco. Contacte al administrador."
+        );
+      },
+    });
+  });
+});
+
+// Update button click
 $("#btnUpdateParentesco").on("click", function () {
-      const id = $(this).data("id"); // button's data-id
-    $("#p_id").val(id); // set the hidden input
-    
-
-
-
-  // get base URL
   let baseURL = window.location.origin + "/" + window.location.pathname.split("/")[1];
 
-  // collect data from modal inputs
   const dataToUpdate = {
-    id_datos_parentesco: $("#p_id").val(),
+    id_datos_parentesco: $("#p_id").val(), // ✅ read from hidden input
     datos_parentesco_nombres: $("#p_nombres").val(),
     datos_parentesco_apellidos: $("#p_apellidos").val(),
     datos_parentesco_documento: $("#p_documento").val(),
@@ -127,25 +167,23 @@ $("#btnUpdateParentesco").on("click", function () {
     datos_parentesco_ingreso_mensual: $("#p_ingreso").val(),
     datos_parentesco_parentesco: $("#p_parentesco").val()
   };
-// console.log("Data to update:", dataToUpdate);
-console.log("ID to update:", $("#p_id").val());
 
-  // perform the AJAX request to update
-$.ajax({
+  console.log("ID to update:", $("#p_id").val());
+
+  $.ajax({
     url: baseURL + "/updateParentesco",
     type: "POST",
     data: dataToUpdate,
     success: function (response) {
         console.log("AJAX success response:", response);
         alertify.success("Datos actualizados correctamente.");
-        // $("#modalParentesco").modal("hide");
-        // setTimeout(() => { location.reload(); }, 1000);
+        $("#modalParentesco").modal("hide");
+        setTimeout(() => { location.reload(); }, 1000); // reload to see changes
     },
     error: function (xhr, status, error) {
         console.error("AJAX error:", status, error);
         console.error("Response text:", xhr.responseText);
         alertify.error("Error al actualizar los datos. Contacte al administrador.");
     }
-});
-
+  });
 });

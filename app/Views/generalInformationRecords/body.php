@@ -126,7 +126,7 @@
                                 <?php foreach ($row->parentescos as $p): ?>
                                     <pre><?php print_r($p); ?></pre>
 
-                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>">
+                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>"> 
                                         <?= esc($p['tipo']) ?>
                                     </button>
                                 <?php endforeach; ?>
@@ -168,7 +168,7 @@
             </div>
             <div class="modal-body">
                 <form id="formParentesco" class="row g-3">
-                    <input type="hidden" id="p_id" name="id_datos_parentesco">
+                    <input type="hidden" id="p_id" name="id_datos_parentesco"  >
 
                     <div class="col-md-6">
                         <label class="form-label">Nombres</label>
