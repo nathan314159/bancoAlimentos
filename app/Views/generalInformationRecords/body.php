@@ -124,8 +124,6 @@
                             <td><?= esc($row->datos_plan_celular ? 'Sí' : 'No') ?></td>
                             <td>
                                 <?php foreach ($row->parentescos as $p): ?>
-                                    <pre><?php print_r($p); ?></pre>
-
                                     <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>"> 
                                         <?= esc($p['tipo']) ?>
                                     </button>

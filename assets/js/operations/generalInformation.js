@@ -1440,3 +1440,78 @@ function toggleFormulario() {
     }
 }
 
+// this is the function to toggle the placeholder of the document input based on movilidad selection
+
+function toggleTipoDocumento() {
+  const movilidad = document.getElementById('datos_parentesco_movilidad').value;
+  const documentoInput = document.getElementById('datos_parentesco_documento');
+
+  if (!documentoInput) return; // Safety check
+
+  // TEST: color indicator
+  // documentoInput.style.border = "2px solid red"; // 👈 turns red when function triggers
+
+  if (movilidad === 'Extranjero') {
+    documentoInput.placeholder = 'Pasaporte u otro documento';
+  } else if (movilidad === 'Ecuatoriano') {
+    documentoInput.placeholder = 'Cédula de identidad';
+  } else {
+    documentoInput.placeholder = '';
+  }
+}
+
+function validarCedulaEcuatoriana(cedula) {
+  cedula = cedula.trim();
+  if (!/^\d{10}$/.test(cedula)) return false;
+
+  const provincia = parseInt(cedula.substring(0, 2));
+  const tercerDigito = parseInt(cedula[2]);
+  const digitos = cedula.split('').map(Number);
+
+  if (provincia < 1 || (provincia > 24 && provincia !== 30)) return false;
+  if (tercerDigito >= 6) return false;
+
+  const coeficientes = [2, 1, 2, 1, 2, 1, 2, 1, 2];
+  let suma = 0;
+  for (let i = 0; i < 9; i++) {
+    let valor = digitos[i] * coeficientes[i];
+    if (valor >= 10) valor -= 9;
+    suma += valor;
+  }
+
+  const verificador = 10 - (suma % 10 === 0 ? 10 : suma % 10);
+  return verificador === digitos[9];
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const movilidadSelect = document.getElementById("datos_parentesco_movilidad");
+  const documentoInput = document.getElementById("datos_parentesco_documento");
+
+  if (movilidadSelect) {
+    movilidadSelect.addEventListener("change", toggleTipoDocumento);
+  }
+
+  if (documentoInput) {
+    documentoInput.addEventListener("blur", () => {
+      const valor = documentoInput.value;
+
+      // Only validate if "Ecuatoriano" is selected
+      if (movilidadSelect && movilidadSelect.value === "Ecuatoriano") {
+        if (!validarCedulaEcuatoriana(valor)) {
+          alertify.error("Cédula incorrecta");
+          documentoInput.style.border = "2px solid red";
+          documentoInput.title = "Cédula incorrecta";
+          console.warn("❌ Cédula ecuatoriana inválida:", valor);
+        } else {
+          documentoInput.style.border = "2px solid green";
+          documentoInput.title = "Cédula válida";
+          console.log("✅ Cédula válida:", valor);
+        }
+      } else {
+        // Reset border for Extranjero or blank
+        documentoInput.style.border = "";
+        documentoInput.title = "";
+      }
+    });
+  }
+});

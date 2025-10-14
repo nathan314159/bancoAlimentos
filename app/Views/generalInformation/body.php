@@ -97,6 +97,15 @@
                     <input type="text" class="form-control" id="datos_parentesco_apellidos" name="datos_parentesco_apellidos">
                 </div>
 
+                <!-- NUEVO CAMPO: Condición de movilidad humana -->
+                <div class="form-group col-md-4">
+                    <label for="datos_parentesco_movilidad" class="font-weight-bold">Movilidad</label>
+                    <select id="datos_parentesco_movilidad" class="form-control" onchange="toggleTipoDocumento()">
+                        <option value="">Seleccione</option>
+                        <option value="Ecuatoriano">Ecuatoriano</option>
+                        <option value="Extranjero">Extranjero</option>
+                    </select>
+                </div>
 
                 <div class="form-group col-md-4">
                     <label for="datos_parentesco_documento" class="font-weight-bold">Documento</label>
