@@ -50,6 +50,7 @@ class GeneralInformationMod extends Model
         "datos_plan_celular",
         "datos_observacion",
         "datos_resultado",
+        "datos_resultado_sistema",
         "datos_estado",
         'datos_consentimiento',
     ];
@@ -191,6 +192,7 @@ class GeneralInformationMod extends Model
             dg.datos_plan_celular,
             dg.datos_observacion,
             dg.datos_resultado,
+            dg.datos_resultado_sistema,
             dg.datos_created_at,
 
             dp.id_datos_parentesco AS id_datos_parentesco,
@@ -282,6 +284,7 @@ class GeneralInformationMod extends Model
         dg.datos_plan_celular,
         dg.datos_observacion,
         dg.datos_resultado,
+        dg.datos_resultado_sistema,
         dg.datos_created_at,
 
         dp.id_datos_parentesco AS id_datos_parentesco,

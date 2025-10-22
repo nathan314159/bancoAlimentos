@@ -173,6 +173,7 @@ class GeneralInformation extends BaseController
                     'datos_plan_celular' => $this->request->getPost('datos_plan_celular'),
                     'datos_observacion' => $this->request->getPost('datos_observacion'),
                     'datos_resultado' => $this->request->getPost('datos_resultado'),
+                    'datos_resultado_sistema' => $this->request->getPost('datos_resultado_sistema'),
                     'datos_consentimiento' => $consentimiento,
                     'datos_parentesco_id' => null, // se actualizará luego
                 ];

@@ -71,6 +71,7 @@
                         <th>Parentescos</th>
                         <th>Observaciones</th>
                         <th>Resultado</th>
+                        <th>Validación del sistema</th>
                         <?php if (session('rol_nombre') == 'Administrador') { ?>
                             <th>Acciones</th>
                         <?php } ?>
@@ -124,13 +125,35 @@
                             <td><?= esc($row->datos_plan_celular ? 'Sí' : 'No') ?></td>
                             <td>
                                 <?php foreach ($row->parentescos as $p): ?>
-                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>"> 
+                                    <button class="btn btn-sm btn-outline-info me-1" title="<?= esc($p['nombre']) ?>" data-id="<?= esc($p['id_parentesco']) ?>">
                                         <?= esc($p['tipo']) ?>
                                     </button>
                                 <?php endforeach; ?>
                             </td>
                             <td><?= esc($row->datos_observacion) ?></td>
-                            <td><?php if (esc($row->datos_resultado) == 'Aprobado') { ?><span class="badge bg-success" style="color: white;">Aprobado</span><?php } else { ?><span class="badge bg-danger" style="color: white;">No aprobado</span><?php } ?></td>
+                            <!-- Resultado del voluntario -->
+                            <td>
+                                <?php if (esc($row->datos_resultado) == 'Aprobado') { ?>
+                                    <span class="badge bg-success" style="color: white;">Aprobado</span>
+                                <?php } else { ?>
+                                    <span class="badge bg-danger" style="color: white;">No aprobado</span>
+                                <?php } ?>
+                            </td>
+
+                            <!-- Validación del sistema -->
+                            <td>
+                                <?php
+                                $sistema = trim($row->datos_resultado_sistema);
+                                if ($sistema == 'Aprobado') { ?>
+                                    <span class="badge bg-success" style="color: white;">Aprobado</span>
+                                <?php } elseif ($sistema == 'Pendiente') { ?>
+                                    <span class="badge bg-warning" style="color: white;">Pendiente</span>
+                                <?php } else { ?>
+                                    <span class="badge bg-danger" style="color: white;">No aprobado</span>
+                                <?php } ?>
+                            </td>
+
+
                             <?php if (session('rol_nombre') == 'Administrador') { ?>
                                 <td>
                                     <button class="btn btn-sm btn-danger me-1" title="Eliminar" onclick="deleteGeneralInformation(<?= esc($row->id_datos_generales) ?>)">
@@ -166,7 +189,7 @@
             </div>
             <div class="modal-body">
                 <form id="formParentesco" class="row g-3">
-                    <input type="hidden" id="p_id" name="id_datos_parentesco"  >
+                    <input type="hidden" id="p_id" name="id_datos_parentesco">
 
                     <div class="col-md-6">
                         <label class="form-label">Nombres</label>

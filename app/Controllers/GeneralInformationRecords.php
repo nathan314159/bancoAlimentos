@@ -255,7 +255,8 @@ public function updateParentesco()
                     '¿Cuántos celulares en casa?',
                     '¿Tiene plan de celular?',
                     'Observación',
-                    'Resultado'
+                    'Resultado',
+                    'Resultado Sistema'
                 ];
 
                 // Estilos
@@ -446,7 +447,7 @@ public function updateParentesco()
                         $sheet->setCellValue($col++ . $fila, $dato->datos_plan_celular ? 'Sí' : 'No');
                         $sheet->setCellValue($col++ . $fila, $dato->datos_observacion ?? '');
                         $sheet->setCellValue($col++ . $fila, $dato->datos_resultado ?? '');
-
+                        $sheet->setCellValue($col++ . $fila, $dato->datos_resultado_sistema ?? '');
                         $fila++;
                     }
 

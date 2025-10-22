@@ -1361,6 +1361,16 @@ function evaluarResultado() {
     resultadoSelect.value = "No aprobado";
   }
 
+    // Lógica para cambiar automáticamente el select de resultado sistema no se cambia por el usuario
+  const datos_resultado_sistema = document.getElementById("datos_resultado_sistema");
+  if (tieneVehiculoBuenoORegular) {
+    datos_resultado_sistema.value = "No aprobado";
+  } else if (diferencia < 0) {
+    datos_resultado_sistema.value = "Aprobado";
+  } else {
+    datos_resultado_sistema.value = "No aprobado";
+  }
+
   // 5. Actualizar texto del criterio
   const criterioDiv = document.getElementById("criterioMensaje");
   const observacionText = document.getElementById("datos_observacion");

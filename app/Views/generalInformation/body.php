@@ -450,6 +450,13 @@
             </div>
 
             <div class="form-row">
+
+                <!-- Resultado automático del sistema -->
+                <input type="text" class="form-control" id="datos_resultado_sistema"
+                    name="datos_resultado_sistema"
+                    value="<?= $dato['datos_resultado_sistema'] ?? 'Pendiente' ?>" readonly>
+
+
                 <!-- Select Resultado -->
                 <div class="form-group col-md-6">
                     <label for="datos_resultado" class="font-weight-bold">Resultado</label>
