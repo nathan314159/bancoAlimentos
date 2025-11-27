@@ -976,6 +976,7 @@ function addRelationship() {
   };
 
   const datos = {
+    movilidad: get("datos_parentesco_movilidad"),
     nombres: get("datos_parentesco_nombres"),
     apellidos: get("datos_parentesco_apellidos"),
     documento: get("datos_parentesco_documento"),
@@ -1064,6 +1065,17 @@ function addRelationship() {
     <td>${limpio.parentesco}<input type="hidden" name="parentesco_parentesco[]" value="${limpio.parentesco}"></td>
     <td><button type="button" class="btn btn-danger btn-sm" onclick="this.closest('tr').remove(alertify.error('Parentesco eliminado'))">Eliminar</button></td>
   `;
+
+  // VALIDACIÓN DE CÉDULA ECUATORIANA
+  if (datos.movilidad.value === "Ecuatoriano") {
+    if (!validarCedulaEcuatoriana(datos.documento.value)) {
+      alertify.error("La cédula ingresada es incorrecta");
+      datos.documento.classList.add("border", "border-danger");
+      setTimeout(() => datos.documento.classList.remove("border", "border-danger"), 3000);
+      return; // <-- IMPORTANTE: detiene TODA la función
+    }
+  }
+
 
   tbody.appendChild(row);
   alertify.success("Parentesco agregado con éxito");
@@ -1361,7 +1373,7 @@ function evaluarResultado() {
     resultadoSelect.value = "No aprobado";
   }
 
-    // Lógica para cambiar automáticamente el select de resultado sistema no se cambia por el usuario
+  // Lógica para cambiar automáticamente el select de resultado sistema no se cambia por el usuario
   const datos_resultado_sistema = document.getElementById("datos_resultado_sistema");
   if (tieneVehiculoBuenoORegular) {
     datos_resultado_sistema.value = "No aprobado";
@@ -1419,56 +1431,85 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleFormulario() {
-    const consentimiento = document.getElementById('datos_consentimiento').checked;
-    const formulario = document.getElementById('formularioCompleto');
+  const consentimiento = document.getElementById('datos_consentimiento').checked;
+  const formulario = document.getElementById('formularioCompleto');
 
-    if(consentimiento) {
-        formulario.style.display = 'block';
-    } else {
-        formulario.style.display = 'none';
-    }
+  if (consentimiento) {
+    formulario.style.display = 'block';
+  } else {
+    formulario.style.display = 'none';
+  }
 }
 
 function toggleFormulario() {
-    const consentimiento = document.getElementById('datos_consentimiento');
-    const formulario = document.getElementById('formularioCompleto');
+  const consentimiento = document.getElementById('datos_consentimiento');
+  const formulario = document.getElementById('formularioCompleto');
 
-    if(consentimiento.checked) {
-        const continuar = confirm("¿Está seguro que desea continuar con el formulario?");
-        if (continuar) {
-            // Show the form
-            formulario.style.display = 'block';
-            // Disable the checkbox so it can't be unchecked
-            consentimiento.disabled = true;
-        } else {
-            // If Cancel, uncheck the box and keep form hidden
-            consentimiento.checked = false;
-            formulario.style.display = 'none';
-        }
+  if (consentimiento.checked) {
+    const continuar = confirm("¿Está seguro que desea continuar con el formulario?");
+    if (continuar) {
+      // Show the form
+      formulario.style.display = 'block';
+      // Disable the checkbox so it can't be unchecked
+      consentimiento.disabled = true;
     } else {
-        formulario.style.display = 'none';
+      // If Cancel, uncheck the box and keep form hidden
+      consentimiento.checked = false;
+      formulario.style.display = 'none';
     }
+  } else {
+    formulario.style.display = 'none';
+  }
 }
 
 // this is the function to toggle the placeholder of the document input based on movilidad selection
+// FUNCIONA
+// function toggleTipoDocumento() {
+//   const movilidad = document.getElementById('datos_parentesco_movilidad').value;
+//   const documentoInput = document.getElementById('datos_parentesco_documento');
+
+//   if (!documentoInput) return; // Safety check
+
+//   // Cambiar el placeholder según movilidad
+//   if (movilidad === 'Extranjero') {
+//     documentoInput.placeholder = 'Pasaporte u otro documento';
+//   } else if (movilidad === 'Ecuatoriano') {
+//     documentoInput.placeholder = 'Cédula de identidad';
+//   } else {
+//     documentoInput.placeholder = '';
+//   }
+
+//   // Habilitar / deshabilitar input
+//   if (movilidad === "Ecuatoriano" || movilidad === "Extranjero") {
+//     documentoInput.disabled = false;
+//   } else {
+//     documentoInput.disabled = true;
+//     documentoInput.value = "";
+//   }
+// }
 
 function toggleTipoDocumento() {
   const movilidad = document.getElementById('datos_parentesco_movilidad').value;
   const documentoInput = document.getElementById('datos_parentesco_documento');
-
-  if (!documentoInput) return; // Safety check
-
-  // TEST: color indicator
-  // documentoInput.style.border = "2px solid red"; // 👈 turns red when function triggers
+  if (!documentoInput) return;
 
   if (movilidad === 'Extranjero') {
     documentoInput.placeholder = 'Pasaporte u otro documento';
+    documentoInput.disabled = false;
+    documentoInput.maxLength = 20; // ejemplo
+    documentoInput.type = "text";
   } else if (movilidad === 'Ecuatoriano') {
     documentoInput.placeholder = 'Cédula de identidad';
+    documentoInput.disabled = false;
+    documentoInput.maxLength = 10;
+    documentoInput.type = "text"; // usar text para permitir validación personalizada
   } else {
     documentoInput.placeholder = '';
+    documentoInput.disabled = true;
+    documentoInput.value = '';
   }
 }
+
 
 function validarCedulaEcuatoriana(cedula) {
   cedula = cedula.trim();
@@ -1494,34 +1535,30 @@ function validarCedulaEcuatoriana(cedula) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const movilidadSelect = document.getElementById("datos_parentesco_movilidad");
-  const documentoInput = document.getElementById("datos_parentesco_documento");
+  // obtener movilidad y documento como strings
+  const movilidadVal = document.getElementById("datos_parentesco_movilidad").value;
+  const documentoVal = (document.getElementById("datos_parentesco_documento").value || "").trim();
 
-  if (movilidadSelect) {
-    movilidadSelect.addEventListener("change", toggleTipoDocumento);
+  // Si es ecuatoriano → validar cédula
+  if (movilidadVal === "Ecuatoriano") {
+    if (!validarCedulaEcuatoriana(documentoVal)) {
+      alertify.error("La cédula ingresada es incorrecta");
+      const docField = document.getElementById("datos_parentesco_documento");
+      docField.classList.add("border", "border-danger");
+      setTimeout(() => docField.classList.remove("border", "border-danger"), 3000);
+      return; // DETENER: no seguir agregando
+    }
   }
 
-  if (documentoInput) {
-    documentoInput.addEventListener("blur", () => {
-      const valor = documentoInput.value;
-
-      // Only validate if "Ecuatoriano" is selected
-      if (movilidadSelect && movilidadSelect.value === "Ecuatoriano") {
-        if (!validarCedulaEcuatoriana(valor)) {
-          alertify.error("Cédula incorrecta");
-          documentoInput.style.border = "2px solid red";
-          documentoInput.title = "Cédula incorrecta";
-          console.warn("❌ Cédula ecuatoriana inválida:", valor);
-        } else {
-          documentoInput.style.border = "2px solid green";
-          documentoInput.title = "Cédula válida";
-          console.log("✅ Cédula válida:", valor);
-        }
-      } else {
-        // Reset border for Extranjero or blank
-        documentoInput.style.border = "";
-        documentoInput.title = "";
-      }
-    });
+  // Si es extranjero → opcional: validar longitud mínima (ejemplo)
+  if (movilidadVal === "Extranjero") {
+    if (documentoVal.length < 4) {
+      alertify.error("Documento extranjero inválido (demasiado corto)");
+      const docField = document.getElementById("datos_parentesco_documento");
+      docField.classList.add("border", "border-danger");
+      setTimeout(() => docField.classList.remove("border", "border-danger"), 3000);
+      return;
+    }
   }
+
 });

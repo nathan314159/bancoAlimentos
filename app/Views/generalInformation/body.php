@@ -109,8 +109,9 @@
 
                 <div class="form-group col-md-4">
                     <label for="datos_parentesco_documento" class="font-weight-bold">Documento</label>
-                    <input type="number" class="form-control" id="datos_parentesco_documento" name="datos_parentesco_documento">
+                    <input type="number" class="form-control" id="datos_parentesco_documento" name="datos_parentesco_documento" disabled>
                 </div>
+
 
                 <div class="form-group col-md-4">
                     <label for="datos_parentesco_celular_telf" class="font-weight-bold">Celular/Teléfono</label>
