@@ -53,6 +53,7 @@
 <!-- JS for General Information -->
 <?php if ($function == 'formulario') { ?>
     <script src="<?php echo base_url(); ?>/assets/js/operations/generalInformation.js"></script>
+    <script src="<?php echo base_url(); ?>/assets/js/operations/indexedDB.js"></script>
 <?php } ?>
 
 <!-- JS for General Information Records -->
@@ -72,6 +73,19 @@
 
 <!--DATATABLE JQUERY-->
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+
+<!-- Service Worker -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('<?php echo base_url(); ?>sw.js')
+            .then(reg => console.log('Service Worker registrado 🚀', reg))
+            .catch(err => console.error('Error registrando SW:', err));
+    }
+</script>
+
+<!-- sync -->
+<script src="<?php echo base_url(); ?>/assets/js/operations/sync.js"></script>
+
 
 </body>
 
