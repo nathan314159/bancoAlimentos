@@ -1,0 +1,2750 @@
+ERROR - 2025-12-24 00:12:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => 4721dc0c-f3a4-41fc-8e98-5212f9e1ff78
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 129
+    [tipo_parroquia] => 
+    [datos_comunidades] => hhhh
+    [datos_barrios] => h
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Adobe
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => No cocina
+    [datos_servicios_higienicos] => No tiene
+    [datos_viviendas] => Anticresis
+    [datos_pago_vivienda] => 7
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 7
+    [datos_pago_luz] => 7
+    [datos_cantidad_luz] => 7
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Otros
+    [datos_gastos_viveres] => 7
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 7
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:19 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => 7af02e87-c664-4c21-b0e0-5ecabc803dc7
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 129
+    [tipo_parroquia] => 
+    [datos_comunidades] => hhhh
+    [datos_barrios] => h
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Adobe
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => No cocina
+    [datos_servicios_higienicos] => No tiene
+    [datos_viviendas] => Anticresis
+    [datos_pago_vivienda] => 7
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 7
+    [datos_pago_luz] => 7
+    [datos_cantidad_luz] => 7
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Otros
+    [datos_gastos_viveres] => 7
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 7
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:19 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => b6bd14a5-6edf-4582-aea5-36d5ca0510e3
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 8
+    [parroquia] => 135
+    [tipo_parroquia] => 
+    [datos_comunidades] => kkk
+    [datos_barrios] => kkkk
+    [datos_tipo_viviendas] => Cuartos
+    [datos_techos] => Eternit
+    [datos_paredes] => Bloque
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 9
+    [datos_combustibles_cocina] => Gas
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Propia (regalada, heredad
+    [datos_pago_vivienda] => 9
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 9
+    [datos_pago_luz] => 9
+    [datos_cantidad_luz] => 9
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 9
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 9
+    [datos_plan_celular] => No
+    [datos_observacion] => 9
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:19 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => a7ed28a2-7962-42ef-851b-5f026602edc7
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 
+    [datos_comunidades] => iiii
+    [datos_barrios] => iiiiii
+    [datos_tipo_viviendas] => Cuartos
+    [datos_techos] => Zinc
+    [datos_paredes] => Adobe
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => Gas
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Propia y esta pagada
+    [datos_pago_vivienda] => 7
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 7
+    [datos_pago_luz] => 7
+    [datos_cantidad_luz] => 7
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Composta
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 7
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 7
+    [datos_plan_celular] => No
+    [datos_observacion] => 77777
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:19 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => 41f5f60f-64c7-468a-8cba-8ce7dcc801c4
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 11
+    [parroquia] => 151
+    [tipo_parroquia] => 
+    [datos_comunidades] => kkk
+    [datos_barrios] => kkk
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Bloque
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 999
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 9
+    [datos_pago_luz] => 9
+    [datos_cantidad_luz] => 9
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 9
+    [datos_eliminacion_basura] => La queman
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 9
+    [datos_medio_transporte] => 
+    [datos_estado_transporte] => 
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 9999
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:19 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:19 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => 684416a1-7e16-47d1-9402-b0d550ff4444
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 
+    [datos_comunidades] => hhhhhhh
+    [datos_barrios] => hhh
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Eternit
+    [datos_paredes] => Bloque
+    [datos_pisos] => Tierra
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => Leña
+    [datos_servicios_higienicos] => Pozo ciego
+    [datos_viviendas] => Propia y esta pagadando
+    [datos_pago_vivienda] => 7
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 7
+    [datos_pago_luz] => 7
+    [datos_cantidad_luz] => 7
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Composta
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 7
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 7
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => 6b0cdafb-98ec-4a82-aaec-bd77d3b60274
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 
+    [datos_comunidades] => gg
+    [datos_barrios] => gg
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Eternit
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Hormigón
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Letrina
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 4
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 4
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => 7e803f73-0825-4d84-801d-3eb6c9966fc7
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 100
+    [tipo_parroquia] => 
+    [datos_comunidades] => jjjj
+    [datos_barrios] => jjjj
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Losa
+    [datos_paredes] => Adobe
+    [datos_pisos] => Tierra
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => Gas
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Prestada
+    [datos_pago_vivienda] => 7
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 7
+    [datos_pago_luz] => 7
+    [datos_cantidad_luz] => 7
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 7
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 7
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => bff31034-e0fc-43cb-a12e-60abdf31f0ff
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 
+    [datos_comunidades] => g
+    [datos_barrios] => g
+    [datos_tipo_viviendas] => Cuartos
+    [datos_techos] => Zinc
+    [datos_paredes] => Bloque
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 5
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Propia y esta pagadando
+    [datos_pago_vivienda] => 5
+    [datos_agua] => Río o vertiente, acequia 
+    [datos_pago_agua] => 5
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 5
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 5
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 5555
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => 4b18d708-3558-4960-8127-7feec2749f20
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 
+    [datos_comunidades] => tttt
+    [datos_barrios] => tttt
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Eternit
+    [datos_paredes] => Adobe
+    [datos_pisos] => Tierra
+    [datos_cuarto] => 5
+    [datos_combustibles_cocina] => Gas
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 5
+    [datos_agua] => Río o vertiente, acequia 
+    [datos_pago_agua] => 5
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 5
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Composta
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 5
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 5gggg
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => ea6741f9-e981-4fe7-9abb-b58523783206
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 132
+    [tipo_parroquia] => 
+    [datos_comunidades] => gggg
+    [datos_barrios] => ggg
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Eternit
+    [datos_paredes] => Hormigón
+    [datos_pisos] => Duela
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Propia y esta pagadando
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 4
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 00:12:20 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 00:12:20 --> JSON RECIBIDO: Array
+(
+    [uuid] => c2a513ef-a0a3-4731-a921-2dbeec60d620
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 
+    [datos_comunidades] => FLETUNO
+    [datos_barrios] => FLETUNO
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Adobe
+    [datos_pisos] => Tierra
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Leña
+    [datos_servicios_higienicos] => Letrina
+    [datos_viviendas] => Propia y esta pagadando
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 444
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 00:12:20 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 00:12:20 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 00:12:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 00:12:20 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%2%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 14:53:12 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\GeneralInformationMod::syncEncuesta
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\SyncEncuesta.php(119): CodeIgniter\Model->__call('syncEncuesta', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 15:22:59 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:22:59 --> JSON RECIBIDO: Array
+(
+    [uuid] => a8fc13fc-6385-4d76-87d5-20885f629295
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:22:59 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:22:59 --> mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 15:23:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 15:23:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 15:23:00 --> [Caused by] mysqli_sql_exception: Table 'badi.tbl_provincias' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_provincias`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 15:23:59 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:23:59 --> JSON RECIBIDO: Array
+(
+    [uuid] => a8fc13fc-6385-4d76-87d5-20885f629295
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:23:59 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:23:59 --> mysqli_sql_exception: Unknown column 'provincia_nombre' in 'where clause' in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-12-24 15:23:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'provincia_nombre' in 'where clause'
+[Method: POST, Route: sync-encuesta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 2 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 15:23:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'provincia_nombre' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 4 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 15:23:59 --> [Caused by] mysqli_sql_exception: Unknown column 'provincia_nombre' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE \'%3%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_datos_generales`
+WHERE `provincia_nombre` LIKE :provincia_nombre: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Controllers\SyncEncuesta.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 15:25:22 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:25:22 --> JSON RECIBIDO: Array
+(
+    [uuid] => a8fc13fc-6385-4d76-87d5-20885f629295
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:25:22 --> CONTENT TYPE: application/json
+CRITICAL - 2025-12-24 15:25:22 --> ErrorException: Undefined property: stdClass::$id_provincia
+[Method: POST, Route: sync-encuesta]
+in APPPATH\Controllers\SyncEncuesta.php on line 56.
+ 1 APPPATH\Controllers\SyncEncuesta.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_provincia', 'C:\\xampp\\htdocs\\bancoAlimentos\\app\\Controllers\\SyncEncuesta.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 15:27:46 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:27:46 --> JSON RECIBIDO: Array
+(
+    [uuid] => a8fc13fc-6385-4d76-87d5-20885f629295
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:27:46 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:29:18 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:29:18 --> JSON RECIBIDO: Array
+(
+    [uuid] => 7043c03a-11f4-4e2f-8de1-77f7fa016444
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:29:18 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:37:07 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:37:07 --> JSON RECIBIDO: Array
+(
+    [uuid] => 3fc29f3d-db39-43dc-9b59-cfc3ea4fc194
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:37:07 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:38:14 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:38:14 --> JSON RECIBIDO: Array
+(
+    [uuid] => a28cedeb-4012-4389-88e9-9154f5dc5dce
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:38:14 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:43:54 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:43:54 --> JSON RECIBIDO: Array
+(
+    [uuid] => ed744e72-327a-4c0b-add0-3ffaa3032b48
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:43:54 --> CONTENT TYPE: application/json
+CRITICAL - 2025-12-24 15:43:54 --> ErrorException: Undefined property: stdClass::$id_provincia
+[Method: POST, Route: sync-encuesta]
+in APPPATH\Controllers\SyncEncuesta.php on line 56.
+ 1 APPPATH\Controllers\SyncEncuesta.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_provincia', 'C:\\xampp\\htdocs\\bancoAlimentos\\app\\Controllers\\SyncEncuesta.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-24 15:51:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:51:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => ed744e72-327a-4c0b-add0-3ffaa3032b48
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:51:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:51:42 --> Provincia inválida: 3
+ERROR - 2025-12-24 15:51:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:51:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => a273a07e-2748-4de7-898b-73222f668932
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:51:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:51:42 --> Provincia inválida: 3
+ERROR - 2025-12-24 15:54:38 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:54:38 --> JSON RECIBIDO: Array
+(
+    [uuid] => ed744e72-327a-4c0b-add0-3ffaa3032b48
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:54:38 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 15:54:38 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 15:54:38 --> JSON RECIBIDO: Array
+(
+    [uuid] => a273a07e-2748-4de7-898b-73222f668932
+    [datos_cedula_voluntario] => 1725417331
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => natgab
+    [datos_barrios] => natgab
+    [datos_tipo_viviendas] => Casa
+    [datos_techos] => Losa
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Céramica
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Alcantarillado
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 1725417331 id_users 21725417331 id_users 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 15:54:38 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 16:17:34 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 16:17:34 --> JSON RECIBIDO: Array
+(
+    [uuid] => fd81abcd-4373-415f-aa52-a4896ec20f69
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 128
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet prueba tres
+    [datos_barrios] => flet prueba tres
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Losa
+    [datos_paredes] => Adobe
+    [datos_pisos] => Tierra
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Arrienda
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 
+    [datos_eliminacion_basura] => Composta
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => flet prueba tres 1725417999 id_users 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 16:17:34 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 16:24:59 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 16:24:59 --> JSON RECIBIDO: Array
+(
+    [uuid] => e9d69570-c619-4bc9-925f-72baed02b95d
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 11
+    [parroquia] => 150
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet prueba cuatro
+    [datos_barrios] => flet prueba cuatro
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Eternit
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Hormigón
+    [datos_cuarto] => 45
+    [datos_combustibles_cocina] => Leña
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Prestada
+    [datos_pago_vivienda] => 45
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 44
+    [datos_pago_luz] => 43
+    [datos_cantidad_luz] => 23
+    [datos_internet] => Sí
+    [datos_pago_internet] => 42
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 41
+    [datos_eliminacion_basura] => Carro recolector
+    [datos_lugares_viveres] => Mercados
+    [datos_gastos_viveres] => 44
+    [datos_medio_transporte] => 
+    [datos_estado_transporte] => 
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => No
+    [datos_observacion] => flet prueba cuatro 1725417999
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 16:24:59 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:00:55 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:00:55 --> JSON RECIBIDO: Array
+(
+    [uuid] => d63cf0cd-3d8c-4212-8521-9351233b2615
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => FLET TEST ONE
+    [datos_barrios] => FLET TEST ONE
+    [datos_tipo_viviendas] => Departamento
+    [datos_techos] => Eternit
+    [datos_paredes] => Ladrillo
+    [datos_pisos] => Hormigón
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => Electricidad
+    [datos_servicios_higienicos] => Pozo séptico
+    [datos_viviendas] => Propia (regalada, heredad
+    [datos_pago_vivienda] => 2
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 2
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 2
+    [datos_internet] => Sí
+    [datos_pago_internet] => 2
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 22
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Mercados
+    [datos_gastos_viveres] => 22
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => No
+    [datos_observacion] => FLET TEST ONE 1725417999 id_users 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:00:55 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:21:41 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:21:41 --> JSON RECIBIDO: Array
+(
+    [uuid] => f90adcf5-2533-4b41-9f4e-046ee06f5203
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => FLET TEST two
+    [datos_barrios] => FLET TEST two
+    [datos_tipo_viviendas] => 0
+    [datos_techos] => 0
+    [datos_paredes] => 0
+    [datos_pisos] => 0
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => 0
+    [datos_servicios_higienicos] => 0
+    [datos_viviendas] => 0
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 3
+    [datos_plan_celular] => Sí
+    [datos_observacion] => FLET TEST two 1725417999 id_users 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:21:41 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:27:52 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:27:52 --> JSON RECIBIDO: Array
+(
+    [uuid] => 43a370dc-5ccf-4c95-a2d7-23139e2c2fb9
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => FLET TEST TRES
+    [datos_barrios] => FLET TEST TRES
+    [datos_tipo_viviendas] => 0
+    [datos_techos] => 0
+    [datos_paredes] => 0
+    [datos_pisos] => 0
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => 0
+    [datos_servicios_higienicos] => 0
+    [datos_viviendas] => 0
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => FLET TEST TRES 1725417999
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:27:52 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:33:49 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:33:49 --> JSON RECIBIDO: Array
+(
+    [uuid] => f3c2460e-7ee6-4715-b32c-391ce759835c
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => FLET TEST cuatro
+    [datos_barrios] => FLET TEST cuatro
+    [datos_tipo_viviendas] => 0
+    [datos_techos] => 0
+    [datos_paredes] => 0
+    [datos_pisos] => 0
+    [datos_cuarto] => 3
+    [datos_combustibles_cocina] => 0
+    [datos_servicios_higienicos] => 0
+    [datos_viviendas] => 0
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Carro recolector
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => Sí
+    [datos_observacion] => FLET TEST cuatro 1725417999
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:33:49 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:38:22 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:38:22 --> JSON RECIBIDO: Array
+(
+    [uuid] => 007a8c76-baa4-4a32-8ed7-d160dc3317df
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => g
+    [datos_barrios] => g
+    [datos_tipo_viviendas] => 0
+    [datos_techos] => 0
+    [datos_paredes] => 0
+    [datos_pisos] => 0
+    [datos_cuarto] => 5
+    [datos_combustibles_cocina] => 0
+    [datos_servicios_higienicos] => 0
+    [datos_viviendas] => 0
+    [datos_pago_vivienda] => 5
+    [datos_agua] => Pozo
+    [datos_pago_agua] => 5
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 5
+    [datos_internet] => Sí
+    [datos_pago_internet] => 5
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 5
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Supermercado
+    [datos_gastos_viveres] => 5
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 5
+    [datos_plan_celular] => No
+    [datos_observacion] => 5
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:38:22 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 17:54:29 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 17:54:29 --> JSON RECIBIDO: Array
+(
+    [uuid] => 73ab6815-a5a8-4866-9df7-fcec1ecc087a
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => f
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 0
+    [datos_techos] => 0
+    [datos_paredes] => 0
+    [datos_pisos] => 0
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 0
+    [datos_servicios_higienicos] => 0
+    [datos_viviendas] => 0
+    [datos_pago_vivienda] => 3
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 0
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => La queman
+    [datos_lugares_viveres] => Trueques
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Ninguno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 17:54:29 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 20:37:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 20:37:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => 2c08c152-01b4-4ba8-bef3-7cf856ecedf3
+    [datos_cedula_voluntario] => 1725417999
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => fff
+    [datos_barrios] => fff
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 174
+    [datos_paredes] => 179
+    [datos_pisos] => 184
+    [datos_cuarto] => 4444
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Red Pública
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => La queman
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 4444
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Ninguno
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 44444
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 20:37:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 20:46:14 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 20:46:14 --> JSON RECIBIDO: Array
+(
+    [uuid] => 76f28f8a-f3d7-450f-aa61-c337baeb3019
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => f
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 193
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Micromercados
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => ffff
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 20:46:14 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 20:49:04 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 20:49:04 --> JSON RECIBIDO: Array
+(
+    [uuid] => 5a9a86df-b8c7-4f1f-8fec-e6bc18ed2477
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => f
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 193
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 4
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Lo botan a la calle, quebrada o rio
+    [datos_lugares_viveres] => Micromercados
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => aqui el resultado de la prueba offline
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 20:49:04 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 21:07:30 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 21:07:30 --> JSON RECIBIDO: Array
+(
+    [uuid] => 8973fc42-8118-4ab3-9b64-3ec8881bf5a6
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => f
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 193
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 400
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => Sí
+    [datos_pago_internet] => 55
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 56
+    [datos_eliminacion_basura] => Carro recolector
+    [datos_lugares_viveres] => Supermercado
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 888
+    [datos_plan_celular] => Sí
+    [datos_observacion] => aqui el resultado de la prueba offline 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 21:07:30 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 21:40:07 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 21:40:07 --> JSON RECIBIDO: Array
+(
+    [uuid] => 7ae99c21-2b4c-446e-9ca7-cae7b5bd45d9
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => f
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 193
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 400
+    [datos_agua] => Carro repartidor
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 4
+    [datos_cantidad_luz] => 4
+    [datos_internet] => Sí
+    [datos_pago_internet] => 55
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 56
+    [datos_eliminacion_basura] => Carro recolector
+    [datos_lugares_viveres] => Supermercado
+    [datos_gastos_viveres] => 4
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 888
+    [datos_plan_celular] => Sí
+    [datos_observacion] => aqui el resultado de la prueba offline 2
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 21:40:07 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 21:46:40 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 21:46:40 --> JSON RECIBIDO: Array
+(
+    [uuid] => e78d0a6b-7306-4377-b0b8-ebd910df81c3
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ffff
+    [datos_barrios] => f
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 182
+    [datos_cuarto] => 4
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 4
+    [datos_agua] => 205
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => Reciclan/entierran
+    [datos_lugares_viveres] => Tienda del barrio
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 21:46:40 --> CONTENT TYPE: application/json
+ERROR - 2025-12-24 22:08:05 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-24 22:08:05 --> JSON RECIBIDO: Array
+(
+    [uuid] => 758ef908-4d5e-404e-97fa-315d06b3f977
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 10
+    [parroquia] => 141
+    [tipo_parroquia] => 20
+    [datos_comunidades] => d
+    [datos_barrios] => d
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 100200360
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 197
+    [datos_pago_vivienda] => 100200360
+    [datos_agua] => 202
+    [datos_pago_agua] => 100200360
+    [datos_pago_luz] => 100200360
+    [datos_cantidad_luz] => 100200360
+    [datos_internet] => Sí
+    [datos_pago_internet] => 100200360
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 100200360
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 100200360
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 100200360
+    [datos_plan_celular] => Sí
+    [datos_observacion] => 100200360100200360
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+        )
+
+)
+
+ERROR - 2025-12-24 22:08:05 --> CONTENT TYPE: application/json

@@ -58,3 +58,6 @@ $routes->post('/updateParentesco', 'GeneralInformationRecords::updateParentesco'
 
 //Routes for profile
 $routes->get('/profile', 'Users::profile');
+
+$routes->post('sync-encuesta', 'SyncEncuesta::sync');
+
