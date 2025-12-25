@@ -1,0 +1,542 @@
+ERROR - 2025-12-25 02:12:36 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 02:12:36 --> JSON RECIBIDO: Array
+(
+    [uuid] => b8876c5e-494c-4755-9757-8e0ded2e19d8
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 12
+    [parroquia] => 155
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet test dos parentesco
+    [datos_barrios] => flet test dos parentesco
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 3
+    [datos_agua] => 202
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => Sí
+    [datos_pago_internet] => 33
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 33
+    [datos_eliminacion_basura] => 219
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 333
+    [datos_plan_celular] => No
+    [datos_observacion] => flet test dos parentescoflet test dos parentescoflet test dos parentesco
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => flet test 2
+                    [apellidos] => flet test 2
+                    [documento] => 123456789
+                    [telefono] => 3
+                    [etnia] => Montubio
+                    [genero] => Masculino
+                    [nivel_educacion] => Universitaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 2
+                    [estado_civil] => Separado/a
+                    [discapacidad] => Sí
+                    [enfermedad] => ciego
+                    [trabaja] => Sí
+                    [ocupacion] => cajero
+                    [ingreso] => 380
+                    [parentesco] => papa
+                )
+
+            [1] => Array
+                (
+                    [nombres] => flet test 2 parentesco
+                    [apellidos] => flet test 2 parentesco
+                    [documento] => flet test 2 parentes
+                    [telefono] => 12345678
+                    [etnia] => Mestizo
+                    [genero] => Masculino
+                    [nivel_educacion] => Primaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Separado/a
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 22
+                    [parentesco] => flet test 2 parentesco
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 02:12:36 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 02:12:37 --> mysqli_sql_exception: Table 'badi.tbl_datos_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(136): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:12:37 --> mysqli_sql_exception: Table 'badi.tbl_datos_generales_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(158): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:12:37 --> mysqli_sql_exception: Table 'badi.tbl_datos_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(136): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:12:37 --> mysqli_sql_exception: Table 'badi.tbl_datos_generales_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(158): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:16:29 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 02:16:29 --> JSON RECIBIDO: Array
+(
+    [uuid] => b8876c5e-494c-4755-9757-8e0ded2e19d8
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 12
+    [parroquia] => 155
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet test dos parentesco
+    [datos_barrios] => flet test dos parentesco
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 3
+    [datos_agua] => 202
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => Sí
+    [datos_pago_internet] => 33
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 33
+    [datos_eliminacion_basura] => 219
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 333
+    [datos_plan_celular] => No
+    [datos_observacion] => flet test dos parentescoflet test dos parentescoflet test dos parentesco
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => flet test 2
+                    [apellidos] => flet test 2
+                    [documento] => 123456789
+                    [telefono] => 3
+                    [etnia] => Montubio
+                    [genero] => Masculino
+                    [nivel_educacion] => Universitaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 2
+                    [estado_civil] => Separado/a
+                    [discapacidad] => Sí
+                    [enfermedad] => ciego
+                    [trabaja] => Sí
+                    [ocupacion] => cajero
+                    [ingreso] => 380
+                    [parentesco] => papa
+                )
+
+            [1] => Array
+                (
+                    [nombres] => flet test 2 parentesco
+                    [apellidos] => flet test 2 parentesco
+                    [documento] => flet test 2 parentes
+                    [telefono] => 12345678
+                    [etnia] => Mestizo
+                    [genero] => Masculino
+                    [nivel_educacion] => Primaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Separado/a
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 22
+                    [parentesco] => flet test 2 parentesco
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 02:16:29 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 02:16:29 --> mysqli_sql_exception: Table 'badi.tbl_datos_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(136): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:16:29 --> mysqli_sql_exception: Table 'badi.tbl_datos_generales_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(158): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:16:29 --> mysqli_sql_exception: Table 'badi.tbl_datos_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(136): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:16:29 --> mysqli_sql_exception: Table 'badi.tbl_datos_generales_parentescos' doesn't exist in C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\bancoAlimentos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\bancoAlimentos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\bancoAlimentos\app\Controllers\SyncEncuesta.php(158): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(933): App\Controllers\SyncEncuesta->sync()
+#6 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SyncEncuesta))
+#7 C:\xampp\htdocs\bancoAlimentos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\bancoAlimentos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\bancoAlimentos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-12-25 02:24:36 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 02:24:36 --> JSON RECIBIDO: Array
+(
+    [uuid] => b8876c5e-494c-4755-9757-8e0ded2e19d8
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 12
+    [parroquia] => 155
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet test dos parentesco
+    [datos_barrios] => flet test dos parentesco
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 3
+    [datos_agua] => 202
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => Sí
+    [datos_pago_internet] => 33
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 33
+    [datos_eliminacion_basura] => 219
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 333
+    [datos_plan_celular] => No
+    [datos_observacion] => flet test dos parentescoflet test dos parentescoflet test dos parentesco
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => flet test 2
+                    [apellidos] => flet test 2
+                    [documento] => 123456789
+                    [telefono] => 3
+                    [etnia] => Montubio
+                    [genero] => Masculino
+                    [nivel_educacion] => Universitaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 2
+                    [estado_civil] => Separado/a
+                    [discapacidad] => Sí
+                    [enfermedad] => ciego
+                    [trabaja] => Sí
+                    [ocupacion] => cajero
+                    [ingreso] => 380
+                    [parentesco] => papa
+                )
+
+            [1] => Array
+                (
+                    [nombres] => flet test 2 parentesco
+                    [apellidos] => flet test 2 parentesco
+                    [documento] => flet test 2 parentes
+                    [telefono] => 12345678
+                    [etnia] => Mestizo
+                    [genero] => Masculino
+                    [nivel_educacion] => Primaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Separado/a
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 22
+                    [parentesco] => flet test 2 parentesco
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 02:24:36 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 02:25:24 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 02:25:24 --> JSON RECIBIDO: Array
+(
+    [uuid] => c3ecdd77-ae91-4d1f-b592-53606ca52af7
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => 12
+    [parroquia] => 155
+    [tipo_parroquia] => 20
+    [datos_comunidades] => flet test dos parentesco
+    [datos_barrios] => flet test dos parentesco
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 3
+    [datos_agua] => 202
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => Sí
+    [datos_pago_internet] => 33
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 33
+    [datos_eliminacion_basura] => 219
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 333
+    [datos_plan_celular] => No
+    [datos_observacion] => flet test dos parentescoflet test dos parentescoflet test dos parentesco
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => flet test 2
+                    [apellidos] => flet test 2
+                    [documento] => 123456789
+                    [telefono] => 3
+                    [etnia] => Montubio
+                    [genero] => Masculino
+                    [nivel_educacion] => Universitaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 2
+                    [estado_civil] => Separado/a
+                    [discapacidad] => Sí
+                    [enfermedad] => ciego
+                    [trabaja] => Sí
+                    [ocupacion] => cajero
+                    [ingreso] => 380
+                    [parentesco] => papa
+                )
+
+            [1] => Array
+                (
+                    [nombres] => flet test 2 parentesco
+                    [apellidos] => flet test 2 parentesco
+                    [documento] => flet test 2 parentes
+                    [telefono] => 12345678
+                    [etnia] => Mestizo
+                    [genero] => Masculino
+                    [nivel_educacion] => Primaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Separado/a
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 22
+                    [parentesco] => flet test 2 parentesco
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 02:25:24 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 02:30:23 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 02:30:23 --> JSON RECIBIDO: Array
+(
+    [uuid] => df84b4ec-c5c4-418a-9ad9-474484cb0b86
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 5
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => FLET TEST CUATRO pariente
+    [datos_barrios] => FLET TEST CUATRO pariente
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 188
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 3
+    [datos_agua] => 202
+    [datos_pago_agua] => 3
+    [datos_pago_luz] => 3
+    [datos_cantidad_luz] => 3
+    [datos_internet] => Sí
+    [datos_pago_internet] => 4
+    [datos_tv_cable] => Sí
+    [datos_tv_pago] => 4
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 225
+    [datos_gastos_viveres] => 3
+    [datos_medio_transporte] => Moto o pasola eléctrica
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 3
+    [datos_plan_celular] => Sí
+    [datos_observacion] => FLET TEST CUATRO pariente
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => FLET TEST CUATRO
+                    [apellidos] => FLET TEST CUATRO
+                    [documento] => FLET TEST CUATRO
+                    [telefono] => 3
+                    [etnia] => Blanco
+                    [genero] => Femenino
+                    [nivel_educacion] => Universitaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Soltero/a
+                    [discapacidad] => Sí
+                    [enfermedad] => CIEGO
+                    [trabaja] => Sí
+                    [ocupacion] => Cajero
+                    [ingreso] => 1,234.00
+                    [parentesco] => papa
+                )
+
+            [1] => Array
+                (
+                    [nombres] => FLET TEST CUATRO pariente
+                    [apellidos] => FLET TEST CUATRO pariente
+                    [documento] => FLET TEST CUATRO par
+                    [telefono] => 3
+                    [etnia] => Afroecuatoriano
+                    [genero] => Masculino
+                    [nivel_educacion] => Primaria
+                    [fecha_nacimiento] => 24/12/2025
+                    [edad] => 3
+                    [estado_civil] => Soltero/a
+                    [discapacidad] => Sí
+                    [enfermedad] => invalido
+                    [trabaja] => Sí
+                    [ocupacion] => controlador buses
+                    [ingreso] => 23
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 02:30:23 --> CONTENT TYPE: application/json

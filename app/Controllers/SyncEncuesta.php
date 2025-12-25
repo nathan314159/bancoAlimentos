@@ -133,7 +133,7 @@ class SyncEncuesta extends ResourceController
 
         if (!empty($data['familiares'])) {
             foreach ($data['familiares'] as $i => $familiar) {
-                $db->table('tbl_datos_parentescos')->insert([
+                $db->table('tbl_datos_parentesco')->insert([
                     'datos_parentesco_nombres' => $familiar['nombres'] ?? null,
                     'datos_parentesco_apellidos' => $familiar['apellidos'] ?? null,
                     'datos_parentesco_documento' => $familiar['documento'] ?? null,
@@ -155,7 +155,7 @@ class SyncEncuesta extends ResourceController
                 $idParentesco = $db->insertID();
 
                 // 🔗 Relación
-                $db->table('tbl_datos_generales_parentescos')->insert([
+                $db->table('tbl_datos_generales_parentesco')->insert([
                     'id_datos_generales' => $idGeneral,
                     'id_datos_parentescos' => $idParentesco
                 ]);
