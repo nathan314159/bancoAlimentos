@@ -15,7 +15,6 @@ class SyncEncuesta extends ResourceController
         // 1️⃣ Leer JSON
         $data = $this->request->getJSON(true);
         log_message('error', 'JSON RECIBIDO: ' . print_r($data, true));
-        
         log_message('error', 'CONTENT TYPE: ' . $this->request->getHeaderLine('Content-Type'));
 
         if (!$data) {
@@ -133,6 +132,8 @@ class SyncEncuesta extends ResourceController
 
         if (!empty($data['familiares'])) {
             foreach ($data['familiares'] as $i => $familiar) {
+                log_message('error','FECHA RECIBIDA MYSQL => ' . var_export($familiar['fecha_nacimiento'], true));
+
                 $db->table('tbl_datos_parentesco')->insert([
                     'datos_parentesco_nombres' => $familiar['nombres'] ?? null,
                     'datos_parentesco_apellidos' => $familiar['apellidos'] ?? null,
