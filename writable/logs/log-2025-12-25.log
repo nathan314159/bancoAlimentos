@@ -1400,3 +1400,271 @@ ERROR - 2025-12-25 20:21:29 --> JSON RECIBIDO: Array
 
 ERROR - 2025-12-25 20:21:29 --> CONTENT TYPE: application/json
 ERROR - 2025-12-25 20:21:29 --> FECHA RECIBIDA MYSQL => '2025-12-25'
+ERROR - 2025-12-25 23:43:34 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 23:43:34 --> JSON RECIBIDO: Array
+(
+    [uuid] => e8f4224c-d55e-4f91-8ab5-b18756b86c14
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => Antonio Ante
+    [parroquia] => 127
+    [tipo_parroquia] => 20
+    [datos_comunidades] => 100200360
+    [datos_barrios] => 100200360
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 173
+    [datos_paredes] => 177
+    [datos_pisos] => 181
+    [datos_cuarto] => 100200360
+    [datos_combustibles_cocina] => 188
+    [datos_servicios_higienicos] => 193
+    [datos_viviendas] => 199
+    [datos_pago_vivienda] => 100200360
+    [datos_agua] => 204
+    [datos_pago_agua] => 100200360
+    [datos_pago_luz] => 100200360
+    [datos_cantidad_luz] => 100200360
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 220
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 100200360
+    [datos_medio_transporte] => Pasola a gasolina
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => Sí
+    [datos_celular] => Sí
+    [datos_cantidad_celulare] => 100200360
+    [datos_plan_celular] => No
+    [datos_observacion] => 100200360
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => bbbbb
+                    [apellidos] => bbbbbb
+                    [documento] => 100200360
+                    [telefono] => 100200360
+                    [etnia] => 240
+                    [genero] => 244
+                    [nivel_educacion] => 249
+                    [estado_civil] => 254
+                    [fecha_nacimiento] => 2025-12-25
+                    [edad] => 100200360
+                    [discapacidad] => Sí
+                    [enfermedad] => Ninguna100200360
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 100200360
+                    [parentesco] => 100200360
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 23:43:34 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 23:43:34 --> FECHA RECIBIDA MYSQL => '2025-12-25'
+ERROR - 2025-12-25 23:58:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 23:58:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => d8db99e0-9ba3-4c81-8717-bf448980a093
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => Cantón de Carchi
+    [parroquia] => 141
+    [tipo_parroquia] => urbano
+    [datos_comunidades] => 100200360
+    [datos_barrios] => 100200360
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 186
+    [datos_cuarto] => 100200360
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 100200360
+    [datos_agua] => 205
+    [datos_pago_agua] => 100200360
+    [datos_pago_luz] => 100200360
+    [datos_cantidad_luz] => 100200360
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 100200360
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 100200360
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cine
+                    [apellidos] => 100200360
+                    [documento] => 100200360
+                    [telefono] => 100200360
+                    [etnia] => 237
+                    [genero] => 244
+                    [nivel_educacion] => 248
+                    [estado_civil] => 254
+                    [fecha_nacimiento] => 2025-12-25
+                    [edad] => 100200360
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 100200360
+                    [parentesco] => 100200360
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 23:58:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 23:58:42 --> FECHA RECIBIDA MYSQL => '2025-12-25'
+ERROR - 2025-12-25 23:58:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 23:58:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => d8db99e0-9ba3-4c81-8717-bf448980a093
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => Cantón de Carchi
+    [parroquia] => 141
+    [tipo_parroquia] => urbano
+    [datos_comunidades] => 100200360
+    [datos_barrios] => 100200360
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 186
+    [datos_cuarto] => 100200360
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 100200360
+    [datos_agua] => 205
+    [datos_pago_agua] => 100200360
+    [datos_pago_luz] => 100200360
+    [datos_cantidad_luz] => 100200360
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 100200360
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 100200360
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cine
+                    [apellidos] => 100200360
+                    [documento] => 100200360
+                    [telefono] => 100200360
+                    [etnia] => 237
+                    [genero] => 244
+                    [nivel_educacion] => 248
+                    [estado_civil] => 254
+                    [fecha_nacimiento] => 2025-12-25
+                    [edad] => 100200360
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 100200360
+                    [parentesco] => 100200360
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 23:58:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 23:58:42 --> FECHA RECIBIDA MYSQL => '2025-12-25'
+ERROR - 2025-12-25 23:59:30 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-25 23:59:30 --> JSON RECIBIDO: Array
+(
+    [uuid] => 45e19cf1-2f9d-4503-a723-f131e880f42e
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 2
+    [canton] => Cantón de Carchi
+    [parroquia] => 143
+    [tipo_parroquia] => rural
+    [datos_comunidades] => 100200360
+    [datos_barrios] => 100200360
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 186
+    [datos_cuarto] => 100200360
+    [datos_combustibles_cocina] => 189
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 200
+    [datos_pago_vivienda] => 100200360
+    [datos_agua] => 205
+    [datos_pago_agua] => 100200360
+    [datos_pago_luz] => 100200360
+    [datos_cantidad_luz] => 100200360
+    [datos_internet] => No
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => No
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 100200360
+    [datos_medio_transporte] => Ninguno
+    [datos_estado_transporte] => Malo
+    [datos_terrenos] => No
+    [datos_celular] => No
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => No
+    [datos_observacion] => 100200360
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cine
+                    [apellidos] => 100200360
+                    [documento] => 100200360
+                    [telefono] => 100200360
+                    [etnia] => 237
+                    [genero] => 244
+                    [nivel_educacion] => 248
+                    [estado_civil] => 254
+                    [fecha_nacimiento] => 2025-12-25
+                    [edad] => 100200360
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 100200360
+                    [parentesco] => 100200360
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-25 23:59:30 --> CONTENT TYPE: application/json
+ERROR - 2025-12-25 23:59:30 --> FECHA RECIBIDA MYSQL => '2025-12-25'

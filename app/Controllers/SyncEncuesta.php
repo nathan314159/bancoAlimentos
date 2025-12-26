@@ -132,8 +132,7 @@ class SyncEncuesta extends ResourceController
 
         if (!empty($data['familiares'])) {
             foreach ($data['familiares'] as $i => $familiar) {
-                log_message('error','FECHA RECIBIDA MYSQL => ' . var_export($familiar['fecha_nacimiento'], true));
-
+                
                 $db->table('tbl_datos_parentesco')->insert([
                     'datos_parentesco_nombres' => $familiar['nombres'] ?? null,
                     'datos_parentesco_apellidos' => $familiar['apellidos'] ?? null,
