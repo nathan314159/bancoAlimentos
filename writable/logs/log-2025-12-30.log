@@ -1,0 +1,20 @@
+CRITICAL - 2025-12-30 23:34:25 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\GeneralInformationMod::showGeneralInformation
+[Method: GET, Route: informationRecords]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\GeneralInformationRecords.php(50): CodeIgniter\Model->__call('showGeneralInformation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GeneralInformationRecords->informationRecords()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralInformationRecords))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-30 23:41:33 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\GeneralInformationMod::showGeneralInformation
+[Method: GET, Route: informationRecords]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\GeneralInformationRecords.php(50): CodeIgniter\Model->__call('showGeneralInformation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GeneralInformationRecords->informationRecords()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralInformationRecords))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

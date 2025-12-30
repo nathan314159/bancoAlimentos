@@ -91,7 +91,7 @@
 
                             <td><?= esc($row->nombre_provincia) ?></td>
                             <td><?= esc($row->datos_canton) ?></td>
-                            <td><?= esc($row->datos_tipo_parroquias) ?></td>
+                            <td><?= esc($row->tipo_parroquia) ?></td>
                             <td><?= esc($row->nombre_parroquia) ?></td>
                             <td><?= esc($row->datos_comunidades) ?></td>
                             <td><?= esc($row->datos_barrios) ?></td>
@@ -106,9 +106,9 @@
                             <td><?= esc($row->nombre_servicios) ?></td>
                             <td><?= esc($row->nombre_vivienda) ?></td>
                             <td><?= esc($row->datos_pago_vivienda) ?></td>
-                            <td><?= esc($row->datos_agua ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_agua) ?></td>
                             <td><?= esc($row->datos_pago_agua) ?></td>
-                            <td><?= esc($row->datos_pago_luz ? 'Sí' : 'No') ?></td>
+                            <td><?= esc($row->datos_pago_luz) ?></td>
                             <td><?= esc($row->datos_cantidad_luz) ?></td>
                             <td><?= esc($row->datos_internet ? 'Sí' : 'No') ?></td>
                             <td><?= esc($row->datos_pago_internet) ?></td>

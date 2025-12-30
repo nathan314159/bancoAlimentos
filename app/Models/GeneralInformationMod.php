@@ -17,7 +17,7 @@ class GeneralInformationMod extends Model
         "datos_parentesco_id",
         "datos_provincia",
         "datos_canton",
-        "datos_tipo_parroquias",
+        // "datos_tipo_parroquias",
         "datos_parroquias",
         "datos_comunidades",
         "datos_barrios",
@@ -99,7 +99,14 @@ class GeneralInformationMod extends Model
             dg.id_users,
 
             provincia.itc_nombre AS nombre_provincia,
+            canton.itc_nombre AS nombre_canton,
             parroquia.itc_nombre AS nombre_parroquia,
+
+            CASE
+                WHEN parroquia.itc_codigo LIKE '%URB%' THEN 'Urbana'
+                WHEN parroquia.itc_codigo LIKE '%RURAL%' THEN 'Rural'
+            END AS tipo_parroquia,
+
             tipo_vivienda.itc_nombre AS nombre_tipo_vivienda,
             techo.itc_nombre AS nombre_techo,
             pared.itc_nombre AS nombre_pared,
@@ -111,7 +118,7 @@ class GeneralInformationMod extends Model
             frecuencia.itc_nombre AS nombre_frecuencia_viveres,
 
             dg.datos_parroquias,
-            dg.datos_tipo_parroquias,
+            
             dg.datos_canton,
             dg.datos_comunidades,
             dg.datos_barrios,
@@ -192,6 +199,12 @@ class GeneralInformationMod extends Model
 
         provincia.itc_nombre AS nombre_provincia,
         parroquia.itc_nombre AS nombre_parroquia,
+
+        CASE
+            WHEN parroquia.itc_codigo LIKE '%URB%' THEN 'Urbana'
+            WHEN parroquia.itc_codigo LIKE '%RURAL%' THEN 'Rural'
+        END AS tipo_parroquia,
+
         tipo_vivienda.itc_nombre AS nombre_tipo_vivienda,
         techo.itc_nombre AS nombre_techo,
         pared.itc_nombre AS nombre_pared,
@@ -203,7 +216,6 @@ class GeneralInformationMod extends Model
         frecuencia.itc_nombre AS nombre_frecuencia_viveres,
 
         dg.datos_parroquias,
-        dg.datos_tipo_parroquias,
         dg.datos_canton,
         dg.datos_comunidades,
         dg.datos_barrios,
