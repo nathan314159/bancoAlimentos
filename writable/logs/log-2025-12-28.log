@@ -1,0 +1,1828 @@
+ERROR - 2025-12-28 00:44:52 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 00:44:52 --> JSON RECIBIDO: Array
+(
+    [uuid] => a7fe02a2-c341-4673-97e2-43655c9af1f7
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 105
+    [tipo_parroquia] => 20
+    [datos_comunidades] => cellphone
+    [datos_barrios] => cellphone
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 2
+    [datos_agua] => 204
+    [datos_pago_agua] => 2
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 4
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 2
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 0
+    [datos_observacion] => cellphone
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cellphone
+                    [apellidos] => cellphone
+                    [documento] => cellphone
+                    [telefono] => 2
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 252
+                    [fecha_nacimiento] => 2025-12-27
+                    [edad] => 2
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 2
+                    [parentesco] => cellphone
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 00:44:52 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 00:44:53 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 00:44:53 --> JSON RECIBIDO: Array
+(
+    [uuid] => 0f46e674-2418-4693-9cf8-3c103742bc88
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 105
+    [tipo_parroquia] => 20
+    [datos_comunidades] => cellphone
+    [datos_barrios] => cellphone
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 2
+    [datos_agua] => 204
+    [datos_pago_agua] => 2
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 4
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 2
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 0
+    [datos_observacion] => cellphone
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cellphone
+                    [apellidos] => cellphone
+                    [documento] => cellphone
+                    [telefono] => 2
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 252
+                    [fecha_nacimiento] => 2025-12-27
+                    [edad] => 2
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 2
+                    [parentesco] => cellphone
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 00:44:53 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 00:45:51 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 00:45:51 --> JSON RECIBIDO: Array
+(
+    [uuid] => e6c50751-ede8-49d3-b941-8219e504b60e
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 105
+    [tipo_parroquia] => 20
+    [datos_comunidades] => cellphone
+    [datos_barrios] => cellphone
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 176
+    [datos_pisos] => 181
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 2
+    [datos_agua] => 204
+    [datos_pago_agua] => 2
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 4
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 2
+    [datos_medio_transporte] => Moto
+    [datos_estado_transporte] => Regular
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 0
+    [datos_observacion] => patricio arboleda papa te amo
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => cellphone
+                    [apellidos] => cellphone
+                    [documento] => cellphone
+                    [telefono] => 2
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 252
+                    [fecha_nacimiento] => 2025-12-27
+                    [edad] => 2
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 2
+                    [parentesco] => cellphone
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 00:45:51 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 15:45:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 15:45:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => d876020b-2c70-4825-a500-e65e27738102
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 15:45:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 15:46:28 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 15:46:28 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 15:46:28 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 15:47:40 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 15:47:40 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 15:47:40 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 15:52:44 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 15:52:44 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 15:52:44 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 15:52:45 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 15:52:45 --> JSON RECIBIDO: Array
+(
+    [uuid] => 07223c18-5300-463f-af89-a2e19bfdbc3b
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 1
+    [datos_tv_pago] => 22
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+            [3] => Array
+                (
+                    [nombres] => sebas
+                    [apellidos] => arboleda
+                    [documento] => 172883
+                    [telefono] => 09993345
+                    [etnia] => 
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 12
+                    [discapacidad] => Sí
+                    [enfermedad] => patojo
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => adoptado
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 15:52:45 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 16:18:05 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 16:18:05 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 16:18:05 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 16:18:07 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 16:18:07 --> JSON RECIBIDO: Array
+(
+    [uuid] => d18fea4d-d85b-45d8-b01c-564f9bb05527
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 169
+    [datos_techos] => 173
+    [datos_paredes] => 176
+    [datos_pisos] => 186
+    [datos_cuarto] => 2
+    [datos_combustibles_cocina] => 188
+    [datos_servicios_higienicos] => 192
+    [datos_viviendas] => 197
+    [datos_pago_vivienda] => 150
+    [datos_agua] => 203
+    [datos_pago_agua] => 25
+    [datos_pago_luz] => 5
+    [datos_cantidad_luz] => 3
+    [datos_internet] => 1
+    [datos_pago_internet] => 50
+    [datos_tv_cable] => 1
+    [datos_tv_pago] => 69
+    [datos_eliminacion_basura] => 218
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 250
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 23
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba 3
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 16:18:07 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 17:53:34 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 17:53:34 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 17:53:34 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 17:53:34 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 17:53:34 --> JSON RECIBIDO: Array
+(
+    [uuid] => e8a5a62a-404d-421d-8649-5bd01d7a8907
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 178
+    [datos_pisos] => 181
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 34
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => prueba corrección datos_agua
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => Nathan prueba celu 4
+                    [apellidos] => arboleda
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo web
+                    [ingreso] => 4000
+                    [parentesco] => jefe de casa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 17:53:34 --> CONTENT TYPE: application/json
+CRITICAL - 2025-12-28 17:53:39 --> ErrorException: Undefined property: stdClass::$agua
+[Method: GET, Route: informationRecords]
+in APPPATH\Views\generalInformationRecords\body.php on line 109.
+ 1 APPPATH\Views\generalInformationRecords\body.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$agua', 'C:\\xampp\\htdocs\\bancoAlimentos\\app\\Views\\generalInformationRecords\\body.php', 109)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bancoAlimentos\\app\\Views\\generalInformationRecords\\body.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('generalInformationRecords/body', [], true)
+ 5 APPPATH\Controllers\GeneralInformationRecords.php(74): view('generalInformationRecords/body', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GeneralInformationRecords->informationRecords()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralInformationRecords))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-28 17:55:11 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 17:55:11 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 17:55:11 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 17:55:11 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 17:55:11 --> JSON RECIBIDO: Array
+(
+    [uuid] => dfd02c3c-59f3-4526-8d07-0feb03d22084
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 178
+    [datos_pisos] => 181
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 34
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => prueba corrección datos_agua
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => Nathan prueba celu 4
+                    [apellidos] => arboleda
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo web
+                    [ingreso] => 4000
+                    [parentesco] => jefe de casa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 17:55:11 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:04:18 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:04:18 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:04:18 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:04:19 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:04:19 --> JSON RECIBIDO: Array
+(
+    [uuid] => d1f3f990-44b2-4f63-bf53-97e1a2d4ab46
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 178
+    [datos_pisos] => 181
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 34
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => prueba corrección datos_agua
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => Nathan prueba celu 4
+                    [apellidos] => arboleda
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo web
+                    [ingreso] => 4000
+                    [parentesco] => jefe de casa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:04:19 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:04:19 --> DEBUG datos_agua RAW: 202
+ERROR - 2025-12-28 18:04:19 --> DEBUG tipo datos_agua: integer
+ERROR - 2025-12-28 18:04:19 --> DEBUG datos_agua CAST INT: 202
+ERROR - 2025-12-28 18:04:19 --> BUSCANDO AGUA | id_item=202 | catalogo=29
+ERROR - 2025-12-28 18:08:16 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:08:16 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:08:16 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:08:16 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:08:16 --> JSON RECIBIDO: Array
+(
+    [uuid] => f87d1a5d-bc1a-48c6-ae6d-8794e0448f93
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 178
+    [datos_pisos] => 181
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 34
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => prueba corrección datos_agua
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => Nathan prueba celu 4
+                    [apellidos] => arboleda
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo web
+                    [ingreso] => 4000
+                    [parentesco] => jefe de casa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:08:16 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:08:16 --> DB NAME: badi
+ERROR - 2025-12-28 18:08:16 --> DEBUG datos_agua RAW: 202
+ERROR - 2025-12-28 18:08:16 --> DEBUG tipo datos_agua: integer
+ERROR - 2025-12-28 18:08:16 --> DEBUG datos_agua CAST INT: 202
+ERROR - 2025-12-28 18:08:16 --> BUSCANDO AGUA | id_item=202 | catalogo=29
+ERROR - 2025-12-28 18:08:42 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:08:42 --> JSON RECIBIDO: Array
+(
+    [uuid] => e3d1e0bd-250e-4100-bbfc-8078bab0777c
+    [datos_cedula_voluntario] => 1002003601
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 103
+    [tipo_parroquia] => 20
+    [datos_comunidades] => atuntaqui
+    [datos_barrios] => atuntaqui
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 177
+    [datos_pisos] => 184
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 15
+    [datos_pago_luz] => 15
+    [datos_cantidad_luz] => 20
+    [datos_internet] => 1
+    [datos_pago_internet] => 28
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 222
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 0
+    [datos_celular] => 1
+    [datos_cantidad_celulare] => 2
+    [datos_plan_celular] => 0
+    [datos_observacion] => esto es una prueba
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => nathan jonathan
+                    [apellidos] => arboleda hernandez
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo de software
+                    [ingreso] => 4000
+                    [parentesco] => jefe del hogar
+                )
+
+            [1] => Array
+                (
+                    [nombres] => ana
+                    [apellidos] => torres
+                    [documento] => 100200360
+                    [telefono] => 09989
+                    [etnia] => 236
+                    [genero] => 243
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2005-10-24
+                    [edad] => 23
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => teacher
+                    [ingreso] => 2000
+                    [parentesco] => esposa
+                )
+
+            [2] => Array
+                (
+                    [nombres] => fernando 
+                    [apellidos] => arboleda
+                    [documento] => 123456
+                    [telefono] => 0998766
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 246
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 2015-01-24
+                    [edad] => 10
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => No
+                    [ocupacion] => 
+                    [ingreso] => 0
+                    [parentesco] => hijo
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:08:42 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:08:43 --> 🔥 LOG DE PRUEBA: SyncEncuesta ejecutado
+ERROR - 2025-12-28 18:08:43 --> JSON RECIBIDO: Array
+(
+    [uuid] => 2b3a216c-e776-47a0-a7ef-bdf8ff91f650
+    [datos_cedula_voluntario] => 100200360
+    [provincia] => 3
+    [canton] => 4
+    [parroquia] => 99
+    [tipo_parroquia] => 20
+    [datos_comunidades] => ibarra
+    [datos_barrios] => ibarra
+    [datos_tipo_viviendas] => 168
+    [datos_techos] => 172
+    [datos_paredes] => 178
+    [datos_pisos] => 181
+    [datos_cuarto] => 7
+    [datos_combustibles_cocina] => 187
+    [datos_servicios_higienicos] => 191
+    [datos_viviendas] => 196
+    [datos_pago_vivienda] => 0
+    [datos_agua] => 202
+    [datos_pago_agua] => 4
+    [datos_pago_luz] => 2
+    [datos_cantidad_luz] => 34
+    [datos_internet] => 0
+    [datos_pago_internet] => 0
+    [datos_tv_cable] => 0
+    [datos_tv_pago] => 0
+    [datos_eliminacion_basura] => 217
+    [datos_lugares_viveres] => 226
+    [datos_gastos_viveres] => 200
+    [datos_medio_transporte] => Carro
+    [datos_estado_transporte] => Bueno
+    [datos_terrenos] => 1
+    [datos_celular] => 0
+    [datos_cantidad_celulare] => 0
+    [datos_plan_celular] => 1
+    [datos_observacion] => prueba corrección datos_agua
+    [datos_consentimiento] => 1
+    [familiares] => Array
+        (
+            [0] => Array
+                (
+                    [nombres] => Nathan prueba celu 4
+                    [apellidos] => arboleda
+                    [documento] => 1722417332
+                    [telefono] => 0998098630
+                    [etnia] => 236
+                    [genero] => 242
+                    [nivel_educacion] => 249
+                    [estado_civil] => 251
+                    [fecha_nacimiento] => 1989-10-24
+                    [edad] => 36
+                    [discapacidad] => No
+                    [enfermedad] => 
+                    [trabaja] => Sí
+                    [ocupacion] => desarrollo web
+                    [ingreso] => 4000
+                    [parentesco] => jefe de casa
+                )
+
+        )
+
+)
+
+ERROR - 2025-12-28 18:08:43 --> CONTENT TYPE: application/json
+ERROR - 2025-12-28 18:08:43 --> DB NAME: badi
+ERROR - 2025-12-28 18:08:43 --> DEBUG datos_agua RAW: 202
+ERROR - 2025-12-28 18:08:43 --> DEBUG tipo datos_agua: integer
+ERROR - 2025-12-28 18:08:43 --> DEBUG datos_agua CAST INT: 202
+ERROR - 2025-12-28 18:08:43 --> BUSCANDO AGUA | id_item=202 | catalogo=29
