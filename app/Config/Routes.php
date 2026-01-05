@@ -61,3 +61,5 @@ $routes->get('/profile', 'Users::profile');
 
 $routes->post('sync-encuesta', 'SyncEncuesta::sync');
 
+$routes->post('sync-encuesta/validar-cedula', 'SyncEncuesta::validarCedula');
+

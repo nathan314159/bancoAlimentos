@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
+use App\Models\UsersMod;
 
 class SyncEncuesta extends ResourceController
 {
@@ -24,14 +25,26 @@ class SyncEncuesta extends ResourceController
             ])->setStatusCode(400);
         }
 
-        $cedula = $data['datos_cedula_voluntario'] ?? null;
+        $cedula = isset($data['datos_cedula_voluntario'])
+            ? trim((string) $data['datos_cedula_voluntario'])
+            : null;
+
+        log_message('error', 'CEDULA RECIBIDA NORMALIZADA: [' . $cedula . ']');
+
+        if (!$cedula) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Cédula no enviada'
+            ])->setStatusCode(400);
+        }
+
 
         // 2️⃣ Conexión a DB
         $db = \Config\Database::connect();
 
         // 🔎 Buscar usuario por cédula
         $user = $db->table('tbl_users')
-            ->where('users_cedula', $cedula)
+            ->where('TRIM(users_cedula)', $cedula)
             ->get()
             ->getRow();
 
@@ -76,8 +89,6 @@ class SyncEncuesta extends ResourceController
                 'message' => 'Provincia inválida'
             ])->setStatusCode(400);
         }
-
-
 
 
         // 🧱 Iniciar transacción
@@ -132,7 +143,7 @@ class SyncEncuesta extends ResourceController
 
         if (!empty($data['familiares'])) {
             foreach ($data['familiares'] as $i => $familiar) {
-                
+
                 $db->table('tbl_datos_parentesco')->insert([
                     'datos_parentesco_nombres' => $familiar['nombres'] ?? null,
                     'datos_parentesco_apellidos' => $familiar['apellidos'] ?? null,
@@ -186,6 +197,39 @@ class SyncEncuesta extends ResourceController
         return $this->response->setJSON([
             'status' => 'ok',
             'uuid' => $data['uuid'] ?? null
+        ]);
+    }
+
+    public function validarCedula()
+    {
+        $json = $this->request->getJSON(true);
+        $cedula = trim($json['cedula'] ?? '');
+
+        if ($cedula === '') {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Cédula no enviada'
+            ])->setStatusCode(400);
+        }
+
+        // ✅ CREAR EL MODELO AQUÍ
+        $usersModel = new UsersMod();
+
+        // ⚠️ OJO: el campo es users_cedula, NO cedula
+        $user = $usersModel
+            ->where('users_cedula', $cedula)
+            ->first();
+
+        if (!$user) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Cédula no existe en el sistema'
+            ])->setStatusCode(400);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'ok',
+            'message' => 'Cédula válida'
         ]);
     }
 }

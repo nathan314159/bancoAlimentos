@@ -5,6 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use CodeIgniter\Database\RawSql;
 
+
 class UsersMod extends Model
 {
     protected $table            = 'tbl_users';
