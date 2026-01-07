@@ -98,7 +98,7 @@ class SyncEncuesta extends ResourceController
         $generalData = [
             'id_users' => $user->id_users,
             'datos_provincia' => $data['provincia'] ?? null,
-            'datos_canton' => $data['canton'] ?? null,
+            'datos_canton' => $data['canton_nombre'] ?? null,
             'datos_parroquias' => $data['parroquia'] ?? null,
             'datos_tipo_parroquias' => $data['tipo_parroquia'] ?? null,
             'datos_comunidades' => $data['datos_comunidades'] ?? null,
