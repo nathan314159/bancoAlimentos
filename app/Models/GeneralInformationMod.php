@@ -107,12 +107,14 @@ class GeneralInformationMod extends Model
                 WHEN parroquia.itc_codigo LIKE '%RURAL%' THEN 'Rural'
             END AS tipo_parroquia,
 
+            
             tipo_vivienda.itc_nombre AS nombre_tipo_vivienda,
             techo.itc_nombre AS nombre_techo,
             pared.itc_nombre AS nombre_pared,
             piso.itc_nombre AS nombre_piso,
             vivienda.itc_nombre AS nombre_vivienda,
             combustible.itc_nombre AS nombre_combustible,
+            agua.itc_nombre AS nombre_agua,
             servicios.itc_nombre AS nombre_servicios,
             eliminacion.itc_nombre AS nombre_eliminacion_basura,
             frecuencia.itc_nombre AS nombre_frecuencia_viveres,
@@ -177,6 +179,7 @@ class GeneralInformationMod extends Model
         $builder->join('tbl_item_catalogo servicios', 'servicios.id_item = dg.datos_servicios_higienicos', 'left');
         $builder->join('tbl_item_catalogo eliminacion', 'eliminacion.id_item = dg.datos_eliminacion_basura', 'left');
         $builder->join('tbl_item_catalogo frecuencia', 'frecuencia.id_item = dg.datos_lugares_mayor_frecuencia_viveres', 'left');
+        $builder->join('tbl_item_catalogo agua', 'agua.id_item = dg.datos_agua', 'left');
 
         // JOINs para parentesco
         $builder->join('tbl_datos_generales_parentesco dgp', 'dgp.id_datos_generales = dg.id_datos_generales');
@@ -189,11 +192,11 @@ class GeneralInformationMod extends Model
     }
 
     public function showGeneralInformationDates($idUser, $fechaDesde = null, $fechaHasta = null)
-{
-    $db = \Config\Database::connect();
+    {
+        $db = \Config\Database::connect();
 
-    $builder = $db->table('tbl_datos_generales dg');
-    $builder->select("
+        $builder = $db->table('tbl_datos_generales dg');
+        $builder->select("
         dg.id_datos_generales,
         dg.id_users,
 
@@ -211,6 +214,7 @@ class GeneralInformationMod extends Model
         piso.itc_nombre AS nombre_piso,
         vivienda.itc_nombre AS nombre_vivienda,
         combustible.itc_nombre AS nombre_combustible,
+        agua.itc_nombre AS nombre_agua,
         servicios.itc_nombre AS nombre_servicios,
         eliminacion.itc_nombre AS nombre_eliminacion_basura,
         frecuencia.itc_nombre AS nombre_frecuencia_viveres,
@@ -261,34 +265,40 @@ class GeneralInformationMod extends Model
         dp.datos_parentesco_ingreso_mensual
     ");
 
-    // JOINs con catálogos
-    $builder->join('tbl_item_catalogo provincia', 'provincia.id_item = dg.datos_provincia', 'left');
-    $builder->join('tbl_item_catalogo canton', 'canton.id_item = dg.datos_canton', 'left');
-    $builder->join('tbl_item_catalogo parroquia', 'parroquia.id_item = dg.datos_parroquias', 'left');
-    $builder->join('tbl_item_catalogo tipo_vivienda', 'tipo_vivienda.id_item = dg.datos_tipo_viviendas', 'left');
-    $builder->join('tbl_item_catalogo techo', 'techo.id_item = dg.datos_techos', 'left');
-    $builder->join('tbl_item_catalogo pared', 'pared.id_item = dg.datos_paredes', 'left');
-    $builder->join('tbl_item_catalogo piso', 'piso.id_item = dg.datos_pisos', 'left');
-    $builder->join('tbl_item_catalogo vivienda', 'vivienda.id_item = dg.datos_viviendas', 'left');
-    $builder->join('tbl_item_catalogo combustible', 'combustible.id_item = dg.datos_combustibles_cocina', 'left');
-    $builder->join('tbl_item_catalogo servicios', 'servicios.id_item = dg.datos_servicios_higienicos', 'left');
-    $builder->join('tbl_item_catalogo eliminacion', 'eliminacion.id_item = dg.datos_eliminacion_basura', 'left');
-    $builder->join('tbl_item_catalogo frecuencia', 'frecuencia.id_item = dg.datos_lugares_mayor_frecuencia_viveres', 'left');
+        // JOINs con catálogos
+        $builder->join('tbl_item_catalogo provincia', 'provincia.id_item = dg.datos_provincia', 'left');
+        $builder->join('tbl_item_catalogo canton', 'canton.id_item = dg.datos_canton', 'left');
+        $builder->join('tbl_item_catalogo parroquia', 'parroquia.id_item = dg.datos_parroquias', 'left');
+        $builder->join('tbl_item_catalogo tipo_vivienda', 'tipo_vivienda.id_item = dg.datos_tipo_viviendas', 'left');
+        $builder->join('tbl_item_catalogo techo', 'techo.id_item = dg.datos_techos', 'left');
+        $builder->join('tbl_item_catalogo pared', 'pared.id_item = dg.datos_paredes', 'left');
+        $builder->join('tbl_item_catalogo piso', 'piso.id_item = dg.datos_pisos', 'left');
+        $builder->join('tbl_item_catalogo vivienda', 'vivienda.id_item = dg.datos_viviendas', 'left');
+        $builder->join('tbl_item_catalogo combustible', 'combustible.id_item = dg.datos_combustibles_cocina', 'left');
+        $builder->join(
+            'tbl_item_catalogo agua',
+            'agua.id_item = dg.datos_agua',
+            'left'
+        );
 
-    // JOINs de parentesco
-    $builder->join('tbl_datos_generales_parentesco dgp', 'dgp.id_datos_generales = dg.id_datos_generales');
-    $builder->join('tbl_datos_parentesco dp', 'dp.id_datos_parentesco = dgp.id_datos_parentescos');
+        $builder->join('tbl_item_catalogo servicios', 'servicios.id_item = dg.datos_servicios_higienicos', 'left');
+        $builder->join('tbl_item_catalogo eliminacion', 'eliminacion.id_item = dg.datos_eliminacion_basura', 'left');
+        $builder->join('tbl_item_catalogo frecuencia', 'frecuencia.id_item = dg.datos_lugares_mayor_frecuencia_viveres', 'left');
 
-    $builder->where('dg.id_users', $idUser);
-    $builder->where('dg.datos_estado', 1);
+        // JOINs de parentesco
+        $builder->join('tbl_datos_generales_parentesco dgp', 'dgp.id_datos_generales = dg.id_datos_generales');
+        $builder->join('tbl_datos_parentesco dp', 'dp.id_datos_parentesco = dgp.id_datos_parentescos');
 
-    if ($fechaDesde && $fechaHasta) {
-        $builder->where('dg.datos_created_at >=', $fechaDesde . ' 00:00:00');
-        $builder->where('dg.datos_created_at <=', $fechaHasta . ' 23:59:59');
+        $builder->where('dg.id_users', $idUser);
+        $builder->where('dg.datos_estado', 1);
+
+        if ($fechaDesde && $fechaHasta) {
+            $builder->where('dg.datos_created_at >=', $fechaDesde . ' 00:00:00');
+            $builder->where('dg.datos_created_at <=', $fechaHasta . ' 23:59:59');
+        }
+
+        return $builder->get()->getResult();
     }
-
-    return $builder->get()->getResult();
-}
 
 
     public function getPrimerParentescoByDatosGeneralesId($idDatosGenerales)
