@@ -130,8 +130,8 @@ class SyncEncuesta extends ResourceController
             'datos_cantidad_celulare' => $data['datos_cantidad_celulare'] ?? null,
             'datos_plan_celular' => $data['datos_plan_celular'] ?? null,
             'datos_observacion' => $data['datos_observacion'] ?? null,
-            'datos_resultado' => null,
-            'datos_resultado_sistema' => 'Sincronizado',
+            'datos_resultado' => $data['datos_resultado'] ?? null,
+            'datos_resultado_sistema' => $data['datos_resultado_sistema'] ?? null,
             'datos_consentimiento' => $data['datos_consentimiento'] ?? null,
         ];
 
