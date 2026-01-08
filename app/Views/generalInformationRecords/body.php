@@ -106,7 +106,7 @@
                             <td><?= esc($row->nombre_servicios) ?></td>
                             <td><?= esc($row->nombre_vivienda) ?></td>
                             <td><?= esc($row->datos_pago_vivienda) ?></td>
-                            <td><?= esc($row->datos_agua) ?></td>
+                            <td><?= esc($row->nombre_agua) ?></td>
                             <td><?= esc($row->datos_pago_agua) ?></td>
                             <td><?= esc($row->datos_pago_luz) ?></td>
                             <td><?= esc($row->datos_cantidad_luz) ?></td>
