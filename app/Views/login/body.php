@@ -92,8 +92,8 @@
                 </div>
                 <div class="modal-body text-justify">
                     <p class="mb-3"><b>Por razones de seguridad, Banco de Alimentos te informa que el cambio de clave debe ser solicitado al administrador del sistema. Gracias por tu comprensión.</b></p>
-                    <p class="text-muted"><b>Nombre de administrador:</b> Juan Alvarez</p>
-                    <p class="text-muted"><b>Contacto:</b> 0900200300</p>
+                    <!-- <p class="text-muted"><b>Nombre de administrador:</b> Juan Alvarez</p>
+                    <p class="text-muted"><b>Contacto:</b> 0900200300</p> -->
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-secondary px-4" data-dismiss="modal"><b>Entendido</b></button>
