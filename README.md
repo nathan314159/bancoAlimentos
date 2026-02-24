@@ -9,10 +9,15 @@ This project is a socioeconomic data collection and management system developed 
 The purpose of the system is to:
 
 a) Digitize the household survey process conducted by field employees
+
 b) Standardize data collection across provinces and cantons
+
 c) Structure beneficiary information in a relational database
+
 d) Support decision-making based on accurate and organized data
+
 e) Prepare validated data for future deployment and production use
+
 It replaces manual or paper-based surveys with a structured digital workflow.
 
 3️⃣ What problem does it solve?
