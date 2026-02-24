@@ -61,6 +61,6 @@ e) Data validation and integrity enforcement
 f) REST API integration between web and mobile
 
 6️⃣ System Architecture
-! [image alt](https://github.com/nathan314159/bancoAlimentos/blob/768df928da3f0f4f14d5475d513dacebcbe304f5/arquitectura.pptx.png)
+![image alt](https://github.com/nathan314159/bancoAlimentos/blob/768df928da3f0f4f14d5475d513dacebcbe304f5/arquitectura.pptx.png)
 7️⃣ Screenshots
 
