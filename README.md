@@ -1,64 +1,83 @@
 📌 Banco de Alimentos de Imbabura – Socioeconomic Data Management System
 
-1️⃣ Introduction:
-This project is a socioeconomic data management system developed for "the Banco de Alimentos de Imbabura (B.A.D.I.)" to digitize and standardize the household survey process conducted by field workers. It replaces manual data collection with a structured, dynamic platform that captures geographic information, household members, housing conditions, and economic indicators using conditional logic and relational storage. The system improves data accuracy, reduces errors, and enables the organization to make informed decisions when identifying and assisting vulnerable families.
-
-2️⃣ What is the purpose of this project?
+1️⃣ What is the purpose of this project?
 
 This project is a socioeconomic data collection and management system developed for the Banco de Alimentos de Imbabura (B.A.D.I.), a government-supported organization that assists low-income families.
 The purpose of the system is to:
 
-a) Digitize the household survey process conducted by field employees
+Digitize the household survey process conducted by field employees
 
-b) Standardize data collection across provinces and cantons
+Standardize data collection across provinces and cantons
 
-c) Structure beneficiary information in a relational database
+Structure beneficiary information in a relational database
 
-d) Support decision-making based on accurate and organized data
+Support decision-making based on accurate and organized data
 
-e) Prepare validated data for future deployment and production use
+Prepare validated data for future deployment and production use
 
 It replaces manual or paper-based surveys with a structured digital workflow.
 
-3️⃣ What problem does it solve?
+2️⃣ What problem does it solve?
 
 Before this system, the data collection process faced several challenges:
-❌ Manual and inconsistent data collection
 
-Field workers collected data manually, which led to:
-a) Human error
+Manual and inconsistent data collection
 
-b) Incomplete forms
+Human error
 
-c) Inconsistent formats
+Incomplete forms
 
-d) Difficulty validating information
+Inconsistent formats
 
-4️⃣ Tech Stack
+Difficulty validating information
 
-a) Backend: PHP (CodeIgniter)
+No centralized database
 
-b) Frontend: JavaScript
+No real-time validation
 
-c) Database: MySQL
+Difficulty generating reports
 
-d) Mobile: Python (Flet)
+Lack of data traceability
 
-e) Version Control: Git & GitHub
+Limited scalability
 
-5️⃣ Key Features
+3️⃣ Tech Stack
 
-a) Dynamic household member registration (supports unlimited members)
+Backend: PHP (CodeIgniter)
 
-b) Hierarchical geographic selection (Province → Canton → Parish)
+Frontend: JavaScript
 
-c) Conditional survey logic
+Database: MySQL
 
-d) Role-based authentication
+Mobile: Python (Flet)
 
-e) Data validation and integrity enforcement
+Version Control: Git & GitHub
 
-f) REST API integration between web and mobile
+4️⃣ Key Features
+
+Dynamic household member registration (supports unlimited members)
+
+Hierarchical geographic selection (Province → Canton → Parish)
+
+Conditional survey logic
+
+Role-based authentication
+
+Data validation and integrity enforcement
+
+REST API integration between web and mobile
+
+5️⃣ Technical Challenges Solved
+
+Designed a relational schema to handle variable household sizes (1–10+ members)
+
+Implemented dependent dropdown logic (Province → Canton → Parish)
+
+Built conditional form flows based on user selections
+
+Developed REST API communication between web and mobile platforms
+
+Ensured data integrity through validation rules
 
 6️⃣ Methodology
 ![image alt](https://github.com/nathan314159/bancoAlimentos/blob/c0a38eb5b3efd1f07f61f5bcda81b7f42c3666de/metodologia.pptx.png)
