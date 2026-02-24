@@ -27,28 +27,40 @@ Before this system, the data collection process faced several challenges:
 
 Field workers collected data manually, which led to:
 a) Human error
+
 b) Incomplete forms
+
 c) Inconsistent formats
+
 d) Difficulty validating information
 
 4️⃣ Tech Stack
 
 a) Backend: PHP (CodeIgniter)
+
 b) Frontend: JavaScript
+
 c) Database: MySQL
+
 d) Mobile: Python (Flet)
+
 e) Version Control: Git & GitHub
 
 5️⃣ Key Features
 
 a) Dynamic household member registration (supports unlimited members)
+
 b) Hierarchical geographic selection (Province → Canton → Parish)
+
 c) Conditional survey logic
+
 d) Role-based authentication
+
 e) Data validation and integrity enforcement
+
 f) REST API integration between web and mobile
 
 6️⃣ System Architecture
-
+! [image alt](https://github.com/nathan314159/bancoAlimentos/blob/768df928da3f0f4f14d5475d513dacebcbe304f5/arquitectura.pptx.png)
 7️⃣ Screenshots
 
