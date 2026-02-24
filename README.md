@@ -1,60 +1,49 @@
-# CodeIgniter 4 Framework
+📌 Banco de Alimentos de Imbabura – Socioeconomic Data Management System
 
-## What is CodeIgniter?
+1️⃣ Introduction:
+This project is a socioeconomic data management system developed for "the Banco de Alimentos de Imbabura (B.A.D.I.)" to digitize and standardize the household survey process conducted by field workers. It replaces manual data collection with a structured, dynamic platform that captures geographic information, household members, housing conditions, and economic indicators using conditional logic and relational storage. The system improves data accuracy, reduces errors, and enables the organization to make informed decisions when identifying and assisting vulnerable families.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+2️⃣ What is the purpose of this project?
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+This project is a socioeconomic data collection and management system developed for the Banco de Alimentos de Imbabura (B.A.D.I.), a government-supported organization that assists low-income families.
+The purpose of the system is to:
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+a) Digitize the household survey process conducted by field employees
+b) Standardize data collection across provinces and cantons
+c) Structure beneficiary information in a relational database
+d) Support decision-making based on accurate and organized data
+e) Prepare validated data for future deployment and production use
+It replaces manual or paper-based surveys with a structured digital workflow.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+3️⃣ What problem does it solve?
 
-## Important Change with index.php
+Before this system, the data collection process faced several challenges:
+❌ Manual and inconsistent data collection
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Field workers collected data manually, which led to:
+a) Human error
+b) Incomplete forms
+c) Inconsistent formats
+d) Difficulty validating information
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+4️⃣ Tech Stack
 
-**Please** read the user guide for a better explanation of how CI4 works!
+a) Backend: PHP (CodeIgniter)
+b) Frontend: JavaScript
+c) Database: MySQL
+d) Mobile: Python (Flet)
+e) Version Control: Git & GitHub
 
-## Repository Management
+5️⃣ Key Features
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+a) Dynamic household member registration (supports unlimited members)
+b) Hierarchical geographic selection (Province → Canton → Parish)
+c) Conditional survey logic
+d) Role-based authentication
+e) Data validation and integrity enforcement
+f) REST API integration between web and mobile
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+6️⃣ System Architecture
 
-## Contributing
+7️⃣ Screenshots
 
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
