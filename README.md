@@ -79,12 +79,26 @@ Developed REST API communication between web and mobile platforms
 
 Ensured data integrity through validation rules
 
-6️⃣ Methodology
+6️⃣ Dependencies
+
+This project uses Composer-managed dependencies, including:
+
+CodeIgniter 4.6.1
+
+PHPSpreadsheet (Excel report generation)
+
+Predis (Redis client)
+
+Symfony Components
+
+PHPUnit (Testing framework)
+
+7️⃣ Methodology
 ![image alt](https://github.com/nathan314159/bancoAlimentos/blob/c0a38eb5b3efd1f07f61f5bcda81b7f42c3666de/metodologia.pptx.png)
 
-7️⃣ System Architecture
+8️⃣ System Architecture
 ![image alt](https://github.com/nathan314159/bancoAlimentos/blob/768df928da3f0f4f14d5475d513dacebcbe304f5/arquitectura.pptx.png)
-8️⃣ Screenshots
+9️⃣ Screenshots
 ![image alt](https://github.com/nathan314159/bancoAlimentos/blob/c0a38eb5b3efd1f07f61f5bcda81b7f42c3666de/celular%20badi.pptx.png)
 ![image alt](https://github.com/nathan314159/bancoAlimentos/blob/c0a38eb5b3efd1f07f61f5bcda81b7f42c3666de/dashboard.pptx.png
 )
